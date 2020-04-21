@@ -1,0 +1,70 @@
+name: flutterwarden
+description: A flutter client for Bitwarden password manager.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.6.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI
+  ant_icons: ^1.0.0
+  cached_network_image: ^2.1.0+1
+  google_fonts: ^0.6.2
+
+  # Dependency Injection
+  get_it: ^4.0.1
+  injectable: ^0.3.0
+
+  # State management
+  bloc: ^4.0.0
+  flutter_bloc: ^4.0.0
+
+  # Dart data class
+  json_serializable: ^3.3.0
+  freezed_annotation: ^0.7.1
+
+  # Network
+  data_connection_checker: ^0.3.4
+  http: ^0.12.0+4
+
+  # Local cache
+  hive: ^1.4.1+1
+  shared_preferences: ^0.5.7
+
+  # Cryptography
+  pointycastle: ^1.0.2
+
+  # Routing
+  auto_route: ^0.4.4
+
+  # Logging
+  logger: ^0.8.3
+
+  # Misc
+  dartz: ^0.8.9
+  rxdart: ^0.24.0
+  path_provider: ^1.6.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Code generators
+  freezed: ^0.10.6
+  build_runner: ^1.8.1
+  auto_route_generator: ^0.4.5
+  injectable_generator: ^0.3.4
+
+  # Linting
+  effective_dart: ^1.2.1
+
+  # Testing
+  bloc_test: ^5.0.0
+  mockito: ^4.1.1
+
+flutter:
+  uses-material-design: true
