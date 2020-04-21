@@ -1,6 +1,23 @@
-# flutterwarden
+# FlutterWarden (⚠️WIP)
 
-A new Flutter project.
+A flutter client for [Bitwarden](https://bitwarden.com/). The app is not completed yet.
+
+## Progress
+
+- [x] Login with email and password
+- [ ] Two factor authentication
+- [ ] Decryption of username and password
+- [ ] Copy username and password to clip board
+- [ ] Add new login username and password
+- [ ] Password generator
+- [ ] Fingerprint authentication
+
+## Screenshots
+
+<p>
+<img src="https://raw.githubusercontent.com/excogitatr/flutterwarden/master/assets/screen_1.png" alt="Screen 1" width="250">
+<img src="https://raw.githubusercontent.com/excogitatr/flutterwarden/master/assets/screen_2.png" alt="Screen 2" width="250">
+</p>
 
 ## Getting Started
 
