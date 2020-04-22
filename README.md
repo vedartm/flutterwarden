@@ -1,4 +1,4 @@
-# FlutterWarden (⚠️WIP)
+# FlutterWarden (🚧 WIP)
 
 A flutter client for [Bitwarden](https://bitwarden.com/). The app is not completed yet.
 
@@ -7,7 +7,7 @@ A flutter client for [Bitwarden](https://bitwarden.com/). The app is not complet
 - [x] Login with email and password
 - [ ] Two factor authentication
 - [ ] Decryption of username and password
-- [ ] Copy username and password to clipboard
+- [x] Copy username and password to clipboard
 - [ ] Add new login - username and password
 - [ ] Password generator
 - [ ] Fingerprint authentication
