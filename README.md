@@ -21,13 +21,12 @@ A flutter client for [Bitwarden](https://bitwarden.com/). The app is not complet
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+I have created a demo account in bitwarden for testing.
+- Email: y7t23ehl24@cloud-mail.top
+- Password: warden1234
 
-A few resources to get you started if this is your first Flutter project:
+Never save your personal password in this when you are testing.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
+For help getting started with Flutter, view the
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
