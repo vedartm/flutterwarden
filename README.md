@@ -7,10 +7,11 @@ A flutter client for [Bitwarden](https://bitwarden.com/). The app is not complet
 - [x] Login with email and password
 - [ ] Two factor authentication
 - [ ] Decryption of username and password
-- [ ] Copy username and password to clip board
-- [ ] Add new login username and password
+- [ ] Copy username and password to clipboard
+- [ ] Add new login - username and password
 - [ ] Password generator
 - [ ] Fingerprint authentication
+- [ ] Offline capability
 
 ## Screenshots
 
@@ -22,10 +23,11 @@ A flutter client for [Bitwarden](https://bitwarden.com/). The app is not complet
 ## Getting Started
 
 I have created a demo account in bitwarden for testing.
+
 - Email: y7t23ehl24@cloud-mail.top
 - Password: warden1234
 
-Never save your personal password in this when you are testing.
+Never save your personal password in this account when you are testing.
 
 For help getting started with Flutter, view the
 [online documentation](https://flutter.dev/docs), which offers tutorials,
