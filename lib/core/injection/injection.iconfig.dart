@@ -10,10 +10,12 @@ import 'package:http/src/client.dart';
 import 'package:data_connection_checker/data_connection_checker.dart';
 import 'package:flutterwarden/features/auth/data/datasources/auth_local_datasource.dart';
 import 'package:flutterwarden/features/home/data/datasources/home_local_datasource.dart';
+import 'package:local_auth/local_auth.dart';
 import 'package:logger/logger.dart';
 import 'package:flutterwarden/core/util/crypto_converter.dart';
 import 'package:flutterwarden/features/auth/data/datasources/auth_identity_datasource.dart';
 import 'package:flutterwarden/features/auth/data/datasources/auth_warden_datasource.dart';
+import 'package:flutterwarden/core/platform/biometric_auth.dart';
 import 'package:flutterwarden/features/home/data/datasources/home_warden_datasource.dart';
 import 'package:flutterwarden/features/auth/data/repositories/auth_repository.dart';
 import 'package:flutterwarden/features/auth/domain/repositories/i_auth_repository.dart';
@@ -40,12 +42,15 @@ Future<void> $initGetIt(GetIt g, {String environment}) async {
       () => AuthLocalDataSource(g<Box<dynamic>>()));
   g.registerLazySingleton<IHomeLocalDataSource>(
       () => HomeLocalDataSource(g<Box<dynamic>>()));
+  g.registerLazySingleton<LocalAuthentication>(() => registerModule.localAuth);
   g.registerLazySingleton<Logger>(() => registerModule.loggerDev);
   g.registerLazySingleton<CryptoConverter>(() => CryptoConverter(g<Logger>()));
   g.registerLazySingleton<IAuthIdentityDataSource>(
       () => AuthIdentityDataSource(g<Client>(), g<Logger>()));
   g.registerLazySingleton<IAuthWardenDataSource>(
       () => AuthWardenDataSource(g<Client>(), g<Logger>()));
+  g.registerLazySingleton<IBiometricAuth>(
+      () => BiometricAuth(g<LocalAuthentication>(), g<Logger>()));
   g.registerLazySingleton<IHomeWardenDatasource>(
       () => HomeWardenDataSource(g<Client>(), g<Logger>()));
   g.registerLazySingleton<IAuthRepository>(() => AuthRepository(
@@ -54,8 +59,11 @@ Future<void> $initGetIt(GetIt g, {String environment}) async {
         g<IAuthWardenDataSource>(),
         g<CryptoConverter>(),
       ));
-  g.registerLazySingleton<IHomeRepository>(() =>
-      HomeRepository(g<IHomeLocalDataSource>(), g<IHomeWardenDatasource>()));
+  g.registerLazySingleton<IHomeRepository>(() => HomeRepository(
+        g<IHomeLocalDataSource>(),
+        g<IHomeWardenDatasource>(),
+        g<IBiometricAuth>(),
+      ));
   g.registerLazySingleton<SignInUseCase>(
       () => SignInUseCase(g<IAuthRepository>()));
   g.registerLazySingleton<SignOutUseCase>(
@@ -66,7 +74,8 @@ Future<void> $initGetIt(GetIt g, {String environment}) async {
       () => CheckAuthStatusUseCase(g<IAuthRepository>()));
   g.registerLazySingleton<GetSyncUseCase>(
       () => GetSyncUseCase(g<IHomeRepository>()));
-  g.registerFactory<HomeBloc>(() => HomeBloc(g<GetSyncUseCase>()));
+  g.registerFactory<HomeBloc>(
+      () => HomeBloc(g<GetSyncUseCase>(), g<IBiometricAuth>()));
   g.registerFactory<LoginFormBloc>(() => LoginFormBloc(g<SignInUseCase>()));
   g.registerFactory<AuthBloc>(
       () => AuthBloc(g<CheckAuthStatusUseCase>(), g<SignOutUseCase>()));

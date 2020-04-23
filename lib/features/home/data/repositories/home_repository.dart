@@ -3,6 +3,7 @@ import 'package:injectable/injectable.dart';
 
 import '../../../../core/error/exceptions.dart';
 import '../../../../core/error/failures.dart';
+import '../../../../core/platform/biometric_auth.dart';
 import '../../domain/entities/sync.dart';
 import '../../domain/repositories/i_home_repository.dart';
 import '../datasources/home_local_datasource.dart';
@@ -12,10 +13,15 @@ import '../models/sync_model.dart';
 @lazySingleton
 @RegisterAs(IHomeRepository)
 class HomeRepository implements IHomeRepository {
-  HomeRepository(this._localDataSource, this._wardenDatasource);
+  HomeRepository(
+    this._localDataSource,
+    this._wardenDatasource,
+    this._biometricAuth,
+  );
 
   final IHomeLocalDataSource _localDataSource;
   final IHomeWardenDatasource _wardenDatasource;
+  final IBiometricAuth _biometricAuth;
 
   @override
   Future<Either<Failure, Sync>> getSync(String accessToken) async {
@@ -26,5 +32,12 @@ class HomeRepository implements IHomeRepository {
     } on ServerException {
       return Left(const Failure.server());
     }
+  }
+
+  @override
+  Future<Either<Failure, bool>> verifyUser() async {
+    final isAuthenticated = await _biometricAuth.isAvailable() &&
+        await _biometricAuth.authenticate();
+    return Right(isAuthenticated);
   }
 }

@@ -10,14 +10,15 @@ A flutter client for [Bitwarden](https://bitwarden.com/). The app is not complet
 - [x] Copy username and password to clipboard
 - [ ] Add new login - username and password
 - [ ] Password generator
-- [ ] Fingerprint authentication
+- [x] Fingerprint authentication
 - [ ] Offline capability
 
 ## Screenshots
 
 <p>
 <img src="https://raw.githubusercontent.com/excogitatr/flutterwarden/master/assets/screen_1.png" alt="Screen 1" width="250">
-<img src="https://raw.githubusercontent.com/excogitatr/flutterwarden/master/assets/screen_2.png" alt="Screen 2" width="250">
+<img src="https://raw.githubusercontent.com/excogitatr/flutterwarden/master/assets/screen_3.png" alt="Screen 2" width="250">
+<img src="https://raw.githubusercontent.com/excogitatr/flutterwarden/master/assets/screen_2.png" alt="Screen 3" width="250">
 </p>
 
 ## Getting Started

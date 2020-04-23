@@ -12,6 +12,12 @@ T _$identity<T>(T value) => value;
 class _$HomeEventTearOff {
   const _$HomeEventTearOff();
 
+  VerificationRequested verificationRequested(String accessToken) {
+    return VerificationRequested(
+      accessToken,
+    );
+  }
+
   SyncRequested syncRequested(String accessToken) {
     return SyncRequested(
       accessToken,
@@ -24,6 +30,29 @@ const $HomeEvent = _$HomeEventTearOff();
 
 mixin _$HomeEvent {
   String get accessToken;
+
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result verificationRequested(String accessToken),
+    @required Result syncRequested(String accessToken),
+  });
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result verificationRequested(String accessToken),
+    Result syncRequested(String accessToken),
+    @required Result orElse(),
+  });
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result verificationRequested(VerificationRequested value),
+    @required Result syncRequested(SyncRequested value),
+  });
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result verificationRequested(VerificationRequested value),
+    Result syncRequested(SyncRequested value),
+    @required Result orElse(),
+  });
 
   $HomeEventCopyWith<HomeEvent> get copyWith;
 }
@@ -50,6 +79,125 @@ class _$HomeEventCopyWithImpl<$Res> implements $HomeEventCopyWith<$Res> {
           accessToken == freezed ? _value.accessToken : accessToken as String,
     ));
   }
+}
+
+abstract class $VerificationRequestedCopyWith<$Res>
+    implements $HomeEventCopyWith<$Res> {
+  factory $VerificationRequestedCopyWith(VerificationRequested value,
+          $Res Function(VerificationRequested) then) =
+      _$VerificationRequestedCopyWithImpl<$Res>;
+  @override
+  $Res call({String accessToken});
+}
+
+class _$VerificationRequestedCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res>
+    implements $VerificationRequestedCopyWith<$Res> {
+  _$VerificationRequestedCopyWithImpl(
+      VerificationRequested _value, $Res Function(VerificationRequested) _then)
+      : super(_value, (v) => _then(v as VerificationRequested));
+
+  @override
+  VerificationRequested get _value => super._value as VerificationRequested;
+
+  @override
+  $Res call({
+    Object accessToken = freezed,
+  }) {
+    return _then(VerificationRequested(
+      accessToken == freezed ? _value.accessToken : accessToken as String,
+    ));
+  }
+}
+
+class _$VerificationRequested implements VerificationRequested {
+  const _$VerificationRequested(this.accessToken) : assert(accessToken != null);
+
+  @override
+  final String accessToken;
+
+  @override
+  String toString() {
+    return 'HomeEvent.verificationRequested(accessToken: $accessToken)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is VerificationRequested &&
+            (identical(other.accessToken, accessToken) ||
+                const DeepCollectionEquality()
+                    .equals(other.accessToken, accessToken)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(accessToken);
+
+  @override
+  $VerificationRequestedCopyWith<VerificationRequested> get copyWith =>
+      _$VerificationRequestedCopyWithImpl<VerificationRequested>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result verificationRequested(String accessToken),
+    @required Result syncRequested(String accessToken),
+  }) {
+    assert(verificationRequested != null);
+    assert(syncRequested != null);
+    return verificationRequested(accessToken);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result verificationRequested(String accessToken),
+    Result syncRequested(String accessToken),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (verificationRequested != null) {
+      return verificationRequested(accessToken);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result verificationRequested(VerificationRequested value),
+    @required Result syncRequested(SyncRequested value),
+  }) {
+    assert(verificationRequested != null);
+    assert(syncRequested != null);
+    return verificationRequested(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result verificationRequested(VerificationRequested value),
+    Result syncRequested(SyncRequested value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (verificationRequested != null) {
+      return verificationRequested(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class VerificationRequested implements HomeEvent {
+  const factory VerificationRequested(String accessToken) =
+      _$VerificationRequested;
+
+  @override
+  String get accessToken;
+  @override
+  $VerificationRequestedCopyWith<VerificationRequested> get copyWith;
 }
 
 abstract class $SyncRequestedCopyWith<$Res>
@@ -107,6 +255,56 @@ class _$SyncRequested implements SyncRequested {
   @override
   $SyncRequestedCopyWith<SyncRequested> get copyWith =>
       _$SyncRequestedCopyWithImpl<SyncRequested>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result verificationRequested(String accessToken),
+    @required Result syncRequested(String accessToken),
+  }) {
+    assert(verificationRequested != null);
+    assert(syncRequested != null);
+    return syncRequested(accessToken);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result verificationRequested(String accessToken),
+    Result syncRequested(String accessToken),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (syncRequested != null) {
+      return syncRequested(accessToken);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result verificationRequested(VerificationRequested value),
+    @required Result syncRequested(SyncRequested value),
+  }) {
+    assert(verificationRequested != null);
+    assert(syncRequested != null);
+    return syncRequested(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result verificationRequested(VerificationRequested value),
+    Result syncRequested(SyncRequested value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (syncRequested != null) {
+      return syncRequested(this);
+    }
+    return orElse();
+  }
 }
 
 abstract class SyncRequested implements HomeEvent {
@@ -125,8 +323,12 @@ class _$HomeStateTearOff {
     return const Loading();
   }
 
-  Failed failed() {
-    return const Failed();
+  VerificationFailed verificationFailed() {
+    return const VerificationFailed();
+  }
+
+  SyncFailed syncFailed() {
+    return const SyncFailed();
   }
 
   Synced synced(Sync sync) {
@@ -143,26 +345,30 @@ mixin _$HomeState {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result loading(),
-    @required Result failed(),
+    @required Result verificationFailed(),
+    @required Result syncFailed(),
     @required Result synced(Sync sync),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result loading(),
-    Result failed(),
+    Result verificationFailed(),
+    Result syncFailed(),
     Result synced(Sync sync),
     @required Result orElse(),
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result loading(Loading value),
-    @required Result failed(Failed value),
+    @required Result verificationFailed(VerificationFailed value),
+    @required Result syncFailed(SyncFailed value),
     @required Result synced(Synced value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result loading(Loading value),
-    Result failed(Failed value),
+    Result verificationFailed(VerificationFailed value),
+    Result syncFailed(SyncFailed value),
     Result synced(Synced value),
     @required Result orElse(),
   });
@@ -215,11 +421,13 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result loading(),
-    @required Result failed(),
+    @required Result verificationFailed(),
+    @required Result syncFailed(),
     @required Result synced(Sync sync),
   }) {
     assert(loading != null);
-    assert(failed != null);
+    assert(verificationFailed != null);
+    assert(syncFailed != null);
     assert(synced != null);
     return loading();
   }
@@ -228,7 +436,8 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result loading(),
-    Result failed(),
+    Result verificationFailed(),
+    Result syncFailed(),
     Result synced(Sync sync),
     @required Result orElse(),
   }) {
@@ -243,11 +452,13 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result loading(Loading value),
-    @required Result failed(Failed value),
+    @required Result verificationFailed(VerificationFailed value),
+    @required Result syncFailed(SyncFailed value),
     @required Result synced(Synced value),
   }) {
     assert(loading != null);
-    assert(failed != null);
+    assert(verificationFailed != null);
+    assert(syncFailed != null);
     assert(synced != null);
     return loading(this);
   }
@@ -256,7 +467,8 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result loading(Loading value),
-    Result failed(Failed value),
+    Result verificationFailed(VerificationFailed value),
+    Result syncFailed(SyncFailed value),
     Result synced(Synced value),
     @required Result orElse(),
   }) {
@@ -272,31 +484,34 @@ abstract class Loading implements HomeState {
   const factory Loading() = _$Loading;
 }
 
-abstract class $FailedCopyWith<$Res> {
-  factory $FailedCopyWith(Failed value, $Res Function(Failed) then) =
-      _$FailedCopyWithImpl<$Res>;
+abstract class $VerificationFailedCopyWith<$Res> {
+  factory $VerificationFailedCopyWith(
+          VerificationFailed value, $Res Function(VerificationFailed) then) =
+      _$VerificationFailedCopyWithImpl<$Res>;
 }
 
-class _$FailedCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
-    implements $FailedCopyWith<$Res> {
-  _$FailedCopyWithImpl(Failed _value, $Res Function(Failed) _then)
-      : super(_value, (v) => _then(v as Failed));
+class _$VerificationFailedCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res>
+    implements $VerificationFailedCopyWith<$Res> {
+  _$VerificationFailedCopyWithImpl(
+      VerificationFailed _value, $Res Function(VerificationFailed) _then)
+      : super(_value, (v) => _then(v as VerificationFailed));
 
   @override
-  Failed get _value => super._value as Failed;
+  VerificationFailed get _value => super._value as VerificationFailed;
 }
 
-class _$Failed implements Failed {
-  const _$Failed();
+class _$VerificationFailed implements VerificationFailed {
+  const _$VerificationFailed();
 
   @override
   String toString() {
-    return 'HomeState.failed()';
+    return 'HomeState.verificationFailed()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is Failed);
+    return identical(this, other) || (other is VerificationFailed);
   }
 
   @override
@@ -306,26 +521,29 @@ class _$Failed implements Failed {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result loading(),
-    @required Result failed(),
+    @required Result verificationFailed(),
+    @required Result syncFailed(),
     @required Result synced(Sync sync),
   }) {
     assert(loading != null);
-    assert(failed != null);
+    assert(verificationFailed != null);
+    assert(syncFailed != null);
     assert(synced != null);
-    return failed();
+    return verificationFailed();
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result loading(),
-    Result failed(),
+    Result verificationFailed(),
+    Result syncFailed(),
     Result synced(Sync sync),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (failed != null) {
-      return failed();
+    if (verificationFailed != null) {
+      return verificationFailed();
     }
     return orElse();
   }
@@ -334,33 +552,134 @@ class _$Failed implements Failed {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result loading(Loading value),
-    @required Result failed(Failed value),
+    @required Result verificationFailed(VerificationFailed value),
+    @required Result syncFailed(SyncFailed value),
     @required Result synced(Synced value),
   }) {
     assert(loading != null);
-    assert(failed != null);
+    assert(verificationFailed != null);
+    assert(syncFailed != null);
     assert(synced != null);
-    return failed(this);
+    return verificationFailed(this);
   }
 
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result loading(Loading value),
-    Result failed(Failed value),
+    Result verificationFailed(VerificationFailed value),
+    Result syncFailed(SyncFailed value),
     Result synced(Synced value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (failed != null) {
-      return failed(this);
+    if (verificationFailed != null) {
+      return verificationFailed(this);
     }
     return orElse();
   }
 }
 
-abstract class Failed implements HomeState {
-  const factory Failed() = _$Failed;
+abstract class VerificationFailed implements HomeState {
+  const factory VerificationFailed() = _$VerificationFailed;
+}
+
+abstract class $SyncFailedCopyWith<$Res> {
+  factory $SyncFailedCopyWith(
+          SyncFailed value, $Res Function(SyncFailed) then) =
+      _$SyncFailedCopyWithImpl<$Res>;
+}
+
+class _$SyncFailedCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
+    implements $SyncFailedCopyWith<$Res> {
+  _$SyncFailedCopyWithImpl(SyncFailed _value, $Res Function(SyncFailed) _then)
+      : super(_value, (v) => _then(v as SyncFailed));
+
+  @override
+  SyncFailed get _value => super._value as SyncFailed;
+}
+
+class _$SyncFailed implements SyncFailed {
+  const _$SyncFailed();
+
+  @override
+  String toString() {
+    return 'HomeState.syncFailed()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is SyncFailed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result loading(),
+    @required Result verificationFailed(),
+    @required Result syncFailed(),
+    @required Result synced(Sync sync),
+  }) {
+    assert(loading != null);
+    assert(verificationFailed != null);
+    assert(syncFailed != null);
+    assert(synced != null);
+    return syncFailed();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result loading(),
+    Result verificationFailed(),
+    Result syncFailed(),
+    Result synced(Sync sync),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (syncFailed != null) {
+      return syncFailed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result loading(Loading value),
+    @required Result verificationFailed(VerificationFailed value),
+    @required Result syncFailed(SyncFailed value),
+    @required Result synced(Synced value),
+  }) {
+    assert(loading != null);
+    assert(verificationFailed != null);
+    assert(syncFailed != null);
+    assert(synced != null);
+    return syncFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result loading(Loading value),
+    Result verificationFailed(VerificationFailed value),
+    Result syncFailed(SyncFailed value),
+    Result synced(Synced value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (syncFailed != null) {
+      return syncFailed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SyncFailed implements HomeState {
+  const factory SyncFailed() = _$SyncFailed;
 }
 
 abstract class $SyncedCopyWith<$Res> {
@@ -430,11 +749,13 @@ class _$Synced implements Synced {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result loading(),
-    @required Result failed(),
+    @required Result verificationFailed(),
+    @required Result syncFailed(),
     @required Result synced(Sync sync),
   }) {
     assert(loading != null);
-    assert(failed != null);
+    assert(verificationFailed != null);
+    assert(syncFailed != null);
     assert(synced != null);
     return synced(sync);
   }
@@ -443,7 +764,8 @@ class _$Synced implements Synced {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result loading(),
-    Result failed(),
+    Result verificationFailed(),
+    Result syncFailed(),
     Result synced(Sync sync),
     @required Result orElse(),
   }) {
@@ -458,11 +780,13 @@ class _$Synced implements Synced {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result loading(Loading value),
-    @required Result failed(Failed value),
+    @required Result verificationFailed(VerificationFailed value),
+    @required Result syncFailed(SyncFailed value),
     @required Result synced(Synced value),
   }) {
     assert(loading != null);
-    assert(failed != null);
+    assert(verificationFailed != null);
+    assert(syncFailed != null);
     assert(synced != null);
     return synced(this);
   }
@@ -471,7 +795,8 @@ class _$Synced implements Synced {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result loading(Loading value),
-    Result failed(Failed value),
+    Result verificationFailed(VerificationFailed value),
+    Result syncFailed(SyncFailed value),
     Result synced(Synced value),
     @required Result orElse(),
   }) {

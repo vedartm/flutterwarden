@@ -7,14 +7,32 @@ import '../bloc/home_bloc.dart';
 import 'cipher_card.dart';
 
 class CipherList extends StatelessWidget {
-  const CipherList({Key key}) : super(key: key);
+  const CipherList({Key key, @required this.accessToken}) : super(key: key);
+
+  final String accessToken;
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<HomeBloc, HomeState>(
-      builder: (_, state) => state.map(
+      builder: (context, state) => state.map(
         loading: (s) => Center(child: CircularProgressIndicator()),
-        failed: (s) => Center(child: Text('Some error occured')),
+        verificationFailed: (s) => Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Text('Not authenticated'),
+              const SizedBox(height: 8),
+              FlatButton.icon(
+                onPressed: () => context
+                    .bloc<HomeBloc>()
+                    .add(HomeEvent.verificationRequested(accessToken)),
+                icon: Icon(AntIcons.reload),
+                label: Text('Try again'),
+              )
+            ],
+          ),
+        ),
+        syncFailed: (s) => Center(child: Text('Some error occured')),
         synced: (s) => _isCipherListEmpty(s.sync.ciphers)
             ? Center(child: Text('Sorry the list is empty'))
             : Column(

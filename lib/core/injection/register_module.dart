@@ -1,6 +1,7 @@
 import 'package:data_connection_checker/data_connection_checker.dart';
 import 'package:hive/hive.dart';
 import 'package:injectable/injectable.dart';
+import 'package:local_auth/local_auth.dart';
 import 'package:logger/logger.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:http/http.dart' as http;
@@ -24,4 +25,7 @@ abstract class RegisterModule {
 
   @lazySingleton
   http.Client get httpClient => http.Client();
+
+  @lazySingleton
+  LocalAuthentication get localAuth => LocalAuthentication();
 }

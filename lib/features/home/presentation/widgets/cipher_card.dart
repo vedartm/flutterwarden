@@ -2,7 +2,6 @@ import 'package:ant_icons/ant_icons.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutterwarden/core/theme/colors.dart';
 
 import '../../domain/entities/sync_entities/cipher.dart';
 

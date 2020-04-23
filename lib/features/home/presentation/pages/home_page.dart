@@ -14,10 +14,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<HomeBloc>(
-      create: (_) => getIt()..add(HomeEvent.syncRequested(accessToken)),
+      create: (_) => getIt()..add(HomeEvent.verificationRequested(accessToken)),
       child: Scaffold(
         appBar: Header(title: 'FlutterWarden'),
-        body: CipherList(),
+        body: CipherList(accessToken: accessToken),
         floatingActionButton: FloatingActionButton(
           elevation: 4.0,
           child: const Icon(Icons.add),

@@ -34,7 +34,6 @@ dependencies:
 
   # Local cache
   hive: ^1.4.1+1
-  shared_preferences: ^0.5.7
 
   # Cryptography
   pointycastle: ^1.0.2
@@ -44,6 +43,9 @@ dependencies:
 
   # Logging
   logger: ^0.8.3
+
+  # Fingerprint authentication
+  local_auth: ^0.6.2+1
 
   # Misc
   dartz: ^0.8.9
