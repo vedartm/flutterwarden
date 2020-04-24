@@ -6,6 +6,7 @@ import 'package:injectable/injectable.dart';
 
 import '../../../../core/platform/biometric_auth.dart';
 import '../../domain/entities/sync.dart';
+import '../../domain/entities/sync_entities/cipher.dart';
 import '../../domain/usecases/get_sync_usecase.dart';
 
 part 'home_bloc.freezed.dart';
@@ -16,8 +17,8 @@ part 'home_state.dart';
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeBloc(this._getSync, this._biometricAuth);
 
-  final GetSyncUseCase _getSync;
   final IBiometricAuth _biometricAuth;
+  final GetSyncUseCase _getSync;
 
   @override
   HomeState get initialState => HomeState.loading();
@@ -41,8 +42,19 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       yield* syncEither.fold((l) async* {
         yield HomeState.syncFailed();
       }, (r) async* {
-        yield HomeState.synced(r);
+        yield HomeState.synced(originalSync: r, filteredSync: r);
       });
+    }, searchChanged: (e) async* {
+      final searchedCiphers = e.originalSync.ciphers
+          .where((element) => _isMatchingUsernameOrUri(element, e.searchTerm))
+          .toList();
+      yield HomeState.synced(
+        originalSync: e.originalSync,
+        filteredSync: e.filteredSync.copyWith(ciphers: searchedCiphers),
+      );
     });
   }
+
+  bool _isMatchingUsernameOrUri(Cipher cipher, String searchTerm) =>
+      cipher.login.username.toLowerCase().contains(searchTerm);
 }

@@ -33,36 +33,43 @@ class CipherList extends StatelessWidget {
           ),
         ),
         syncFailed: (s) => Center(child: Text('Some error occured')),
-        synced: (s) => _isCipherListEmpty(s.sync.ciphers)
-            ? Center(child: Text('Sorry the list is empty'))
-            : Column(
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 24),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: 'Start typing...',
-                        suffixIcon: Icon(AntIcons.search_outline),
+        synced: (s) => Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Start typing...',
+                  suffixIcon: Icon(AntIcons.search_outline),
+                ),
+                onChanged: (searchTerm) => context.bloc<HomeBloc>().add(
+                      HomeEvent.searchChanged(
+                        searchTerm: searchTerm,
+                        originalSync: s.originalSync,
+                        filteredSync: s.filteredSync,
                       ),
                     ),
-                  ),
-                  const SizedBox(height: 16),
-                  Expanded(
-                    child: ListView.separated(
+              ),
+            ),
+            const SizedBox(height: 16),
+            Expanded(
+              child: _isCipherListEmpty(s.filteredSync.ciphers)
+                  ? Center(child: Text('Sorry the list is empty'))
+                  : ListView.separated(
                       padding: const EdgeInsets.only(
                         left: 24,
                         right: 24,
                         bottom: 24,
                       ),
-                      itemCount: s.sync.ciphers.length,
+                      itemCount: s.filteredSync.ciphers.length,
                       itemBuilder: (_, index) => CipherCard(
-                        cipher: s.sync.ciphers[index],
+                        cipher: s.filteredSync.ciphers[index],
                       ),
                       separatorBuilder: (_, __) => const SizedBox(height: 16),
                     ),
-                  ),
-                ],
-              ),
+            ),
+          ],
+        ),
       ),
     );
   }

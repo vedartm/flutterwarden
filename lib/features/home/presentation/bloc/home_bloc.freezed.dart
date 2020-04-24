@@ -23,44 +23,57 @@ class _$HomeEventTearOff {
       accessToken,
     );
   }
+
+  SearchChanged searchChanged(
+      {@required Sync filteredSync,
+      @required Sync originalSync,
+      @required String searchTerm}) {
+    return SearchChanged(
+      filteredSync: filteredSync,
+      originalSync: originalSync,
+      searchTerm: searchTerm,
+    );
+  }
 }
 
 // ignore: unused_element
 const $HomeEvent = _$HomeEventTearOff();
 
 mixin _$HomeEvent {
-  String get accessToken;
-
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result verificationRequested(String accessToken),
     @required Result syncRequested(String accessToken),
+    @required
+        Result searchChanged(
+            Sync filteredSync, Sync originalSync, String searchTerm),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result verificationRequested(String accessToken),
     Result syncRequested(String accessToken),
+    Result searchChanged(
+        Sync filteredSync, Sync originalSync, String searchTerm),
     @required Result orElse(),
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result verificationRequested(VerificationRequested value),
     @required Result syncRequested(SyncRequested value),
+    @required Result searchChanged(SearchChanged value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result verificationRequested(VerificationRequested value),
     Result syncRequested(SyncRequested value),
+    Result searchChanged(SearchChanged value),
     @required Result orElse(),
   });
-
-  $HomeEventCopyWith<HomeEvent> get copyWith;
 }
 
 abstract class $HomeEventCopyWith<$Res> {
   factory $HomeEventCopyWith(HomeEvent value, $Res Function(HomeEvent) then) =
       _$HomeEventCopyWithImpl<$Res>;
-  $Res call({String accessToken});
 }
 
 class _$HomeEventCopyWithImpl<$Res> implements $HomeEventCopyWith<$Res> {
@@ -69,24 +82,12 @@ class _$HomeEventCopyWithImpl<$Res> implements $HomeEventCopyWith<$Res> {
   final HomeEvent _value;
   // ignore: unused_field
   final $Res Function(HomeEvent) _then;
-
-  @override
-  $Res call({
-    Object accessToken = freezed,
-  }) {
-    return _then(_value.copyWith(
-      accessToken:
-          accessToken == freezed ? _value.accessToken : accessToken as String,
-    ));
-  }
 }
 
-abstract class $VerificationRequestedCopyWith<$Res>
-    implements $HomeEventCopyWith<$Res> {
+abstract class $VerificationRequestedCopyWith<$Res> {
   factory $VerificationRequestedCopyWith(VerificationRequested value,
           $Res Function(VerificationRequested) then) =
       _$VerificationRequestedCopyWithImpl<$Res>;
-  @override
   $Res call({String accessToken});
 }
 
@@ -144,9 +145,13 @@ class _$VerificationRequested implements VerificationRequested {
   Result when<Result extends Object>({
     @required Result verificationRequested(String accessToken),
     @required Result syncRequested(String accessToken),
+    @required
+        Result searchChanged(
+            Sync filteredSync, Sync originalSync, String searchTerm),
   }) {
     assert(verificationRequested != null);
     assert(syncRequested != null);
+    assert(searchChanged != null);
     return verificationRequested(accessToken);
   }
 
@@ -155,6 +160,8 @@ class _$VerificationRequested implements VerificationRequested {
   Result maybeWhen<Result extends Object>({
     Result verificationRequested(String accessToken),
     Result syncRequested(String accessToken),
+    Result searchChanged(
+        Sync filteredSync, Sync originalSync, String searchTerm),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -169,9 +176,11 @@ class _$VerificationRequested implements VerificationRequested {
   Result map<Result extends Object>({
     @required Result verificationRequested(VerificationRequested value),
     @required Result syncRequested(SyncRequested value),
+    @required Result searchChanged(SearchChanged value),
   }) {
     assert(verificationRequested != null);
     assert(syncRequested != null);
+    assert(searchChanged != null);
     return verificationRequested(this);
   }
 
@@ -180,6 +189,7 @@ class _$VerificationRequested implements VerificationRequested {
   Result maybeMap<Result extends Object>({
     Result verificationRequested(VerificationRequested value),
     Result syncRequested(SyncRequested value),
+    Result searchChanged(SearchChanged value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -194,18 +204,14 @@ abstract class VerificationRequested implements HomeEvent {
   const factory VerificationRequested(String accessToken) =
       _$VerificationRequested;
 
-  @override
   String get accessToken;
-  @override
   $VerificationRequestedCopyWith<VerificationRequested> get copyWith;
 }
 
-abstract class $SyncRequestedCopyWith<$Res>
-    implements $HomeEventCopyWith<$Res> {
+abstract class $SyncRequestedCopyWith<$Res> {
   factory $SyncRequestedCopyWith(
           SyncRequested value, $Res Function(SyncRequested) then) =
       _$SyncRequestedCopyWithImpl<$Res>;
-  @override
   $Res call({String accessToken});
 }
 
@@ -261,9 +267,13 @@ class _$SyncRequested implements SyncRequested {
   Result when<Result extends Object>({
     @required Result verificationRequested(String accessToken),
     @required Result syncRequested(String accessToken),
+    @required
+        Result searchChanged(
+            Sync filteredSync, Sync originalSync, String searchTerm),
   }) {
     assert(verificationRequested != null);
     assert(syncRequested != null);
+    assert(searchChanged != null);
     return syncRequested(accessToken);
   }
 
@@ -272,6 +282,8 @@ class _$SyncRequested implements SyncRequested {
   Result maybeWhen<Result extends Object>({
     Result verificationRequested(String accessToken),
     Result syncRequested(String accessToken),
+    Result searchChanged(
+        Sync filteredSync, Sync originalSync, String searchTerm),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -286,9 +298,11 @@ class _$SyncRequested implements SyncRequested {
   Result map<Result extends Object>({
     @required Result verificationRequested(VerificationRequested value),
     @required Result syncRequested(SyncRequested value),
+    @required Result searchChanged(SearchChanged value),
   }) {
     assert(verificationRequested != null);
     assert(syncRequested != null);
+    assert(searchChanged != null);
     return syncRequested(this);
   }
 
@@ -297,6 +311,7 @@ class _$SyncRequested implements SyncRequested {
   Result maybeMap<Result extends Object>({
     Result verificationRequested(VerificationRequested value),
     Result syncRequested(SyncRequested value),
+    Result searchChanged(SearchChanged value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -310,10 +325,183 @@ class _$SyncRequested implements SyncRequested {
 abstract class SyncRequested implements HomeEvent {
   const factory SyncRequested(String accessToken) = _$SyncRequested;
 
-  @override
   String get accessToken;
-  @override
   $SyncRequestedCopyWith<SyncRequested> get copyWith;
+}
+
+abstract class $SearchChangedCopyWith<$Res> {
+  factory $SearchChangedCopyWith(
+          SearchChanged value, $Res Function(SearchChanged) then) =
+      _$SearchChangedCopyWithImpl<$Res>;
+  $Res call({Sync filteredSync, Sync originalSync, String searchTerm});
+
+  $SyncCopyWith<$Res> get filteredSync;
+  $SyncCopyWith<$Res> get originalSync;
+}
+
+class _$SearchChangedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
+    implements $SearchChangedCopyWith<$Res> {
+  _$SearchChangedCopyWithImpl(
+      SearchChanged _value, $Res Function(SearchChanged) _then)
+      : super(_value, (v) => _then(v as SearchChanged));
+
+  @override
+  SearchChanged get _value => super._value as SearchChanged;
+
+  @override
+  $Res call({
+    Object filteredSync = freezed,
+    Object originalSync = freezed,
+    Object searchTerm = freezed,
+  }) {
+    return _then(SearchChanged(
+      filteredSync:
+          filteredSync == freezed ? _value.filteredSync : filteredSync as Sync,
+      originalSync:
+          originalSync == freezed ? _value.originalSync : originalSync as Sync,
+      searchTerm:
+          searchTerm == freezed ? _value.searchTerm : searchTerm as String,
+    ));
+  }
+
+  @override
+  $SyncCopyWith<$Res> get filteredSync {
+    if (_value.filteredSync == null) {
+      return null;
+    }
+    return $SyncCopyWith<$Res>(_value.filteredSync, (value) {
+      return _then(_value.copyWith(filteredSync: value));
+    });
+  }
+
+  @override
+  $SyncCopyWith<$Res> get originalSync {
+    if (_value.originalSync == null) {
+      return null;
+    }
+    return $SyncCopyWith<$Res>(_value.originalSync, (value) {
+      return _then(_value.copyWith(originalSync: value));
+    });
+  }
+}
+
+class _$SearchChanged implements SearchChanged {
+  const _$SearchChanged(
+      {@required this.filteredSync,
+      @required this.originalSync,
+      @required this.searchTerm})
+      : assert(filteredSync != null),
+        assert(originalSync != null),
+        assert(searchTerm != null);
+
+  @override
+  final Sync filteredSync;
+  @override
+  final Sync originalSync;
+  @override
+  final String searchTerm;
+
+  @override
+  String toString() {
+    return 'HomeEvent.searchChanged(filteredSync: $filteredSync, originalSync: $originalSync, searchTerm: $searchTerm)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is SearchChanged &&
+            (identical(other.filteredSync, filteredSync) ||
+                const DeepCollectionEquality()
+                    .equals(other.filteredSync, filteredSync)) &&
+            (identical(other.originalSync, originalSync) ||
+                const DeepCollectionEquality()
+                    .equals(other.originalSync, originalSync)) &&
+            (identical(other.searchTerm, searchTerm) ||
+                const DeepCollectionEquality()
+                    .equals(other.searchTerm, searchTerm)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(filteredSync) ^
+      const DeepCollectionEquality().hash(originalSync) ^
+      const DeepCollectionEquality().hash(searchTerm);
+
+  @override
+  $SearchChangedCopyWith<SearchChanged> get copyWith =>
+      _$SearchChangedCopyWithImpl<SearchChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result verificationRequested(String accessToken),
+    @required Result syncRequested(String accessToken),
+    @required
+        Result searchChanged(
+            Sync filteredSync, Sync originalSync, String searchTerm),
+  }) {
+    assert(verificationRequested != null);
+    assert(syncRequested != null);
+    assert(searchChanged != null);
+    return searchChanged(filteredSync, originalSync, searchTerm);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result verificationRequested(String accessToken),
+    Result syncRequested(String accessToken),
+    Result searchChanged(
+        Sync filteredSync, Sync originalSync, String searchTerm),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (searchChanged != null) {
+      return searchChanged(filteredSync, originalSync, searchTerm);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result verificationRequested(VerificationRequested value),
+    @required Result syncRequested(SyncRequested value),
+    @required Result searchChanged(SearchChanged value),
+  }) {
+    assert(verificationRequested != null);
+    assert(syncRequested != null);
+    assert(searchChanged != null);
+    return searchChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result verificationRequested(VerificationRequested value),
+    Result syncRequested(SyncRequested value),
+    Result searchChanged(SearchChanged value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (searchChanged != null) {
+      return searchChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SearchChanged implements HomeEvent {
+  const factory SearchChanged(
+      {@required Sync filteredSync,
+      @required Sync originalSync,
+      @required String searchTerm}) = _$SearchChanged;
+
+  Sync get filteredSync;
+  Sync get originalSync;
+  String get searchTerm;
+  $SearchChangedCopyWith<SearchChanged> get copyWith;
 }
 
 class _$HomeStateTearOff {
@@ -331,9 +519,10 @@ class _$HomeStateTearOff {
     return const SyncFailed();
   }
 
-  Synced synced(Sync sync) {
+  Synced synced({@required Sync originalSync, @required Sync filteredSync}) {
     return Synced(
-      sync,
+      originalSync: originalSync,
+      filteredSync: filteredSync,
     );
   }
 }
@@ -347,14 +536,14 @@ mixin _$HomeState {
     @required Result loading(),
     @required Result verificationFailed(),
     @required Result syncFailed(),
-    @required Result synced(Sync sync),
+    @required Result synced(Sync originalSync, Sync filteredSync),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result loading(),
     Result verificationFailed(),
     Result syncFailed(),
-    Result synced(Sync sync),
+    Result synced(Sync originalSync, Sync filteredSync),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -423,7 +612,7 @@ class _$Loading implements Loading {
     @required Result loading(),
     @required Result verificationFailed(),
     @required Result syncFailed(),
-    @required Result synced(Sync sync),
+    @required Result synced(Sync originalSync, Sync filteredSync),
   }) {
     assert(loading != null);
     assert(verificationFailed != null);
@@ -438,7 +627,7 @@ class _$Loading implements Loading {
     Result loading(),
     Result verificationFailed(),
     Result syncFailed(),
-    Result synced(Sync sync),
+    Result synced(Sync originalSync, Sync filteredSync),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -523,7 +712,7 @@ class _$VerificationFailed implements VerificationFailed {
     @required Result loading(),
     @required Result verificationFailed(),
     @required Result syncFailed(),
-    @required Result synced(Sync sync),
+    @required Result synced(Sync originalSync, Sync filteredSync),
   }) {
     assert(loading != null);
     assert(verificationFailed != null);
@@ -538,7 +727,7 @@ class _$VerificationFailed implements VerificationFailed {
     Result loading(),
     Result verificationFailed(),
     Result syncFailed(),
-    Result synced(Sync sync),
+    Result synced(Sync originalSync, Sync filteredSync),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -621,7 +810,7 @@ class _$SyncFailed implements SyncFailed {
     @required Result loading(),
     @required Result verificationFailed(),
     @required Result syncFailed(),
-    @required Result synced(Sync sync),
+    @required Result synced(Sync originalSync, Sync filteredSync),
   }) {
     assert(loading != null);
     assert(verificationFailed != null);
@@ -636,7 +825,7 @@ class _$SyncFailed implements SyncFailed {
     Result loading(),
     Result verificationFailed(),
     Result syncFailed(),
-    Result synced(Sync sync),
+    Result synced(Sync originalSync, Sync filteredSync),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -685,9 +874,10 @@ abstract class SyncFailed implements HomeState {
 abstract class $SyncedCopyWith<$Res> {
   factory $SyncedCopyWith(Synced value, $Res Function(Synced) then) =
       _$SyncedCopyWithImpl<$Res>;
-  $Res call({Sync sync});
+  $Res call({Sync originalSync, Sync filteredSync});
 
-  $SyncCopyWith<$Res> get sync;
+  $SyncCopyWith<$Res> get originalSync;
+  $SyncCopyWith<$Res> get filteredSync;
 }
 
 class _$SyncedCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
@@ -700,46 +890,70 @@ class _$SyncedCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object sync = freezed,
+    Object originalSync = freezed,
+    Object filteredSync = freezed,
   }) {
     return _then(Synced(
-      sync == freezed ? _value.sync : sync as Sync,
+      originalSync:
+          originalSync == freezed ? _value.originalSync : originalSync as Sync,
+      filteredSync:
+          filteredSync == freezed ? _value.filteredSync : filteredSync as Sync,
     ));
   }
 
   @override
-  $SyncCopyWith<$Res> get sync {
-    if (_value.sync == null) {
+  $SyncCopyWith<$Res> get originalSync {
+    if (_value.originalSync == null) {
       return null;
     }
-    return $SyncCopyWith<$Res>(_value.sync, (value) {
-      return _then(_value.copyWith(sync: value));
+    return $SyncCopyWith<$Res>(_value.originalSync, (value) {
+      return _then(_value.copyWith(originalSync: value));
+    });
+  }
+
+  @override
+  $SyncCopyWith<$Res> get filteredSync {
+    if (_value.filteredSync == null) {
+      return null;
+    }
+    return $SyncCopyWith<$Res>(_value.filteredSync, (value) {
+      return _then(_value.copyWith(filteredSync: value));
     });
   }
 }
 
 class _$Synced implements Synced {
-  const _$Synced(this.sync) : assert(sync != null);
+  const _$Synced({@required this.originalSync, @required this.filteredSync})
+      : assert(originalSync != null),
+        assert(filteredSync != null);
 
   @override
-  final Sync sync;
+  final Sync originalSync;
+  @override
+  final Sync filteredSync;
 
   @override
   String toString() {
-    return 'HomeState.synced(sync: $sync)';
+    return 'HomeState.synced(originalSync: $originalSync, filteredSync: $filteredSync)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is Synced &&
-            (identical(other.sync, sync) ||
-                const DeepCollectionEquality().equals(other.sync, sync)));
+            (identical(other.originalSync, originalSync) ||
+                const DeepCollectionEquality()
+                    .equals(other.originalSync, originalSync)) &&
+            (identical(other.filteredSync, filteredSync) ||
+                const DeepCollectionEquality()
+                    .equals(other.filteredSync, filteredSync)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(sync);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(originalSync) ^
+      const DeepCollectionEquality().hash(filteredSync);
 
   @override
   $SyncedCopyWith<Synced> get copyWith =>
@@ -751,13 +965,13 @@ class _$Synced implements Synced {
     @required Result loading(),
     @required Result verificationFailed(),
     @required Result syncFailed(),
-    @required Result synced(Sync sync),
+    @required Result synced(Sync originalSync, Sync filteredSync),
   }) {
     assert(loading != null);
     assert(verificationFailed != null);
     assert(syncFailed != null);
     assert(synced != null);
-    return synced(sync);
+    return synced(originalSync, filteredSync);
   }
 
   @override
@@ -766,12 +980,12 @@ class _$Synced implements Synced {
     Result loading(),
     Result verificationFailed(),
     Result syncFailed(),
-    Result synced(Sync sync),
+    Result synced(Sync originalSync, Sync filteredSync),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (synced != null) {
-      return synced(sync);
+      return synced(originalSync, filteredSync);
     }
     return orElse();
   }
@@ -809,8 +1023,10 @@ class _$Synced implements Synced {
 }
 
 abstract class Synced implements HomeState {
-  const factory Synced(Sync sync) = _$Synced;
+  const factory Synced(
+      {@required Sync originalSync, @required Sync filteredSync}) = _$Synced;
 
-  Sync get sync;
+  Sync get originalSync;
+  Sync get filteredSync;
   $SyncedCopyWith<Synced> get copyWith;
 }
