@@ -5,7 +5,7 @@ A flutter client for [Bitwarden](https://bitwarden.com/). The app is not complet
 ## Progress
 
 - [x] Login with email and password
-- [ ] Two factor authentication
+- [x] Two factor authentication
 - [ ] Decryption of username and password
 - [x] Copy username and password to clipboard
 - [ ] Add new login - username and password
