@@ -1,8 +1,10 @@
 import 'package:ant_icons/ant_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../core/routes/router.gr.dart';
+import '../../../../core/theme/colors.dart';
 import '../../../../core/util/validators.dart';
 import '../bloc/login_form/login_form_bloc.dart';
 
@@ -17,8 +19,16 @@ class LoginForm extends StatelessWidget {
           () {},
           (either) {
             either.fold(
-              (failure) {
-                Scaffold.of(context)
+              (failure) => failure.maybeMap(
+                (value) => null,
+                twoFactorRequired: (s) {
+                  context
+                      .bloc<LoginFormBloc>()
+                      .add(LoginFormEvent.twoFactorProviderSaved(s.type));
+                  _showTwoFactorInputDialog(
+                      context, s.type, context.bloc<LoginFormBloc>());
+                },
+                orElse: () => Scaffold.of(context)
                   ..hideCurrentSnackBar()
                   ..showSnackBar(
                     SnackBar(
@@ -31,17 +41,45 @@ class LoginForm extends StatelessWidget {
                       ),
                       backgroundColor: Colors.red,
                     ),
-                  );
-              },
-              (r) {
-                Router.navigator.pushReplacementNamed(
-                  Routes.homePage,
-                  arguments: HomePageArguments(accessToken: r.accessToken),
-                );
-              },
+                  ),
+              ),
+              (r) => Router.navigator.pushReplacementNamed(
+                Routes.homePage,
+                arguments: HomePageArguments(accessToken: r.accessToken),
+              ),
             );
           },
         );
+        state.auth2faFailureOrSuccessOption.fold(
+          () {},
+          (either) => either.fold(
+            (l) => null,
+            (r) => Router.navigator.pushReplacementNamed(
+              Routes.homePage,
+              arguments: HomePageArguments(accessToken: r.accessToken),
+            ),
+          ),
+        );
+        // if (state.isSubmittingToken) {
+        //   _showLoadingDialog(context);
+        // }
+        // if (state.showTokenErrorMessages) {
+        //   Navigator.pop(context);
+        //   Scaffold.of(context)
+        //     ..hideCurrentSnackBar()
+        //     ..showSnackBar(
+        //       SnackBar(
+        //         content: Row(
+        //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //           children: const <Widget>[
+        //             Text(''),
+        //             Icon(Icons.error),
+        //           ],
+        //         ),
+        //         backgroundColor: Colors.red,
+        //       ),
+        //     );
+        // }
       },
       builder: (context, state) {
         return Form(
@@ -98,10 +136,103 @@ class LoginForm extends StatelessWidget {
                       ),
               ),
               const SizedBox(height: 24),
+              OutlineButton.icon(
+                onPressed: () => launch(
+                    'https://vault.bitwarden.com/#/register?email=${state.emailAddress}'),
+                // onPressed: () => _showLoadingDialog(context),
+                icon: Icon(AntIcons.login),
+                label: Text('CREATE ACCOUNT'),
+              )
             ],
           ),
         );
       },
+    );
+  }
+
+  void _showTwoFactorInputDialog(
+      BuildContext context, int twoFactorProvider, LoginFormBloc bloc) {
+    final message = (twoFactorProvider == 1)
+        ? 'Check your registered email and enter the code'
+        : 'Check your two factor authentication provider and enter the code';
+
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => BlocBuilder<LoginFormBloc, LoginFormState>(
+        bloc: bloc,
+        builder: (_, state) => AlertDialog(
+          backgroundColor: FWColors.scaffoldBackground,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          title: Text('2FA Required'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Text(message),
+              const SizedBox(height: 16),
+              TextField(
+                maxLength: 6,
+                keyboardType: TextInputType.number,
+                onChanged: (value) =>
+                    bloc.add(LoginFormEvent.twoFactorTokenChanged(value)),
+                decoration: InputDecoration(
+                  errorText: bloc.state.showTokenErrorMessages
+                      ? 'Incorrect two factor authentication token'
+                      : null,
+                ),
+              ),
+            ],
+          ),
+          actions: <Widget>[
+            FlatButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text('CANCEL'),
+            ),
+            const SizedBox(width: 8),
+            RaisedButton(
+              onPressed: (state.token.length == 6)
+                  ? !state.isSubmittingToken
+                      ? () => bloc.add(LoginFormEvent
+                          .signInWithEmailPasswordAndTokenPressed())
+                      : null
+                  : null,
+              child: state.isSubmittingToken
+                  ? const SizedBox(
+                      height: 16,
+                      width: 16,
+                      child: CircularProgressIndicator(
+                        strokeWidth: 2,
+                      ),
+                    )
+                  : Text('SUBMIT'),
+            ),
+            const SizedBox(width: 8)
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _showLoadingDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => AlertDialog(
+        backgroundColor: FWColors.scaffoldBackground,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        content: Row(
+          children: const <Widget>[
+            SizedBox(
+              height: 16,
+              width: 16,
+              child: CircularProgressIndicator(strokeWidth: 2),
+            ),
+            SizedBox(width: 16),
+            Text('Loggin in...')
+          ],
+        ),
+      ),
     );
   }
 }

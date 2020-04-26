@@ -45,7 +45,7 @@ class AuthRepository implements IAuthRepository {
       String email, String password) async {
     try {
       final preLogin = await _wardenDataSource.getPreLogin(email);
-      final passwordHash = _cryptoConverter.hashedPassword(
+      final passwordHash = _cryptoConverter.getMasterPasswordHash(
         password,
         email,
         preLogin.kdfIternationCount,
@@ -62,6 +62,8 @@ class AuthRepository implements IAuthRepository {
       return Left(const Failure.crypto());
     } on CacheException {
       return Left(const Failure.cache());
+    } on TwoFactorException catch (exception) {
+      return Left(Failure.twoFactorRequired(exception.twoFactorProvider));
     }
   }
 
@@ -80,5 +82,36 @@ class AuthRepository implements IAuthRepository {
       String email, String password) {
     // TODO: implement signUpWithEmailAndPassword
     throw UnimplementedError();
+  }
+
+  @override
+  Future<Either<Failure, LoginResponse>> signInWithEmailPasswordAnd2faToken(
+      String email,
+      String password,
+      String twoFactorToken,
+      int twoFactorProvider) async {
+    try {
+      final preLogin = await _wardenDataSource.getPreLogin(email);
+      final passwordHash = _cryptoConverter.getMasterPasswordHash(
+        password,
+        email,
+        preLogin.kdfIternationCount,
+      );
+      final loginResponseModel =
+          await _identityDataSource.getTokenWhile2faLogin(
+        email,
+        passwordHash,
+        twoFactorToken,
+        twoFactorProvider,
+      );
+      await _localDataSource.cacheRefreshToken(loginResponseModel.refreshToken);
+      return Right(loginResponseModel.toEntity());
+    } on ServerException {
+      return Left(const Failure.server());
+    } on CryptoException {
+      return Left(const Failure.crypto());
+    } on CacheException {
+      return Left(const Failure.cache());
+    }
   }
 }

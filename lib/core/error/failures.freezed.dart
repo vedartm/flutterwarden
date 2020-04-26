@@ -27,6 +27,12 @@ class _$FailureTearOff {
   ServerFailure server() {
     return const ServerFailure();
   }
+
+  TwoFactorRequired twoFactorRequired(int type) {
+    return TwoFactorRequired(
+      type,
+    );
+  }
 }
 
 // ignore: unused_element
@@ -39,6 +45,7 @@ mixin _$Failure {
     @required Result cache(),
     @required Result crypto(),
     @required Result server(),
+    @required Result twoFactorRequired(int type),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>(
@@ -46,6 +53,7 @@ mixin _$Failure {
     Result cache(),
     Result crypto(),
     Result server(),
+    Result twoFactorRequired(int type),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -54,6 +62,7 @@ mixin _$Failure {
     @required Result cache(CacheFailure value),
     @required Result crypto(CryptoFailure value),
     @required Result server(ServerFailure value),
+    @required Result twoFactorRequired(TwoFactorRequired value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>(
@@ -61,6 +70,7 @@ mixin _$Failure {
     Result cache(CacheFailure value),
     Result crypto(CryptoFailure value),
     Result server(ServerFailure value),
+    Result twoFactorRequired(TwoFactorRequired value),
     @required Result orElse(),
   });
 }
@@ -115,11 +125,13 @@ class _$_Failure implements _Failure {
     @required Result cache(),
     @required Result crypto(),
     @required Result server(),
+    @required Result twoFactorRequired(int type),
   }) {
     assert($default != null);
     assert(cache != null);
     assert(crypto != null);
     assert(server != null);
+    assert(twoFactorRequired != null);
     return $default();
   }
 
@@ -130,6 +142,7 @@ class _$_Failure implements _Failure {
     Result cache(),
     Result crypto(),
     Result server(),
+    Result twoFactorRequired(int type),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -146,11 +159,13 @@ class _$_Failure implements _Failure {
     @required Result cache(CacheFailure value),
     @required Result crypto(CryptoFailure value),
     @required Result server(ServerFailure value),
+    @required Result twoFactorRequired(TwoFactorRequired value),
   }) {
     assert($default != null);
     assert(cache != null);
     assert(crypto != null);
     assert(server != null);
+    assert(twoFactorRequired != null);
     return $default(this);
   }
 
@@ -161,6 +176,7 @@ class _$_Failure implements _Failure {
     Result cache(CacheFailure value),
     Result crypto(CryptoFailure value),
     Result server(ServerFailure value),
+    Result twoFactorRequired(TwoFactorRequired value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -214,11 +230,13 @@ class _$CacheFailure implements CacheFailure {
     @required Result cache(),
     @required Result crypto(),
     @required Result server(),
+    @required Result twoFactorRequired(int type),
   }) {
     assert($default != null);
     assert(cache != null);
     assert(crypto != null);
     assert(server != null);
+    assert(twoFactorRequired != null);
     return cache();
   }
 
@@ -229,6 +247,7 @@ class _$CacheFailure implements CacheFailure {
     Result cache(),
     Result crypto(),
     Result server(),
+    Result twoFactorRequired(int type),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -245,11 +264,13 @@ class _$CacheFailure implements CacheFailure {
     @required Result cache(CacheFailure value),
     @required Result crypto(CryptoFailure value),
     @required Result server(ServerFailure value),
+    @required Result twoFactorRequired(TwoFactorRequired value),
   }) {
     assert($default != null);
     assert(cache != null);
     assert(crypto != null);
     assert(server != null);
+    assert(twoFactorRequired != null);
     return cache(this);
   }
 
@@ -260,6 +281,7 @@ class _$CacheFailure implements CacheFailure {
     Result cache(CacheFailure value),
     Result crypto(CryptoFailure value),
     Result server(ServerFailure value),
+    Result twoFactorRequired(TwoFactorRequired value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -313,11 +335,13 @@ class _$CryptoFailure implements CryptoFailure {
     @required Result cache(),
     @required Result crypto(),
     @required Result server(),
+    @required Result twoFactorRequired(int type),
   }) {
     assert($default != null);
     assert(cache != null);
     assert(crypto != null);
     assert(server != null);
+    assert(twoFactorRequired != null);
     return crypto();
   }
 
@@ -328,6 +352,7 @@ class _$CryptoFailure implements CryptoFailure {
     Result cache(),
     Result crypto(),
     Result server(),
+    Result twoFactorRequired(int type),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -344,11 +369,13 @@ class _$CryptoFailure implements CryptoFailure {
     @required Result cache(CacheFailure value),
     @required Result crypto(CryptoFailure value),
     @required Result server(ServerFailure value),
+    @required Result twoFactorRequired(TwoFactorRequired value),
   }) {
     assert($default != null);
     assert(cache != null);
     assert(crypto != null);
     assert(server != null);
+    assert(twoFactorRequired != null);
     return crypto(this);
   }
 
@@ -359,6 +386,7 @@ class _$CryptoFailure implements CryptoFailure {
     Result cache(CacheFailure value),
     Result crypto(CryptoFailure value),
     Result server(ServerFailure value),
+    Result twoFactorRequired(TwoFactorRequired value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -412,11 +440,13 @@ class _$ServerFailure implements ServerFailure {
     @required Result cache(),
     @required Result crypto(),
     @required Result server(),
+    @required Result twoFactorRequired(int type),
   }) {
     assert($default != null);
     assert(cache != null);
     assert(crypto != null);
     assert(server != null);
+    assert(twoFactorRequired != null);
     return server();
   }
 
@@ -427,6 +457,7 @@ class _$ServerFailure implements ServerFailure {
     Result cache(),
     Result crypto(),
     Result server(),
+    Result twoFactorRequired(int type),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -443,11 +474,13 @@ class _$ServerFailure implements ServerFailure {
     @required Result cache(CacheFailure value),
     @required Result crypto(CryptoFailure value),
     @required Result server(ServerFailure value),
+    @required Result twoFactorRequired(TwoFactorRequired value),
   }) {
     assert($default != null);
     assert(cache != null);
     assert(crypto != null);
     assert(server != null);
+    assert(twoFactorRequired != null);
     return server(this);
   }
 
@@ -458,6 +491,7 @@ class _$ServerFailure implements ServerFailure {
     Result cache(CacheFailure value),
     Result crypto(CryptoFailure value),
     Result server(ServerFailure value),
+    Result twoFactorRequired(TwoFactorRequired value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -470,4 +504,133 @@ class _$ServerFailure implements ServerFailure {
 
 abstract class ServerFailure implements Failure {
   const factory ServerFailure() = _$ServerFailure;
+}
+
+abstract class $TwoFactorRequiredCopyWith<$Res> {
+  factory $TwoFactorRequiredCopyWith(
+          TwoFactorRequired value, $Res Function(TwoFactorRequired) then) =
+      _$TwoFactorRequiredCopyWithImpl<$Res>;
+  $Res call({int type});
+}
+
+class _$TwoFactorRequiredCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
+    implements $TwoFactorRequiredCopyWith<$Res> {
+  _$TwoFactorRequiredCopyWithImpl(
+      TwoFactorRequired _value, $Res Function(TwoFactorRequired) _then)
+      : super(_value, (v) => _then(v as TwoFactorRequired));
+
+  @override
+  TwoFactorRequired get _value => super._value as TwoFactorRequired;
+
+  @override
+  $Res call({
+    Object type = freezed,
+  }) {
+    return _then(TwoFactorRequired(
+      type == freezed ? _value.type : type as int,
+    ));
+  }
+}
+
+class _$TwoFactorRequired implements TwoFactorRequired {
+  const _$TwoFactorRequired(this.type) : assert(type != null);
+
+  @override
+  final int type;
+
+  @override
+  String toString() {
+    return 'Failure.twoFactorRequired(type: $type)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is TwoFactorRequired &&
+            (identical(other.type, type) ||
+                const DeepCollectionEquality().equals(other.type, type)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(type);
+
+  @override
+  $TwoFactorRequiredCopyWith<TwoFactorRequired> get copyWith =>
+      _$TwoFactorRequiredCopyWithImpl<TwoFactorRequired>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>(
+    Result $default(), {
+    @required Result cache(),
+    @required Result crypto(),
+    @required Result server(),
+    @required Result twoFactorRequired(int type),
+  }) {
+    assert($default != null);
+    assert(cache != null);
+    assert(crypto != null);
+    assert(server != null);
+    assert(twoFactorRequired != null);
+    return twoFactorRequired(type);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>(
+    Result $default(), {
+    Result cache(),
+    Result crypto(),
+    Result server(),
+    Result twoFactorRequired(int type),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (twoFactorRequired != null) {
+      return twoFactorRequired(type);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>(
+    Result $default(_Failure value), {
+    @required Result cache(CacheFailure value),
+    @required Result crypto(CryptoFailure value),
+    @required Result server(ServerFailure value),
+    @required Result twoFactorRequired(TwoFactorRequired value),
+  }) {
+    assert($default != null);
+    assert(cache != null);
+    assert(crypto != null);
+    assert(server != null);
+    assert(twoFactorRequired != null);
+    return twoFactorRequired(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>(
+    Result $default(_Failure value), {
+    Result cache(CacheFailure value),
+    Result crypto(CryptoFailure value),
+    Result server(ServerFailure value),
+    Result twoFactorRequired(TwoFactorRequired value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (twoFactorRequired != null) {
+      return twoFactorRequired(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class TwoFactorRequired implements Failure {
+  const factory TwoFactorRequired(int type) = _$TwoFactorRequired;
+
+  int get type;
+  $TwoFactorRequiredCopyWith<TwoFactorRequired> get copyWith;
 }

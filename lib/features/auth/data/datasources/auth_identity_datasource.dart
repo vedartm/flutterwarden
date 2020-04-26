@@ -18,6 +18,12 @@ abstract class IAuthIdentityDataSource {
   ///
   /// Throws a [ServerException] for all error codes.
   Future<LoginResponseModel> getTokenWhileRefresh(String refreshToken);
+
+  /// Calls the http://identity.bitwardent.com/connect/token endpoint.
+  ///
+  /// Throws a [ServerException] for all error codes.
+  Future<LoginResponseModel> getTokenWhile2faLogin(String email,
+      String passwordHash, String twoFactorToken, int twoFactorProvider);
 }
 
 @lazySingleton
@@ -45,11 +51,16 @@ class AuthIdentityDataSource implements IAuthIdentityDataSource {
         'deviceType': '0',
       },
     );
+    _logger.d(response.statusCode);
     _logger.d(response.body);
     if (response.statusCode == 200) {
       return LoginResponseModel.fromJson(json.decode(response.body));
     } else {
-      throw ServerException();
+      final Map<String, dynamic> responseMap = json.decode(response.body);
+      responseMap.containsKey('TwoFactorProviders')
+          ? throw TwoFactorException(
+              twoFactorProvider: responseMap['TwoFactorProviders'][0])
+          : throw ServerException();
     }
   }
 
@@ -66,6 +77,34 @@ class AuthIdentityDataSource implements IAuthIdentityDataSource {
         'refresh_token': refreshToken,
       },
     );
+    _logger.d(response.body);
+    if (response.statusCode == 200) {
+      return LoginResponseModel.fromJson(json.decode(response.body));
+    } else {
+      throw ServerException();
+    }
+  }
+
+  @override
+  Future<LoginResponseModel> getTokenWhile2faLogin(String email,
+      String passwordHash, String twoFactorToken, int twoFactorProvider) async {
+    final response = await _client.post(
+      'https://identity.bitwarden.com/connect/token',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: {
+        'grant_type': 'password',
+        'username': email,
+        'password': passwordHash,
+        'scope': 'api offline_access',
+        'client_id': 'mobile',
+        'deviceType': '0',
+        'twoFactorToken': twoFactorToken,
+        'twoFactorProvider': twoFactorProvider.toString(),
+      },
+    );
+    _logger.d(response.statusCode);
     _logger.d(response.body);
     if (response.statusCode == 200) {
       return LoginResponseModel.fromJson(json.decode(response.body));

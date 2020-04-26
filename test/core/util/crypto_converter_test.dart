@@ -1,4 +1,3 @@
-import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutterwarden/core/util/crypto_converter.dart';
 import 'package:logger/logger.dart';
@@ -19,9 +18,9 @@ void main() {
         const salt = 'nobody@example.com';
         const iterations = 5000;
         // act
-        final result = cryptoConverter.makeKey(key, salt, iterations);
+        final result = cryptoConverter.getMasterKey(key, salt, iterations);
         // assert
-        expect(result, Right('E4hqYJlt40ZBlO4n8LIaIbY+XCn01coj5RumZjVve6o='));
+        expect(result, 'E4hqYJlt40ZBlO4n8LIaIbY+XCn01coj5RumZjVve6o=');
       },
     );
 
@@ -34,9 +33,9 @@ void main() {
         const iterations = 5000;
         // act
         final result =
-            cryptoConverter.hashedPassword(password, email, iterations);
+            cryptoConverter.getMasterPasswordHash(password, email, iterations);
         // assert
-        expect(result, Right('r5CFRR+n9NQI8a525FY+0BPR0HGOjVJX0cR1KEMnIOo='));
+        expect(result, 'r5CFRR+n9NQI8a525FY+0BPR0HGOjVJX0cR1KEMnIOo=');
       },
     );
   });

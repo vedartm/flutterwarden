@@ -10,4 +10,6 @@ abstract class Failure with _$Failure {
   const factory Failure.crypto() = CryptoFailure;
 
   const factory Failure.server() = ServerFailure;
+
+  const factory Failure.twoFactorRequired(int type) = TwoFactorRequired;
 }

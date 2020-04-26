@@ -15,7 +15,7 @@ class CryptoConverter {
 
   final Logger _logger;
 
-  String makeKey(String password, String salt, int iterations) {
+  String getMasterKey(String password, String salt, int iterations) {
     try {
       if (iterations < 5000) {
         throw Exception('PBKDF2 iteration minimum is 5000.');
@@ -31,7 +31,7 @@ class CryptoConverter {
     }
   }
 
-  String hashedPassword(String password, String salt, int iterations) {
+  String getMasterPasswordHash(String password, String salt, int iterations) {
     try {
       final derivator = PBKDF2KeyDerivator(HMac(SHA256Digest(), 64));
       derivator.init(Pbkdf2Parameters(
@@ -55,4 +55,10 @@ class CryptoConverter {
     // TODO: Implement
     throw UnimplementedError();
   }
+
+  // String getStretchedMasterKey() {}
+
+  // String getEncryptionKey() {}
+
+  // String getMACKey() {}
 }

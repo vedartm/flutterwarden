@@ -9,6 +9,12 @@ abstract class IAuthRepository {
   Future<Either<Failure, LoginResponse>> signInWithEmailAndPassword(
       String email, String password);
 
+  Future<Either<Failure, LoginResponse>> signInWithEmailPasswordAnd2faToken(
+      String email,
+      String password,
+      String twoFactorToken,
+      int twoFactorProvider);
+
   Future<Either<Failure, String>> signUpWithEmailAndPassword(
       String email, String password);
 

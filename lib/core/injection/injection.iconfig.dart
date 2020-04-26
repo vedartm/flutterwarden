@@ -21,6 +21,7 @@ import 'package:flutterwarden/features/auth/data/repositories/auth_repository.da
 import 'package:flutterwarden/features/auth/domain/repositories/i_auth_repository.dart';
 import 'package:flutterwarden/features/home/data/repositories/home_repository.dart';
 import 'package:flutterwarden/features/home/domain/repositories/i_home_repository.dart';
+import 'package:flutterwarden/features/auth/domain/usecases/sign_in_2fa_usecase.dart';
 import 'package:flutterwarden/features/auth/domain/usecases/sign_in_usecase.dart';
 import 'package:flutterwarden/features/auth/domain/usecases/sign_out_usecase.dart';
 import 'package:flutterwarden/features/auth/domain/usecases/sign_up_usecase.dart';
@@ -64,6 +65,8 @@ Future<void> $initGetIt(GetIt g, {String environment}) async {
         g<IHomeWardenDatasource>(),
         g<IBiometricAuth>(),
       ));
+  g.registerLazySingleton<SignIn2faUseCase>(
+      () => SignIn2faUseCase(g<IAuthRepository>()));
   g.registerLazySingleton<SignInUseCase>(
       () => SignInUseCase(g<IAuthRepository>()));
   g.registerLazySingleton<SignOutUseCase>(
@@ -76,7 +79,8 @@ Future<void> $initGetIt(GetIt g, {String environment}) async {
       () => GetSyncUseCase(g<IHomeRepository>()));
   g.registerFactory<HomeBloc>(
       () => HomeBloc(g<GetSyncUseCase>(), g<IBiometricAuth>()));
-  g.registerFactory<LoginFormBloc>(() => LoginFormBloc(g<SignInUseCase>()));
+  g.registerFactory<LoginFormBloc>(
+      () => LoginFormBloc(g<SignInUseCase>(), g<SignIn2faUseCase>()));
   g.registerFactory<AuthBloc>(
       () => AuthBloc(g<CheckAuthStatusUseCase>(), g<SignOutUseCase>()));
 }
