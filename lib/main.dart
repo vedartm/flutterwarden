@@ -5,7 +5,7 @@ import 'package:injectable/injectable.dart';
 
 import 'core/injection/injection.dart';
 import 'core/routes/router.gr.dart';
-import 'core/theme/themes.dart';
+import 'core/ui/themes.dart';
 import 'core/util/simple_bloc_delegate.dart';
 import 'features/auth/presentation/bloc/auth_bloc.dart';
 

@@ -10,8 +10,7 @@ import '../datasources/home_local_datasource.dart';
 import '../datasources/home_warden_datasource.dart';
 import '../models/sync_model.dart';
 
-@lazySingleton
-@RegisterAs(IHomeRepository)
+@LazySingleton(as: IHomeRepository)
 class HomeRepository implements IHomeRepository {
   HomeRepository(
     this._localDataSource,

@@ -1,10 +1,13 @@
 import 'package:ant_icons/ant_icons.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../../core/error/failures.dart';
 import '../../../../core/routes/router.gr.dart';
-import '../../../../core/theme/colors.dart';
+import '../../../../core/ui/colors.dart';
+import '../../../../core/ui/dimens.dart';
 import '../../../../core/util/validators.dart';
 import '../bloc/login_form/login_form_bloc.dart';
 
@@ -43,7 +46,7 @@ class LoginForm extends StatelessWidget {
                     ),
                   ),
               ),
-              (r) => Router.navigator.pushReplacementNamed(
+              (r) => ExtendedNavigator.of(context).replace(
                 Routes.homePage,
                 arguments: HomePageArguments(accessToken: r.accessToken),
               ),
@@ -54,7 +57,7 @@ class LoginForm extends StatelessWidget {
           () {},
           (either) => either.fold(
             (l) => null,
-            (r) => Router.navigator.pushReplacementNamed(
+            (r) => ExtendedNavigator.of(context).replace(
               Routes.homePage,
               arguments: HomePageArguments(accessToken: r.accessToken),
             ),
@@ -86,7 +89,7 @@ class LoginForm extends StatelessWidget {
           autovalidate: state.showErrorMessages,
           child: ListView(
             shrinkWrap: true,
-            padding: const EdgeInsets.symmetric(horizontal: 24),
+            padding: const EdgeInsets.symmetric(horizontal: FWDimens.padding),
             children: <Widget>[
               TextFormField(
                 decoration: InputDecoration(
@@ -163,8 +166,8 @@ class LoginForm extends StatelessWidget {
         bloc: bloc,
         builder: (_, state) => AlertDialog(
           backgroundColor: FWColors.scaffoldBackground,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(FWDimens.borderRadius)),
           title: Text('2FA Required'),
           content: Column(
             mainAxisSize: MainAxisSize.min,
@@ -220,7 +223,8 @@ class LoginForm extends StatelessWidget {
       barrierDismissible: false,
       builder: (context) => AlertDialog(
         backgroundColor: FWColors.scaffoldBackground,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(FWDimens.borderRadius)),
         content: Row(
           children: const <Widget>[
             SizedBox(
@@ -233,6 +237,33 @@ class LoginForm extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  void mapFailures(Failure failure, BuildContext context) {
+    failure.maybeMap(
+      (value) => null,
+      twoFactorRequired: (s) {
+        context
+            .bloc<LoginFormBloc>()
+            .add(LoginFormEvent.twoFactorProviderSaved(s.type));
+        _showTwoFactorInputDialog(
+            context, s.type, context.bloc<LoginFormBloc>());
+      },
+      orElse: () => Scaffold.of(context)
+        ..hideCurrentSnackBar()
+        ..showSnackBar(
+          SnackBar(
+            content: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const <Widget>[
+                Text('Incorrect email and password combination'),
+                Icon(Icons.error),
+              ],
+            ),
+            backgroundColor: Colors.red,
+          ),
+        ),
     );
   }
 }

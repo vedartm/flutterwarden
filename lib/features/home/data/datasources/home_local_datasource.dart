@@ -14,8 +14,7 @@ abstract class IHomeLocalDataSource {
   SyncModel getLastSync();
 }
 
-@lazySingleton
-@RegisterAs(IHomeLocalDataSource)
+@LazySingleton(as: IHomeLocalDataSource)
 class HomeLocalDataSource implements IHomeLocalDataSource {
   HomeLocalDataSource(this._box);
 

@@ -2,6 +2,7 @@ import 'package:ant_icons/ant_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/ui/dimens.dart';
 import '../../domain/entities/sync_entities/cipher.dart';
 import '../bloc/home_bloc.dart';
 import 'cipher_card.dart';
@@ -36,7 +37,7 @@ class CipherList extends StatelessWidget {
         synced: (s) => Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
+              padding: const EdgeInsets.all(FWDimens.padding),
               child: TextField(
                 decoration: InputDecoration(
                   hintText: 'Start typing...',
@@ -51,21 +52,21 @@ class CipherList extends StatelessWidget {
                     ),
               ),
             ),
-            const SizedBox(height: 16),
             Expanded(
               child: _isCipherListEmpty(s.filteredSync.ciphers)
                   ? Center(child: Text('Sorry the list is empty'))
                   : ListView.separated(
                       padding: const EdgeInsets.only(
-                        left: 24,
-                        right: 24,
-                        bottom: 24,
+                        left: FWDimens.padding,
+                        right: FWDimens.padding,
+                        bottom: FWDimens.padding,
                       ),
                       itemCount: s.filteredSync.ciphers.length,
                       itemBuilder: (_, index) => CipherCard(
                         cipher: s.filteredSync.ciphers[index],
                       ),
-                      separatorBuilder: (_, __) => const SizedBox(height: 16),
+                      separatorBuilder: (_, __) =>
+                          const SizedBox(height: FWDimens.padding),
                     ),
             ),
           ],

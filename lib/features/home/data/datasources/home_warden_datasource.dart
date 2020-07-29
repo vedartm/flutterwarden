@@ -14,8 +14,7 @@ abstract class IHomeWardenDatasource {
   Future<SyncModel> getSync(String accessToken);
 }
 
-@lazySingleton
-@RegisterAs(IHomeWardenDatasource)
+@LazySingleton(as: IHomeWardenDatasource)
 class HomeWardenDataSource implements IHomeWardenDatasource {
   HomeWardenDataSource(this._client, this._logger);
 

@@ -26,8 +26,7 @@ abstract class IAuthIdentityDataSource {
       String passwordHash, String twoFactorToken, int twoFactorProvider);
 }
 
-@lazySingleton
-@RegisterAs(IAuthIdentityDataSource)
+@LazySingleton(as: IAuthIdentityDataSource)
 class AuthIdentityDataSource implements IAuthIdentityDataSource {
   AuthIdentityDataSource(this._client, this._logger);
 

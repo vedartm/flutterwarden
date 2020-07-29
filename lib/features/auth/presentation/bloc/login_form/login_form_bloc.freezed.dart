@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'login_form_bloc.dart';
 
@@ -12,34 +12,40 @@ T _$identity<T>(T value) => value;
 class _$LoginFormEventTearOff {
   const _$LoginFormEventTearOff();
 
+// ignore: unused_element
   EmailChanged emailChanged(String emailStr) {
     return EmailChanged(
       emailStr,
     );
   }
 
+// ignore: unused_element
   PasswordChanged passwordChanged(String passwordStr) {
     return PasswordChanged(
       passwordStr,
     );
   }
 
+// ignore: unused_element
   TwoFactorTokenChanged twoFactorTokenChanged(String tokenStr) {
     return TwoFactorTokenChanged(
       tokenStr,
     );
   }
 
+// ignore: unused_element
   TwoFactorProviderSaved twoFactorProviderSaved(int provider) {
     return TwoFactorProviderSaved(
       provider,
     );
   }
 
+// ignore: unused_element
   SignInWithEmailAndPasswordPressed signInWithEmailAndPasswordPressed() {
     return const SignInWithEmailAndPasswordPressed();
   }
 
+// ignore: unused_element
   SignInWithEmailPasswordAndTokenPressed
       signInWithEmailPasswordAndTokenPressed() {
     return const SignInWithEmailPasswordAndTokenPressed();
@@ -939,6 +945,7 @@ abstract class SignInWithEmailPasswordAndTokenPressed
 class _$LoginFormStateTearOff {
   const _$LoginFormStateTearOff();
 
+// ignore: unused_element
   _LoginFormState call(
       {@required
           String emailAddress,

@@ -6,7 +6,7 @@ import 'package:logger/logger.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:http/http.dart' as http;
 
-@registerModule
+@module
 abstract class RegisterModule {
   @lazySingleton
   DataConnectionChecker get connectionChecker => DataConnectionChecker();

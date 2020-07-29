@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'colors.dart';
+import 'dimens.dart';
 
 final ThemeData darkTheme = ThemeData(
   scaffoldBackgroundColor: FWColors.scaffoldBackground,
@@ -10,7 +11,7 @@ final ThemeData lightTheme = ThemeData(
   inputDecorationTheme: InputDecorationTheme(
     border: OutlineInputBorder(
       borderSide: BorderSide.none,
-      borderRadius: BorderRadius.circular(16),
+      borderRadius: BorderRadius.circular(FWDimens.borderRadius),
     ),
     contentPadding: const EdgeInsets.symmetric(vertical: 18, horizontal: 18),
     filled: true,
@@ -19,7 +20,7 @@ final ThemeData lightTheme = ThemeData(
   buttonTheme: ButtonThemeData(
     height: 50,
     shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(16),
+      borderRadius: BorderRadius.circular(FWDimens.borderRadius),
     ),
   ),
 );

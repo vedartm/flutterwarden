@@ -3,6 +3,7 @@ import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../../../../core/ui/dimens.dart';
 import '../../domain/entities/sync_entities/cipher.dart';
 
 class CipherCard extends StatelessWidget {
@@ -12,10 +13,10 @@ class CipherCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+      padding: const EdgeInsets.all(FWDimens.padding),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(FWDimens.borderRadius),
       ),
       child: ExpandablePanel(
         header: Column(

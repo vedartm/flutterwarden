@@ -14,8 +14,7 @@ abstract class IAuthWardenDataSource {
   Future<PreLoginResponseModel> getPreLogin(String email);
 }
 
-@lazySingleton
-@RegisterAs(IAuthWardenDataSource)
+@LazySingleton(as: IAuthWardenDataSource)
 class AuthWardenDataSource implements IAuthWardenDataSource {
   AuthWardenDataSource(this._client, this._logger);
 

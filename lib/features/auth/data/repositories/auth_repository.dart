@@ -11,8 +11,7 @@ import '../datasources/auth_local_datasource.dart';
 import '../datasources/auth_warden_datasource.dart';
 import '../models/login_response_model.dart';
 
-@lazySingleton
-@RegisterAs(IAuthRepository)
+@LazySingleton(as: IAuthRepository)
 class AuthRepository implements IAuthRepository {
   final IAuthLocalDataSource _localDataSource;
   final IAuthIdentityDataSource _identityDataSource;

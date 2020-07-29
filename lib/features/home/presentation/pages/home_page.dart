@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/injection/injection.dart';
-import '../../../../core/widgets/header.dart';
 import '../bloc/home_bloc.dart';
 import '../widgets/cipher_list.dart';
 
@@ -16,7 +15,10 @@ class HomePage extends StatelessWidget {
     return BlocProvider<HomeBloc>(
       create: (_) => getIt()..add(HomeEvent.verificationRequested(accessToken)),
       child: Scaffold(
-        appBar: Header(title: 'FlutterWarden'),
+        appBar: AppBar(
+          title: Text('FlutterWarden'),
+          centerTitle: true,
+        ),
         body: CipherList(accessToken: accessToken),
         floatingActionButton: FloatingActionButton(
           elevation: 4.0,

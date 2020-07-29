@@ -9,8 +9,7 @@ abstract class IBiometricAuth {
   Future<bool> authenticate();
 }
 
-@lazySingleton
-@RegisterAs(IBiometricAuth)
+@LazySingleton(as: IBiometricAuth)
 class BiometricAuth implements IBiometricAuth {
   BiometricAuth(this._localAuth, this._logger);
 

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'home_bloc.dart';
 
@@ -12,18 +12,21 @@ T _$identity<T>(T value) => value;
 class _$HomeEventTearOff {
   const _$HomeEventTearOff();
 
+// ignore: unused_element
   VerificationRequested verificationRequested(String accessToken) {
     return VerificationRequested(
       accessToken,
     );
   }
 
+// ignore: unused_element
   SyncRequested syncRequested(String accessToken) {
     return SyncRequested(
       accessToken,
     );
   }
 
+// ignore: unused_element
   SearchChanged searchChanged(
       {@required Sync filteredSync,
       @required Sync originalSync,
@@ -507,18 +510,22 @@ abstract class SearchChanged implements HomeEvent {
 class _$HomeStateTearOff {
   const _$HomeStateTearOff();
 
+// ignore: unused_element
   Loading loading() {
     return const Loading();
   }
 
+// ignore: unused_element
   VerificationFailed verificationFailed() {
     return const VerificationFailed();
   }
 
+// ignore: unused_element
   SyncFailed syncFailed() {
     return const SyncFailed();
   }
 
+// ignore: unused_element
   Synced synced({@required Sync originalSync, @required Sync filteredSync}) {
     return Synced(
       originalSync: originalSync,

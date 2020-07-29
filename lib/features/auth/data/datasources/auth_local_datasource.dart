@@ -17,8 +17,7 @@ abstract class IAuthLocalDataSource {
   Future<void> clearAllCache();
 }
 
-@lazySingleton
-@RegisterAs(IAuthLocalDataSource)
+@LazySingleton(as: IAuthLocalDataSource)
 class AuthLocalDataSource implements IAuthLocalDataSource {
   AuthLocalDataSource(this._box);
 

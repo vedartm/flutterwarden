@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -11,12 +12,12 @@ class SplashPage extends StatelessWidget {
       listener: (context, state) {
         state.map(
           initial: (_) {},
-          authenticated: (e) => Router.navigator.pushReplacementNamed(
+          authenticated: (e) => ExtendedNavigator.of(context).replace(
             Routes.homePage,
             arguments: HomePageArguments(accessToken: e.accessToken),
           ),
           unauthenticated: (_) =>
-              Router.navigator.pushReplacementNamed(Routes.loginPage),
+              ExtendedNavigator.of(context).replace(Routes.loginPage),
         );
       },
       child: _PageWidget(),
