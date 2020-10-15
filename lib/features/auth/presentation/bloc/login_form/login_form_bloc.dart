@@ -17,13 +17,11 @@ part 'login_form_state.dart';
 
 @injectable
 class LoginFormBloc extends Bloc<LoginFormEvent, LoginFormState> {
-  LoginFormBloc(this._signInUseCase, this._signIn2faUseCase);
+  LoginFormBloc(this._signInUseCase, this._signIn2faUseCase)
+      : super(LoginFormState.initial());
 
   final SignInUseCase _signInUseCase;
   final SignIn2faUseCase _signIn2faUseCase;
-
-  @override
-  LoginFormState get initialState => LoginFormState.initial();
 
   @override
   Stream<LoginFormState> mapEventToState(

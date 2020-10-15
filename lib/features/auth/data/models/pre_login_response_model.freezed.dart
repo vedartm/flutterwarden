@@ -13,6 +13,7 @@ PreLoginResponseModel _$PreLoginResponseModelFromJson(
   return _PreLoginResponseModel.fromJson(json);
 }
 
+/// @nodoc
 class _$PreLoginResponseModelTearOff {
   const _$PreLoginResponseModelTearOff();
 
@@ -25,11 +26,18 @@ class _$PreLoginResponseModelTearOff {
       kdfIternationCount: kdfIternationCount,
     );
   }
+
+// ignore: unused_element
+  PreLoginResponseModel fromJson(Map<String, Object> json) {
+    return PreLoginResponseModel.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $PreLoginResponseModel = _$PreLoginResponseModelTearOff();
 
+/// @nodoc
 mixin _$PreLoginResponseModel {
   @JsonKey(name: 'Kdf')
   int get kdfType;
@@ -40,6 +48,7 @@ mixin _$PreLoginResponseModel {
   $PreLoginResponseModelCopyWith<PreLoginResponseModel> get copyWith;
 }
 
+/// @nodoc
 abstract class $PreLoginResponseModelCopyWith<$Res> {
   factory $PreLoginResponseModelCopyWith(PreLoginResponseModel value,
           $Res Function(PreLoginResponseModel) then) =
@@ -49,6 +58,7 @@ abstract class $PreLoginResponseModelCopyWith<$Res> {
       @JsonKey(name: 'KdfIterations') int kdfIternationCount});
 }
 
+/// @nodoc
 class _$PreLoginResponseModelCopyWithImpl<$Res>
     implements $PreLoginResponseModelCopyWith<$Res> {
   _$PreLoginResponseModelCopyWithImpl(this._value, this._then);
@@ -71,6 +81,7 @@ class _$PreLoginResponseModelCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$PreLoginResponseModelCopyWith<$Res>
     implements $PreLoginResponseModelCopyWith<$Res> {
   factory _$PreLoginResponseModelCopyWith(_PreLoginResponseModel value,
@@ -82,6 +93,7 @@ abstract class _$PreLoginResponseModelCopyWith<$Res>
       @JsonKey(name: 'KdfIterations') int kdfIternationCount});
 }
 
+/// @nodoc
 class __$PreLoginResponseModelCopyWithImpl<$Res>
     extends _$PreLoginResponseModelCopyWithImpl<$Res>
     implements _$PreLoginResponseModelCopyWith<$Res> {
@@ -107,6 +119,8 @@ class __$PreLoginResponseModelCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_PreLoginResponseModel implements _PreLoginResponseModel {
   const _$_PreLoginResponseModel(
       {@required @JsonKey(name: 'Kdf') this.kdfType,

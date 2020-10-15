@@ -12,6 +12,7 @@ LoginResponseModel _$LoginResponseModelFromJson(Map<String, dynamic> json) {
   return _LoginResponseModel.fromJson(json);
 }
 
+/// @nodoc
 class _$LoginResponseModelTearOff {
   const _$LoginResponseModelTearOff();
 
@@ -28,11 +29,18 @@ class _$LoginResponseModelTearOff {
       key: key,
     );
   }
+
+// ignore: unused_element
+  LoginResponseModel fromJson(Map<String, Object> json) {
+    return LoginResponseModel.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $LoginResponseModel = _$LoginResponseModelTearOff();
 
+/// @nodoc
 mixin _$LoginResponseModel {
   @JsonKey(name: 'access_token')
   String get accessToken;
@@ -48,6 +56,7 @@ mixin _$LoginResponseModel {
   $LoginResponseModelCopyWith<LoginResponseModel> get copyWith;
 }
 
+/// @nodoc
 abstract class $LoginResponseModelCopyWith<$Res> {
   factory $LoginResponseModelCopyWith(
           LoginResponseModel value, $Res Function(LoginResponseModel) then) =
@@ -59,6 +68,7 @@ abstract class $LoginResponseModelCopyWith<$Res> {
       @JsonKey(name: 'Key') @nullable String key});
 }
 
+/// @nodoc
 class _$LoginResponseModelCopyWithImpl<$Res>
     implements $LoginResponseModelCopyWith<$Res> {
   _$LoginResponseModelCopyWithImpl(this._value, this._then);
@@ -88,6 +98,7 @@ class _$LoginResponseModelCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$LoginResponseModelCopyWith<$Res>
     implements $LoginResponseModelCopyWith<$Res> {
   factory _$LoginResponseModelCopyWith(
@@ -101,6 +112,7 @@ abstract class _$LoginResponseModelCopyWith<$Res>
       @JsonKey(name: 'Key') @nullable String key});
 }
 
+/// @nodoc
 class __$LoginResponseModelCopyWithImpl<$Res>
     extends _$LoginResponseModelCopyWithImpl<$Res>
     implements _$LoginResponseModelCopyWith<$Res> {
@@ -133,6 +145,8 @@ class __$LoginResponseModelCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_LoginResponseModel implements _LoginResponseModel {
   const _$_LoginResponseModel(
       {@required @JsonKey(name: 'access_token') this.accessToken,

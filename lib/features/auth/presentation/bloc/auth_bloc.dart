@@ -14,13 +14,10 @@ part 'auth_state.dart';
 
 @injectable
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
-  AuthBloc(this._checkAuthStatus, this._signOut);
+  AuthBloc(this._checkAuthStatus, this._signOut) : super(AuthState.initial());
 
   final CheckAuthStatusUseCase _checkAuthStatus;
   final SignOutUseCase _signOut;
-
-  @override
-  AuthState get initialState => AuthState.initial();
 
   @override
   Stream<AuthState> mapEventToState(

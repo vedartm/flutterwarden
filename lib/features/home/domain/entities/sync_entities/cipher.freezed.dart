@@ -9,6 +9,7 @@ part of 'cipher.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$CipherTearOff {
   const _$CipherTearOff();
 
@@ -29,19 +30,23 @@ class _$CipherTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Cipher = _$CipherTearOff();
 
+/// @nodoc
 mixin _$Cipher {
   String get id;
   int get type;
-  String get name;
+  String get name; // @required String notes,
+// @required String card,
   bool get favourite;
   Login get login;
 
   $CipherCopyWith<Cipher> get copyWith;
 }
 
+/// @nodoc
 abstract class $CipherCopyWith<$Res> {
   factory $CipherCopyWith(Cipher value, $Res Function(Cipher) then) =
       _$CipherCopyWithImpl<$Res>;
@@ -50,6 +55,7 @@ abstract class $CipherCopyWith<$Res> {
   $LoginCopyWith<$Res> get login;
 }
 
+/// @nodoc
 class _$CipherCopyWithImpl<$Res> implements $CipherCopyWith<$Res> {
   _$CipherCopyWithImpl(this._value, this._then);
 
@@ -85,6 +91,7 @@ class _$CipherCopyWithImpl<$Res> implements $CipherCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$CipherCopyWith<$Res> implements $CipherCopyWith<$Res> {
   factory _$CipherCopyWith(_Cipher value, $Res Function(_Cipher) then) =
       __$CipherCopyWithImpl<$Res>;
@@ -95,6 +102,7 @@ abstract class _$CipherCopyWith<$Res> implements $CipherCopyWith<$Res> {
   $LoginCopyWith<$Res> get login;
 }
 
+/// @nodoc
 class __$CipherCopyWithImpl<$Res> extends _$CipherCopyWithImpl<$Res>
     implements _$CipherCopyWith<$Res> {
   __$CipherCopyWithImpl(_Cipher _value, $Res Function(_Cipher) _then)
@@ -121,6 +129,7 @@ class __$CipherCopyWithImpl<$Res> extends _$CipherCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_Cipher implements _Cipher {
   const _$_Cipher(
       {@required this.id,
@@ -140,7 +149,8 @@ class _$_Cipher implements _Cipher {
   final int type;
   @override
   final String name;
-  @override
+  @override // @required String notes,
+// @required String card,
   final bool favourite;
   @override
   final Login login;
@@ -195,7 +205,8 @@ abstract class _Cipher implements Cipher {
   int get type;
   @override
   String get name;
-  @override
+  @override // @required String notes,
+// @required String card,
   bool get favourite;
   @override
   Login get login;

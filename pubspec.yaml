@@ -4,7 +4,7 @@ description: A flutter client for Bitwarden password manager.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.6.0 <3.0.0"
+  sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -12,62 +12,62 @@ dependencies:
 
   # UI
   ant_icons: ^1.0.0
-  cached_network_image: ^2.2.0+1
+  cached_network_image: ^2.3.2+1
   expandable: ^4.1.4
 
   # Dependency Injection
   get_it: ^4.0.4
-  injectable: ^1.0.2
+  injectable: ^1.0.5
 
   # State management
-  bloc: ^4.0.0
-  flutter_bloc: ^4.0.0
+  bloc: ^6.0.3
+  flutter_bloc: ^6.0.6
 
   # Dart data class
-  json_serializable: ^3.3.0
-  freezed_annotation: ^0.11.0
+  json_serializable: ^3.5.0
+  freezed_annotation: ^0.12.0
 
   # Network
   data_connection_checker: ^0.3.4
-  url_launcher: ^5.5.0
+  url_launcher: ^5.7.4
   http: ^0.12.2
 
   # Local cache
-  hive: ^1.4.2
+  hive: ^1.4.4+1
 
   # Cryptography
   pointycastle: ^1.0.2
   encrypt: ^4.0.2
 
   # Routing
-  auto_route: ^0.6.6
+  auto_route: ^0.6.9
 
   # Logging
-  logger: ^0.9.2
+  logger: ^0.9.4
 
   # Fingerprint authentication
-  local_auth: ^0.6.2+3
+  local_auth: ^0.6.3+3
 
   # Misc
-  dartz: ^0.9.1
+  dartz: ^0.9.2
   rxdart: ^0.24.1
-  path_provider: ^1.6.11
+  path_provider: ^1.6.21
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   # Code generators
-  freezed: ^0.11.4
-  build_runner: ^1.10.0
-  auto_route_generator: ^0.6.6
-  injectable_generator: ^1.0.2
+  freezed: ^0.12.1
+  build_runner: ^1.10.1
+  auto_route_generator: ^0.6.8
+  injectable_generator: ^1.0.4
 
   # Linting
   effective_dart: ^1.2.4
 
   # Testing
-  bloc_test: ^5.0.0
+  bloc_test: ^7.0.4
   mockito: ^4.1.1
 
 flutter:

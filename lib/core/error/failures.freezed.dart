@@ -9,6 +9,7 @@ part of 'failures.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$FailureTearOff {
   const _$FailureTearOff();
 
@@ -40,9 +41,11 @@ class _$FailureTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Failure = _$FailureTearOff();
 
+/// @nodoc
 mixin _$Failure {
   @optionalTypeArgs
   Result when<Result extends Object>(
@@ -80,11 +83,13 @@ mixin _$Failure {
   });
 }
 
+/// @nodoc
 abstract class $FailureCopyWith<$Res> {
   factory $FailureCopyWith(Failure value, $Res Function(Failure) then) =
       _$FailureCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$FailureCopyWithImpl<$Res> implements $FailureCopyWith<$Res> {
   _$FailureCopyWithImpl(this._value, this._then);
 
@@ -93,11 +98,13 @@ class _$FailureCopyWithImpl<$Res> implements $FailureCopyWith<$Res> {
   final $Res Function(Failure) _then;
 }
 
+/// @nodoc
 abstract class _$FailureCopyWith<$Res> {
   factory _$FailureCopyWith(_Failure value, $Res Function(_Failure) then) =
       __$FailureCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$FailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
     implements _$FailureCopyWith<$Res> {
   __$FailureCopyWithImpl(_Failure _value, $Res Function(_Failure) _then)
@@ -107,6 +114,7 @@ class __$FailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
   _Failure get _value => super._value as _Failure;
 }
 
+/// @nodoc
 class _$_Failure implements _Failure {
   const _$_Failure();
 
@@ -196,12 +204,14 @@ abstract class _Failure implements Failure {
   const factory _Failure() = _$_Failure;
 }
 
+/// @nodoc
 abstract class $CacheFailureCopyWith<$Res> {
   factory $CacheFailureCopyWith(
           CacheFailure value, $Res Function(CacheFailure) then) =
       _$CacheFailureCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$CacheFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
     implements $CacheFailureCopyWith<$Res> {
   _$CacheFailureCopyWithImpl(
@@ -212,6 +222,7 @@ class _$CacheFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
   CacheFailure get _value => super._value as CacheFailure;
 }
 
+/// @nodoc
 class _$CacheFailure implements CacheFailure {
   const _$CacheFailure();
 
@@ -301,12 +312,14 @@ abstract class CacheFailure implements Failure {
   const factory CacheFailure() = _$CacheFailure;
 }
 
+/// @nodoc
 abstract class $CryptoFailureCopyWith<$Res> {
   factory $CryptoFailureCopyWith(
           CryptoFailure value, $Res Function(CryptoFailure) then) =
       _$CryptoFailureCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$CryptoFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
     implements $CryptoFailureCopyWith<$Res> {
   _$CryptoFailureCopyWithImpl(
@@ -317,6 +330,7 @@ class _$CryptoFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
   CryptoFailure get _value => super._value as CryptoFailure;
 }
 
+/// @nodoc
 class _$CryptoFailure implements CryptoFailure {
   const _$CryptoFailure();
 
@@ -406,12 +420,14 @@ abstract class CryptoFailure implements Failure {
   const factory CryptoFailure() = _$CryptoFailure;
 }
 
+/// @nodoc
 abstract class $ServerFailureCopyWith<$Res> {
   factory $ServerFailureCopyWith(
           ServerFailure value, $Res Function(ServerFailure) then) =
       _$ServerFailureCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$ServerFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
     implements $ServerFailureCopyWith<$Res> {
   _$ServerFailureCopyWithImpl(
@@ -422,6 +438,7 @@ class _$ServerFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
   ServerFailure get _value => super._value as ServerFailure;
 }
 
+/// @nodoc
 class _$ServerFailure implements ServerFailure {
   const _$ServerFailure();
 
@@ -511,6 +528,7 @@ abstract class ServerFailure implements Failure {
   const factory ServerFailure() = _$ServerFailure;
 }
 
+/// @nodoc
 abstract class $TwoFactorRequiredCopyWith<$Res> {
   factory $TwoFactorRequiredCopyWith(
           TwoFactorRequired value, $Res Function(TwoFactorRequired) then) =
@@ -518,6 +536,7 @@ abstract class $TwoFactorRequiredCopyWith<$Res> {
   $Res call({int type});
 }
 
+/// @nodoc
 class _$TwoFactorRequiredCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
     implements $TwoFactorRequiredCopyWith<$Res> {
   _$TwoFactorRequiredCopyWithImpl(
@@ -537,6 +556,7 @@ class _$TwoFactorRequiredCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$TwoFactorRequired implements TwoFactorRequired {
   const _$TwoFactorRequired(this.type) : assert(type != null);
 

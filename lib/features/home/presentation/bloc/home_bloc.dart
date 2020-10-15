@@ -15,13 +15,10 @@ part 'home_state.dart';
 
 @injectable
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
-  HomeBloc(this._getSync, this._biometricAuth);
+  HomeBloc(this._getSync, this._biometricAuth) : super(HomeState.loading());
 
   final IBiometricAuth _biometricAuth;
   final GetSyncUseCase _getSync;
-
-  @override
-  HomeState get initialState => HomeState.loading();
 
   @override
   Stream<HomeState> mapEventToState(

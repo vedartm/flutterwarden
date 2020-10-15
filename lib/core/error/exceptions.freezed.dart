@@ -9,6 +9,7 @@ part of 'exceptions.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$TwoFactorExceptionTearOff {
   const _$TwoFactorExceptionTearOff();
 
@@ -20,15 +21,18 @@ class _$TwoFactorExceptionTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TwoFactorException = _$TwoFactorExceptionTearOff();
 
+/// @nodoc
 mixin _$TwoFactorException {
   int get twoFactorProvider;
 
   $TwoFactorExceptionCopyWith<TwoFactorException> get copyWith;
 }
 
+/// @nodoc
 abstract class $TwoFactorExceptionCopyWith<$Res> {
   factory $TwoFactorExceptionCopyWith(
           TwoFactorException value, $Res Function(TwoFactorException) then) =
@@ -36,6 +40,7 @@ abstract class $TwoFactorExceptionCopyWith<$Res> {
   $Res call({int twoFactorProvider});
 }
 
+/// @nodoc
 class _$TwoFactorExceptionCopyWithImpl<$Res>
     implements $TwoFactorExceptionCopyWith<$Res> {
   _$TwoFactorExceptionCopyWithImpl(this._value, this._then);
@@ -56,6 +61,7 @@ class _$TwoFactorExceptionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TwoFactorExceptionCopyWith<$Res>
     implements $TwoFactorExceptionCopyWith<$Res> {
   factory _$TwoFactorExceptionCopyWith(
@@ -65,6 +71,7 @@ abstract class _$TwoFactorExceptionCopyWith<$Res>
   $Res call({int twoFactorProvider});
 }
 
+/// @nodoc
 class __$TwoFactorExceptionCopyWithImpl<$Res>
     extends _$TwoFactorExceptionCopyWithImpl<$Res>
     implements _$TwoFactorExceptionCopyWith<$Res> {
@@ -87,6 +94,7 @@ class __$TwoFactorExceptionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_TwoFactorException implements _TwoFactorException {
   const _$_TwoFactorException({@required this.twoFactorProvider})
       : assert(twoFactorProvider != null);

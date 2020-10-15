@@ -12,6 +12,7 @@ LoginModel _$LoginModelFromJson(Map<String, dynamic> json) {
   return _LoginModel.fromJson(json);
 }
 
+/// @nodoc
 class _$LoginModelTearOff {
   const _$LoginModelTearOff();
 
@@ -28,11 +29,18 @@ class _$LoginModelTearOff {
       password: password,
     );
   }
+
+// ignore: unused_element
+  LoginModel fromJson(Map<String, Object> json) {
+    return LoginModel.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $LoginModel = _$LoginModelTearOff();
 
+/// @nodoc
 mixin _$LoginModel {
   @nullable
   @JsonKey(name: 'Uri')
@@ -49,6 +57,7 @@ mixin _$LoginModel {
   $LoginModelCopyWith<LoginModel> get copyWith;
 }
 
+/// @nodoc
 abstract class $LoginModelCopyWith<$Res> {
   factory $LoginModelCopyWith(
           LoginModel value, $Res Function(LoginModel) then) =
@@ -60,6 +69,7 @@ abstract class $LoginModelCopyWith<$Res> {
       @JsonKey(name: 'Password') String password});
 }
 
+/// @nodoc
 class _$LoginModelCopyWithImpl<$Res> implements $LoginModelCopyWith<$Res> {
   _$LoginModelCopyWithImpl(this._value, this._then);
 
@@ -83,6 +93,7 @@ class _$LoginModelCopyWithImpl<$Res> implements $LoginModelCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$LoginModelCopyWith<$Res> implements $LoginModelCopyWith<$Res> {
   factory _$LoginModelCopyWith(
           _LoginModel value, $Res Function(_LoginModel) then) =
@@ -95,6 +106,7 @@ abstract class _$LoginModelCopyWith<$Res> implements $LoginModelCopyWith<$Res> {
       @JsonKey(name: 'Password') String password});
 }
 
+/// @nodoc
 class __$LoginModelCopyWithImpl<$Res> extends _$LoginModelCopyWithImpl<$Res>
     implements _$LoginModelCopyWith<$Res> {
   __$LoginModelCopyWithImpl(
@@ -121,6 +133,8 @@ class __$LoginModelCopyWithImpl<$Res> extends _$LoginModelCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_LoginModel implements _LoginModel {
   const _$_LoginModel(
       {@required @nullable @JsonKey(name: 'Uri') this.uri,

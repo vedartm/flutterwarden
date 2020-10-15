@@ -12,6 +12,7 @@ SyncModel _$SyncModelFromJson(Map<String, dynamic> json) {
   return _SyncModel.fromJson(json);
 }
 
+/// @nodoc
 class _$SyncModelTearOff {
   const _$SyncModelTearOff();
 
@@ -24,11 +25,18 @@ class _$SyncModelTearOff {
       ciphers: ciphers,
     );
   }
+
+// ignore: unused_element
+  SyncModel fromJson(Map<String, Object> json) {
+    return SyncModel.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $SyncModel = _$SyncModelTearOff();
 
+/// @nodoc
 mixin _$SyncModel {
   @JsonKey(name: 'Profile')
   ProfileModel get profile;
@@ -39,6 +47,7 @@ mixin _$SyncModel {
   $SyncModelCopyWith<SyncModel> get copyWith;
 }
 
+/// @nodoc
 abstract class $SyncModelCopyWith<$Res> {
   factory $SyncModelCopyWith(SyncModel value, $Res Function(SyncModel) then) =
       _$SyncModelCopyWithImpl<$Res>;
@@ -49,6 +58,7 @@ abstract class $SyncModelCopyWith<$Res> {
   $ProfileModelCopyWith<$Res> get profile;
 }
 
+/// @nodoc
 class _$SyncModelCopyWithImpl<$Res> implements $SyncModelCopyWith<$Res> {
   _$SyncModelCopyWithImpl(this._value, this._then);
 
@@ -79,6 +89,7 @@ class _$SyncModelCopyWithImpl<$Res> implements $SyncModelCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$SyncModelCopyWith<$Res> implements $SyncModelCopyWith<$Res> {
   factory _$SyncModelCopyWith(
           _SyncModel value, $Res Function(_SyncModel) then) =
@@ -92,6 +103,7 @@ abstract class _$SyncModelCopyWith<$Res> implements $SyncModelCopyWith<$Res> {
   $ProfileModelCopyWith<$Res> get profile;
 }
 
+/// @nodoc
 class __$SyncModelCopyWithImpl<$Res> extends _$SyncModelCopyWithImpl<$Res>
     implements _$SyncModelCopyWith<$Res> {
   __$SyncModelCopyWithImpl(_SyncModel _value, $Res Function(_SyncModel) _then)
@@ -114,6 +126,8 @@ class __$SyncModelCopyWithImpl<$Res> extends _$SyncModelCopyWithImpl<$Res>
 }
 
 @JsonSerializable(explicitToJson: true)
+
+/// @nodoc
 class _$_SyncModel implements _SyncModel {
   const _$_SyncModel(
       {@required @JsonKey(name: 'Profile') this.profile,

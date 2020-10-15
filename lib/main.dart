@@ -6,13 +6,13 @@ import 'package:injectable/injectable.dart';
 import 'core/injection/injection.dart';
 import 'core/routes/router.gr.dart';
 import 'core/ui/themes.dart';
-import 'core/util/simple_bloc_delegate.dart';
+import 'core/util/simple_bloc_observer.dart';
 import 'features/auth/presentation/bloc/auth_bloc.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await configureInjection(Environment.prod);
-  BlocSupervisor.delegate = SimpleBlocDelegate(getIt());
+  Bloc.observer = SimpleBlocObserver(getIt());
   runApp(FWApp());
 }
 

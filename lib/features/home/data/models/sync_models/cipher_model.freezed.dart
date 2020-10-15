@@ -12,6 +12,7 @@ CipherModel _$CipherModelFromJson(Map<String, dynamic> json) {
   return _CipherModel.fromJson(json);
 }
 
+/// @nodoc
 class _$CipherModelTearOff {
   const _$CipherModelTearOff();
 
@@ -30,18 +31,26 @@ class _$CipherModelTearOff {
       login: login,
     );
   }
+
+// ignore: unused_element
+  CipherModel fromJson(Map<String, Object> json) {
+    return CipherModel.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $CipherModel = _$CipherModelTearOff();
 
+/// @nodoc
 mixin _$CipherModel {
   @JsonKey(name: 'Id')
   String get id;
   @JsonKey(name: 'Type')
   int get type;
   @JsonKey(name: 'Name')
-  String get name;
+  String get name; // @JsonKey(name: 'Notes') @required String notes,
+// @JsonKey(name: 'Card') @required String card,
   @JsonKey(name: 'Favorite')
   bool get favourite;
   @JsonKey(name: 'Login')
@@ -51,6 +60,7 @@ mixin _$CipherModel {
   $CipherModelCopyWith<CipherModel> get copyWith;
 }
 
+/// @nodoc
 abstract class $CipherModelCopyWith<$Res> {
   factory $CipherModelCopyWith(
           CipherModel value, $Res Function(CipherModel) then) =
@@ -65,6 +75,7 @@ abstract class $CipherModelCopyWith<$Res> {
   $LoginModelCopyWith<$Res> get login;
 }
 
+/// @nodoc
 class _$CipherModelCopyWithImpl<$Res> implements $CipherModelCopyWith<$Res> {
   _$CipherModelCopyWithImpl(this._value, this._then);
 
@@ -100,6 +111,7 @@ class _$CipherModelCopyWithImpl<$Res> implements $CipherModelCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$CipherModelCopyWith<$Res>
     implements $CipherModelCopyWith<$Res> {
   factory _$CipherModelCopyWith(
@@ -117,6 +129,7 @@ abstract class _$CipherModelCopyWith<$Res>
   $LoginModelCopyWith<$Res> get login;
 }
 
+/// @nodoc
 class __$CipherModelCopyWithImpl<$Res> extends _$CipherModelCopyWithImpl<$Res>
     implements _$CipherModelCopyWith<$Res> {
   __$CipherModelCopyWithImpl(
@@ -145,6 +158,8 @@ class __$CipherModelCopyWithImpl<$Res> extends _$CipherModelCopyWithImpl<$Res>
 }
 
 @JsonSerializable(explicitToJson: true)
+
+/// @nodoc
 class _$_CipherModel implements _CipherModel {
   const _$_CipherModel(
       {@required @JsonKey(name: 'Id') this.id,
@@ -170,7 +185,8 @@ class _$_CipherModel implements _CipherModel {
   @override
   @JsonKey(name: 'Name')
   final String name;
-  @override
+  @override // @JsonKey(name: 'Notes') @required String notes,
+// @JsonKey(name: 'Card') @required String card,
   @JsonKey(name: 'Favorite')
   final bool favourite;
   @override
@@ -238,7 +254,8 @@ abstract class _CipherModel implements CipherModel {
   @override
   @JsonKey(name: 'Name')
   String get name;
-  @override
+  @override // @JsonKey(name: 'Notes') @required String notes,
+// @JsonKey(name: 'Card') @required String card,
   @JsonKey(name: 'Favorite')
   bool get favourite;
   @override

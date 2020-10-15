@@ -9,6 +9,7 @@ part of 'profile.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$ProfileTearOff {
   const _$ProfileTearOff();
 
@@ -33,9 +34,11 @@ class _$ProfileTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Profile = _$ProfileTearOff();
 
+/// @nodoc
 mixin _$Profile {
   String get id;
   String get name;
@@ -49,6 +52,7 @@ mixin _$Profile {
   $ProfileCopyWith<Profile> get copyWith;
 }
 
+/// @nodoc
 abstract class $ProfileCopyWith<$Res> {
   factory $ProfileCopyWith(Profile value, $Res Function(Profile) then) =
       _$ProfileCopyWithImpl<$Res>;
@@ -62,6 +66,7 @@ abstract class $ProfileCopyWith<$Res> {
       String securityStamp});
 }
 
+/// @nodoc
 class _$ProfileCopyWithImpl<$Res> implements $ProfileCopyWith<$Res> {
   _$ProfileCopyWithImpl(this._value, this._then);
 
@@ -96,6 +101,7 @@ class _$ProfileCopyWithImpl<$Res> implements $ProfileCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ProfileCopyWith<$Res> implements $ProfileCopyWith<$Res> {
   factory _$ProfileCopyWith(_Profile value, $Res Function(_Profile) then) =
       __$ProfileCopyWithImpl<$Res>;
@@ -110,6 +116,7 @@ abstract class _$ProfileCopyWith<$Res> implements $ProfileCopyWith<$Res> {
       String securityStamp});
 }
 
+/// @nodoc
 class __$ProfileCopyWithImpl<$Res> extends _$ProfileCopyWithImpl<$Res>
     implements _$ProfileCopyWith<$Res> {
   __$ProfileCopyWithImpl(_Profile _value, $Res Function(_Profile) _then)
@@ -145,6 +152,7 @@ class __$ProfileCopyWithImpl<$Res> extends _$ProfileCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_Profile implements _Profile {
   const _$_Profile(
       {@required this.id,

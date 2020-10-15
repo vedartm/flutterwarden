@@ -48,7 +48,7 @@ class Router extends RouterBase {
       );
     },
     HomePage: (data) {
-      var args = data.getArgs<HomePageArguments>(nullOk: false);
+      final args = data.getArgs<HomePageArguments>(nullOk: false);
       return MaterialPageRoute<dynamic>(
         builder: (context) => HomePage(
           key: args.key,

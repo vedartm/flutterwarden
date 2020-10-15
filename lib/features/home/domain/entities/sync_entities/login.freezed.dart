@@ -9,6 +9,7 @@ part of 'login.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$LoginTearOff {
   const _$LoginTearOff();
 
@@ -27,9 +28,11 @@ class _$LoginTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Login = _$LoginTearOff();
 
+/// @nodoc
 mixin _$Login {
   @nullable
   String get uri;
@@ -41,6 +44,7 @@ mixin _$Login {
   $LoginCopyWith<Login> get copyWith;
 }
 
+/// @nodoc
 abstract class $LoginCopyWith<$Res> {
   factory $LoginCopyWith(Login value, $Res Function(Login) then) =
       _$LoginCopyWithImpl<$Res>;
@@ -51,6 +55,7 @@ abstract class $LoginCopyWith<$Res> {
       String password});
 }
 
+/// @nodoc
 class _$LoginCopyWithImpl<$Res> implements $LoginCopyWith<$Res> {
   _$LoginCopyWithImpl(this._value, this._then);
 
@@ -74,6 +79,7 @@ class _$LoginCopyWithImpl<$Res> implements $LoginCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$LoginCopyWith<$Res> implements $LoginCopyWith<$Res> {
   factory _$LoginCopyWith(_Login value, $Res Function(_Login) then) =
       __$LoginCopyWithImpl<$Res>;
@@ -85,6 +91,7 @@ abstract class _$LoginCopyWith<$Res> implements $LoginCopyWith<$Res> {
       String password});
 }
 
+/// @nodoc
 class __$LoginCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res>
     implements _$LoginCopyWith<$Res> {
   __$LoginCopyWithImpl(_Login _value, $Res Function(_Login) _then)
@@ -109,6 +116,7 @@ class __$LoginCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_Login implements _Login {
   const _$_Login(
       {@required @nullable this.uri,

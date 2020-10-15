@@ -9,6 +9,7 @@ part of 'sync.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$SyncTearOff {
   const _$SyncTearOff();
 
@@ -21,9 +22,11 @@ class _$SyncTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Sync = _$SyncTearOff();
 
+/// @nodoc
 mixin _$Sync {
   Profile get profile;
   List<Cipher> get ciphers;
@@ -31,6 +34,7 @@ mixin _$Sync {
   $SyncCopyWith<Sync> get copyWith;
 }
 
+/// @nodoc
 abstract class $SyncCopyWith<$Res> {
   factory $SyncCopyWith(Sync value, $Res Function(Sync) then) =
       _$SyncCopyWithImpl<$Res>;
@@ -39,6 +43,7 @@ abstract class $SyncCopyWith<$Res> {
   $ProfileCopyWith<$Res> get profile;
 }
 
+/// @nodoc
 class _$SyncCopyWithImpl<$Res> implements $SyncCopyWith<$Res> {
   _$SyncCopyWithImpl(this._value, this._then);
 
@@ -68,6 +73,7 @@ class _$SyncCopyWithImpl<$Res> implements $SyncCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$SyncCopyWith<$Res> implements $SyncCopyWith<$Res> {
   factory _$SyncCopyWith(_Sync value, $Res Function(_Sync) then) =
       __$SyncCopyWithImpl<$Res>;
@@ -78,6 +84,7 @@ abstract class _$SyncCopyWith<$Res> implements $SyncCopyWith<$Res> {
   $ProfileCopyWith<$Res> get profile;
 }
 
+/// @nodoc
 class __$SyncCopyWithImpl<$Res> extends _$SyncCopyWithImpl<$Res>
     implements _$SyncCopyWith<$Res> {
   __$SyncCopyWithImpl(_Sync _value, $Res Function(_Sync) _then)
@@ -98,6 +105,7 @@ class __$SyncCopyWithImpl<$Res> extends _$SyncCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_Sync implements _Sync {
   const _$_Sync({@required this.profile, @required this.ciphers})
       : assert(profile != null),

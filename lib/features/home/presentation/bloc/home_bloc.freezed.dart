@@ -9,6 +9,7 @@ part of 'home_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$HomeEventTearOff {
   const _$HomeEventTearOff();
 
@@ -39,9 +40,11 @@ class _$HomeEventTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $HomeEvent = _$HomeEventTearOff();
 
+/// @nodoc
 mixin _$HomeEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -74,11 +77,13 @@ mixin _$HomeEvent {
   });
 }
 
+/// @nodoc
 abstract class $HomeEventCopyWith<$Res> {
   factory $HomeEventCopyWith(HomeEvent value, $Res Function(HomeEvent) then) =
       _$HomeEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$HomeEventCopyWithImpl<$Res> implements $HomeEventCopyWith<$Res> {
   _$HomeEventCopyWithImpl(this._value, this._then);
 
@@ -87,6 +92,7 @@ class _$HomeEventCopyWithImpl<$Res> implements $HomeEventCopyWith<$Res> {
   final $Res Function(HomeEvent) _then;
 }
 
+/// @nodoc
 abstract class $VerificationRequestedCopyWith<$Res> {
   factory $VerificationRequestedCopyWith(VerificationRequested value,
           $Res Function(VerificationRequested) then) =
@@ -94,6 +100,7 @@ abstract class $VerificationRequestedCopyWith<$Res> {
   $Res call({String accessToken});
 }
 
+/// @nodoc
 class _$VerificationRequestedCopyWithImpl<$Res>
     extends _$HomeEventCopyWithImpl<$Res>
     implements $VerificationRequestedCopyWith<$Res> {
@@ -114,6 +121,7 @@ class _$VerificationRequestedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$VerificationRequested implements VerificationRequested {
   const _$VerificationRequested(this.accessToken) : assert(accessToken != null);
 
@@ -211,6 +219,7 @@ abstract class VerificationRequested implements HomeEvent {
   $VerificationRequestedCopyWith<VerificationRequested> get copyWith;
 }
 
+/// @nodoc
 abstract class $SyncRequestedCopyWith<$Res> {
   factory $SyncRequestedCopyWith(
           SyncRequested value, $Res Function(SyncRequested) then) =
@@ -218,6 +227,7 @@ abstract class $SyncRequestedCopyWith<$Res> {
   $Res call({String accessToken});
 }
 
+/// @nodoc
 class _$SyncRequestedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
     implements $SyncRequestedCopyWith<$Res> {
   _$SyncRequestedCopyWithImpl(
@@ -237,6 +247,7 @@ class _$SyncRequestedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$SyncRequested implements SyncRequested {
   const _$SyncRequested(this.accessToken) : assert(accessToken != null);
 
@@ -332,6 +343,7 @@ abstract class SyncRequested implements HomeEvent {
   $SyncRequestedCopyWith<SyncRequested> get copyWith;
 }
 
+/// @nodoc
 abstract class $SearchChangedCopyWith<$Res> {
   factory $SearchChangedCopyWith(
           SearchChanged value, $Res Function(SearchChanged) then) =
@@ -342,6 +354,7 @@ abstract class $SearchChangedCopyWith<$Res> {
   $SyncCopyWith<$Res> get originalSync;
 }
 
+/// @nodoc
 class _$SearchChangedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
     implements $SearchChangedCopyWith<$Res> {
   _$SearchChangedCopyWithImpl(
@@ -388,6 +401,7 @@ class _$SearchChangedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$SearchChanged implements SearchChanged {
   const _$SearchChanged(
       {@required this.filteredSync,
@@ -507,6 +521,7 @@ abstract class SearchChanged implements HomeEvent {
   $SearchChangedCopyWith<SearchChanged> get copyWith;
 }
 
+/// @nodoc
 class _$HomeStateTearOff {
   const _$HomeStateTearOff();
 
@@ -534,9 +549,11 @@ class _$HomeStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $HomeState = _$HomeStateTearOff();
 
+/// @nodoc
 mixin _$HomeState {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -570,11 +587,13 @@ mixin _$HomeState {
   });
 }
 
+/// @nodoc
 abstract class $HomeStateCopyWith<$Res> {
   factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
       _$HomeStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
   _$HomeStateCopyWithImpl(this._value, this._then);
 
@@ -583,11 +602,13 @@ class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
   final $Res Function(HomeState) _then;
 }
 
+/// @nodoc
 abstract class $LoadingCopyWith<$Res> {
   factory $LoadingCopyWith(Loading value, $Res Function(Loading) then) =
       _$LoadingCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$LoadingCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
     implements $LoadingCopyWith<$Res> {
   _$LoadingCopyWithImpl(Loading _value, $Res Function(Loading) _then)
@@ -597,6 +618,7 @@ class _$LoadingCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
   Loading get _value => super._value as Loading;
 }
 
+/// @nodoc
 class _$Loading implements Loading {
   const _$Loading();
 
@@ -680,12 +702,14 @@ abstract class Loading implements HomeState {
   const factory Loading() = _$Loading;
 }
 
+/// @nodoc
 abstract class $VerificationFailedCopyWith<$Res> {
   factory $VerificationFailedCopyWith(
           VerificationFailed value, $Res Function(VerificationFailed) then) =
       _$VerificationFailedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$VerificationFailedCopyWithImpl<$Res>
     extends _$HomeStateCopyWithImpl<$Res>
     implements $VerificationFailedCopyWith<$Res> {
@@ -697,6 +721,7 @@ class _$VerificationFailedCopyWithImpl<$Res>
   VerificationFailed get _value => super._value as VerificationFailed;
 }
 
+/// @nodoc
 class _$VerificationFailed implements VerificationFailed {
   const _$VerificationFailed();
 
@@ -780,12 +805,14 @@ abstract class VerificationFailed implements HomeState {
   const factory VerificationFailed() = _$VerificationFailed;
 }
 
+/// @nodoc
 abstract class $SyncFailedCopyWith<$Res> {
   factory $SyncFailedCopyWith(
           SyncFailed value, $Res Function(SyncFailed) then) =
       _$SyncFailedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$SyncFailedCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
     implements $SyncFailedCopyWith<$Res> {
   _$SyncFailedCopyWithImpl(SyncFailed _value, $Res Function(SyncFailed) _then)
@@ -795,6 +822,7 @@ class _$SyncFailedCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
   SyncFailed get _value => super._value as SyncFailed;
 }
 
+/// @nodoc
 class _$SyncFailed implements SyncFailed {
   const _$SyncFailed();
 
@@ -878,6 +906,7 @@ abstract class SyncFailed implements HomeState {
   const factory SyncFailed() = _$SyncFailed;
 }
 
+/// @nodoc
 abstract class $SyncedCopyWith<$Res> {
   factory $SyncedCopyWith(Synced value, $Res Function(Synced) then) =
       _$SyncedCopyWithImpl<$Res>;
@@ -887,6 +916,7 @@ abstract class $SyncedCopyWith<$Res> {
   $SyncCopyWith<$Res> get filteredSync;
 }
 
+/// @nodoc
 class _$SyncedCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
     implements $SyncedCopyWith<$Res> {
   _$SyncedCopyWithImpl(Synced _value, $Res Function(Synced) _then)
@@ -929,6 +959,7 @@ class _$SyncedCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$Synced implements Synced {
   const _$Synced({@required this.originalSync, @required this.filteredSync})
       : assert(originalSync != null),

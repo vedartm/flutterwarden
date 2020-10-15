@@ -9,6 +9,7 @@ part of 'login_form_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$LoginFormEventTearOff {
   const _$LoginFormEventTearOff();
 
@@ -52,9 +53,11 @@ class _$LoginFormEventTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $LoginFormEvent = _$LoginFormEventTearOff();
 
+/// @nodoc
 mixin _$LoginFormEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -102,12 +105,14 @@ mixin _$LoginFormEvent {
   });
 }
 
+/// @nodoc
 abstract class $LoginFormEventCopyWith<$Res> {
   factory $LoginFormEventCopyWith(
           LoginFormEvent value, $Res Function(LoginFormEvent) then) =
       _$LoginFormEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$LoginFormEventCopyWithImpl<$Res>
     implements $LoginFormEventCopyWith<$Res> {
   _$LoginFormEventCopyWithImpl(this._value, this._then);
@@ -117,6 +122,7 @@ class _$LoginFormEventCopyWithImpl<$Res>
   final $Res Function(LoginFormEvent) _then;
 }
 
+/// @nodoc
 abstract class $EmailChangedCopyWith<$Res> {
   factory $EmailChangedCopyWith(
           EmailChanged value, $Res Function(EmailChanged) then) =
@@ -124,6 +130,7 @@ abstract class $EmailChangedCopyWith<$Res> {
   $Res call({String emailStr});
 }
 
+/// @nodoc
 class _$EmailChangedCopyWithImpl<$Res>
     extends _$LoginFormEventCopyWithImpl<$Res>
     implements $EmailChangedCopyWith<$Res> {
@@ -144,6 +151,7 @@ class _$EmailChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$EmailChanged implements EmailChanged {
   const _$EmailChanged(this.emailStr) : assert(emailStr != null);
 
@@ -260,6 +268,7 @@ abstract class EmailChanged implements LoginFormEvent {
   $EmailChangedCopyWith<EmailChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $PasswordChangedCopyWith<$Res> {
   factory $PasswordChangedCopyWith(
           PasswordChanged value, $Res Function(PasswordChanged) then) =
@@ -267,6 +276,7 @@ abstract class $PasswordChangedCopyWith<$Res> {
   $Res call({String passwordStr});
 }
 
+/// @nodoc
 class _$PasswordChangedCopyWithImpl<$Res>
     extends _$LoginFormEventCopyWithImpl<$Res>
     implements $PasswordChangedCopyWith<$Res> {
@@ -287,6 +297,7 @@ class _$PasswordChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$PasswordChanged implements PasswordChanged {
   const _$PasswordChanged(this.passwordStr) : assert(passwordStr != null);
 
@@ -403,6 +414,7 @@ abstract class PasswordChanged implements LoginFormEvent {
   $PasswordChangedCopyWith<PasswordChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $TwoFactorTokenChangedCopyWith<$Res> {
   factory $TwoFactorTokenChangedCopyWith(TwoFactorTokenChanged value,
           $Res Function(TwoFactorTokenChanged) then) =
@@ -410,6 +422,7 @@ abstract class $TwoFactorTokenChangedCopyWith<$Res> {
   $Res call({String tokenStr});
 }
 
+/// @nodoc
 class _$TwoFactorTokenChangedCopyWithImpl<$Res>
     extends _$LoginFormEventCopyWithImpl<$Res>
     implements $TwoFactorTokenChangedCopyWith<$Res> {
@@ -430,6 +443,7 @@ class _$TwoFactorTokenChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$TwoFactorTokenChanged implements TwoFactorTokenChanged {
   const _$TwoFactorTokenChanged(this.tokenStr) : assert(tokenStr != null);
 
@@ -548,6 +562,7 @@ abstract class TwoFactorTokenChanged implements LoginFormEvent {
   $TwoFactorTokenChangedCopyWith<TwoFactorTokenChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $TwoFactorProviderSavedCopyWith<$Res> {
   factory $TwoFactorProviderSavedCopyWith(TwoFactorProviderSaved value,
           $Res Function(TwoFactorProviderSaved) then) =
@@ -555,6 +570,7 @@ abstract class $TwoFactorProviderSavedCopyWith<$Res> {
   $Res call({int provider});
 }
 
+/// @nodoc
 class _$TwoFactorProviderSavedCopyWithImpl<$Res>
     extends _$LoginFormEventCopyWithImpl<$Res>
     implements $TwoFactorProviderSavedCopyWith<$Res> {
@@ -575,6 +591,7 @@ class _$TwoFactorProviderSavedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$TwoFactorProviderSaved implements TwoFactorProviderSaved {
   const _$TwoFactorProviderSaved(this.provider) : assert(provider != null);
 
@@ -692,6 +709,7 @@ abstract class TwoFactorProviderSaved implements LoginFormEvent {
   $TwoFactorProviderSavedCopyWith<TwoFactorProviderSaved> get copyWith;
 }
 
+/// @nodoc
 abstract class $SignInWithEmailAndPasswordPressedCopyWith<$Res> {
   factory $SignInWithEmailAndPasswordPressedCopyWith(
           SignInWithEmailAndPasswordPressed value,
@@ -699,6 +717,7 @@ abstract class $SignInWithEmailAndPasswordPressedCopyWith<$Res> {
       _$SignInWithEmailAndPasswordPressedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$SignInWithEmailAndPasswordPressedCopyWithImpl<$Res>
     extends _$LoginFormEventCopyWithImpl<$Res>
     implements $SignInWithEmailAndPasswordPressedCopyWith<$Res> {
@@ -712,6 +731,7 @@ class _$SignInWithEmailAndPasswordPressedCopyWithImpl<$Res>
       super._value as SignInWithEmailAndPasswordPressed;
 }
 
+/// @nodoc
 class _$SignInWithEmailAndPasswordPressed
     implements SignInWithEmailAndPasswordPressed {
   const _$SignInWithEmailAndPasswordPressed();
@@ -816,6 +836,7 @@ abstract class SignInWithEmailAndPasswordPressed implements LoginFormEvent {
       _$SignInWithEmailAndPasswordPressed;
 }
 
+/// @nodoc
 abstract class $SignInWithEmailPasswordAndTokenPressedCopyWith<$Res> {
   factory $SignInWithEmailPasswordAndTokenPressedCopyWith(
           SignInWithEmailPasswordAndTokenPressed value,
@@ -823,6 +844,7 @@ abstract class $SignInWithEmailPasswordAndTokenPressedCopyWith<$Res> {
       _$SignInWithEmailPasswordAndTokenPressedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$SignInWithEmailPasswordAndTokenPressedCopyWithImpl<$Res>
     extends _$LoginFormEventCopyWithImpl<$Res>
     implements $SignInWithEmailPasswordAndTokenPressedCopyWith<$Res> {
@@ -837,6 +859,7 @@ class _$SignInWithEmailPasswordAndTokenPressedCopyWithImpl<$Res>
       super._value as SignInWithEmailPasswordAndTokenPressed;
 }
 
+/// @nodoc
 class _$SignInWithEmailPasswordAndTokenPressed
     implements SignInWithEmailPasswordAndTokenPressed {
   const _$SignInWithEmailPasswordAndTokenPressed();
@@ -942,6 +965,7 @@ abstract class SignInWithEmailPasswordAndTokenPressed
       _$SignInWithEmailPasswordAndTokenPressed;
 }
 
+/// @nodoc
 class _$LoginFormStateTearOff {
   const _$LoginFormStateTearOff();
 
@@ -983,9 +1007,11 @@ class _$LoginFormStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $LoginFormState = _$LoginFormStateTearOff();
 
+/// @nodoc
 mixin _$LoginFormState {
   String get emailAddress;
   String get password;
@@ -1001,6 +1027,7 @@ mixin _$LoginFormState {
   $LoginFormStateCopyWith<LoginFormState> get copyWith;
 }
 
+/// @nodoc
 abstract class $LoginFormStateCopyWith<$Res> {
   factory $LoginFormStateCopyWith(
           LoginFormState value, $Res Function(LoginFormState) then) =
@@ -1018,6 +1045,7 @@ abstract class $LoginFormStateCopyWith<$Res> {
       Option<Either<Failure, LoginResponse>> auth2faFailureOrSuccessOption});
 }
 
+/// @nodoc
 class _$LoginFormStateCopyWithImpl<$Res>
     implements $LoginFormStateCopyWith<$Res> {
   _$LoginFormStateCopyWithImpl(this._value, this._then);
@@ -1071,6 +1099,7 @@ class _$LoginFormStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$LoginFormStateCopyWith<$Res>
     implements $LoginFormStateCopyWith<$Res> {
   factory _$LoginFormStateCopyWith(
@@ -1090,6 +1119,7 @@ abstract class _$LoginFormStateCopyWith<$Res>
       Option<Either<Failure, LoginResponse>> auth2faFailureOrSuccessOption});
 }
 
+/// @nodoc
 class __$LoginFormStateCopyWithImpl<$Res>
     extends _$LoginFormStateCopyWithImpl<$Res>
     implements _$LoginFormStateCopyWith<$Res> {
@@ -1145,6 +1175,7 @@ class __$LoginFormStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_LoginFormState implements _LoginFormState {
   const _$_LoginFormState(
       {@required this.emailAddress,

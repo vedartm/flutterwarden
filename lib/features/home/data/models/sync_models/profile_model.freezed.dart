@@ -12,6 +12,7 @@ ProfileModel _$ProfileModelFromJson(Map<String, dynamic> json) {
   return _ProfileModel.fromJson(json);
 }
 
+/// @nodoc
 class _$ProfileModelTearOff {
   const _$ProfileModelTearOff();
 
@@ -49,11 +50,18 @@ class _$ProfileModelTearOff {
       securityStamp: securityStamp,
     );
   }
+
+// ignore: unused_element
+  ProfileModel fromJson(Map<String, Object> json) {
+    return ProfileModel.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ProfileModel = _$ProfileModelTearOff();
 
+/// @nodoc
 mixin _$ProfileModel {
   @JsonKey(name: 'Id')
   String get id;
@@ -75,6 +83,7 @@ mixin _$ProfileModel {
   $ProfileModelCopyWith<ProfileModel> get copyWith;
 }
 
+/// @nodoc
 abstract class $ProfileModelCopyWith<$Res> {
   factory $ProfileModelCopyWith(
           ProfileModel value, $Res Function(ProfileModel) then) =
@@ -89,6 +98,7 @@ abstract class $ProfileModelCopyWith<$Res> {
       @JsonKey(name: 'SecurityStamp') String securityStamp});
 }
 
+/// @nodoc
 class _$ProfileModelCopyWithImpl<$Res> implements $ProfileModelCopyWith<$Res> {
   _$ProfileModelCopyWithImpl(this._value, this._then);
 
@@ -123,6 +133,7 @@ class _$ProfileModelCopyWithImpl<$Res> implements $ProfileModelCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ProfileModelCopyWith<$Res>
     implements $ProfileModelCopyWith<$Res> {
   factory _$ProfileModelCopyWith(
@@ -139,6 +150,7 @@ abstract class _$ProfileModelCopyWith<$Res>
       @JsonKey(name: 'SecurityStamp') String securityStamp});
 }
 
+/// @nodoc
 class __$ProfileModelCopyWithImpl<$Res> extends _$ProfileModelCopyWithImpl<$Res>
     implements _$ProfileModelCopyWith<$Res> {
   __$ProfileModelCopyWithImpl(
@@ -176,6 +188,8 @@ class __$ProfileModelCopyWithImpl<$Res> extends _$ProfileModelCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ProfileModel implements _ProfileModel {
   const _$_ProfileModel(
       {@required

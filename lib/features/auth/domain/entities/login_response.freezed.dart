@@ -9,6 +9,7 @@ part of 'login_response.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$LoginResponseTearOff {
   const _$LoginResponseTearOff();
 
@@ -27,19 +28,24 @@ class _$LoginResponseTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $LoginResponse = _$LoginResponseTearOff();
 
+/// @nodoc
 mixin _$LoginResponse {
   String get accessToken;
   Duration get expiresAccessTokenIn;
-  String get refreshToken;
+  String
+      get refreshToken; // will be decrypted using $masterKey to get $encKey and $macKey
+// $masterKey = makeKey("p4ssw0rd", "nobody@example.com".downcase, 5000)
   @nullable
   String get key;
 
   $LoginResponseCopyWith<LoginResponse> get copyWith;
 }
 
+/// @nodoc
 abstract class $LoginResponseCopyWith<$Res> {
   factory $LoginResponseCopyWith(
           LoginResponse value, $Res Function(LoginResponse) then) =
@@ -51,6 +57,7 @@ abstract class $LoginResponseCopyWith<$Res> {
       @nullable String key});
 }
 
+/// @nodoc
 class _$LoginResponseCopyWithImpl<$Res>
     implements $LoginResponseCopyWith<$Res> {
   _$LoginResponseCopyWithImpl(this._value, this._then);
@@ -80,6 +87,7 @@ class _$LoginResponseCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$LoginResponseCopyWith<$Res>
     implements $LoginResponseCopyWith<$Res> {
   factory _$LoginResponseCopyWith(
@@ -93,6 +101,7 @@ abstract class _$LoginResponseCopyWith<$Res>
       @nullable String key});
 }
 
+/// @nodoc
 class __$LoginResponseCopyWithImpl<$Res>
     extends _$LoginResponseCopyWithImpl<$Res>
     implements _$LoginResponseCopyWith<$Res> {
@@ -124,6 +133,7 @@ class __$LoginResponseCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_LoginResponse implements _LoginResponse {
   const _$_LoginResponse(
       {@required this.accessToken,
@@ -140,7 +150,8 @@ class _$_LoginResponse implements _LoginResponse {
   final Duration expiresAccessTokenIn;
   @override
   final String refreshToken;
-  @override
+  @override // will be decrypted using $masterKey to get $encKey and $macKey
+// $masterKey = makeKey("p4ssw0rd", "nobody@example.com".downcase, 5000)
   @nullable
   final String key;
 
@@ -192,7 +203,8 @@ abstract class _LoginResponse implements LoginResponse {
   Duration get expiresAccessTokenIn;
   @override
   String get refreshToken;
-  @override
+  @override // will be decrypted using $masterKey to get $encKey and $macKey
+// $masterKey = makeKey("p4ssw0rd", "nobody@example.com".downcase, 5000)
   @nullable
   String get key;
   @override

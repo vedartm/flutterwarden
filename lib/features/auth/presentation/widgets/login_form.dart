@@ -163,7 +163,7 @@ class LoginForm extends StatelessWidget {
       context: context,
       barrierDismissible: false,
       builder: (context) => BlocBuilder<LoginFormBloc, LoginFormState>(
-        bloc: bloc,
+        cubit: bloc,
         builder: (_, state) => AlertDialog(
           backgroundColor: FWColors.scaffoldBackground,
           shape: RoundedRectangleBorder(
