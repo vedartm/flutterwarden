@@ -86,7 +86,9 @@ class LoginForm extends StatelessWidget {
       },
       builder: (context, state) {
         return Form(
-          autovalidate: state.showErrorMessages,
+          autovalidateMode: state.showErrorMessages
+              ? AutovalidateMode.always
+              : AutovalidateMode.disabled,
           child: ListView(
             shrinkWrap: true,
             padding: const EdgeInsets.symmetric(horizontal: FWDimens.padding),

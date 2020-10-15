@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
 
 import 'core/injection/injection.dart';
-import 'core/routes/router.gr.dart';
+import 'core/routes/router.gr.dart' as r;
 import 'core/ui/themes.dart';
 import 'core/util/simple_bloc_observer.dart';
 import 'features/auth/presentation/bloc/auth_bloc.dart';
@@ -32,8 +32,8 @@ class FWApp extends StatelessWidget {
         title: 'FlutterWarden',
         theme: lightTheme,
         darkTheme: darkTheme,
-        builder: ExtendedNavigator<Router>(
-          router: Router(),
+        builder: ExtendedNavigator<r.Router>(
+          router: r.Router(),
         ),
       ),
     );
