@@ -217,29 +217,6 @@ class LoginForm extends StatelessWidget {
     );
   }
 
-  void _showLoadingDialog(BuildContext context) {
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (context) => AlertDialog(
-        backgroundColor: FWColors.scaffoldBackground,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(FWDimens.borderRadius)),
-        content: Row(
-          children: const <Widget>[
-            SizedBox(
-              height: 16,
-              width: 16,
-              child: CircularProgressIndicator(strokeWidth: 2),
-            ),
-            SizedBox(width: 16),
-            Text('Loggin in...')
-          ],
-        ),
-      ),
-    );
-  }
-
   void mapFailures(Failure failure, BuildContext context) {
     failure.maybeMap(
       (value) => null,

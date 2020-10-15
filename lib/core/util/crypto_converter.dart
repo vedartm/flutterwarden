@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
+import 'package:encrypt/encrypt.dart';
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
 import 'package:pointycastle/export.dart';
@@ -54,6 +55,28 @@ class CryptoConverter {
   String makeEncKey(String key) {
     // TODO: Implement
     throw UnimplementedError();
+  }
+
+  String decryptCipher(String cipherString, String key) {
+    if (cipherString[0] != '2') {
+      throw CryptoException();
+    }
+    final list = cipherString.substring(2).split('|');
+    final iv = base64Decode(list[0]);
+    final ct = base64Decode(list[1]);
+    final mac = base64Decode(list[2]);
+
+    final encrypter = Encrypter(AES(
+      Key.fromUtf8(key),
+      mode: AESMode.cbc,
+    ));
+
+    final encrypted = Encrypted.fromUtf8(String.fromCharCodes(ct));
+    final ivector = IV.fromUtf8(String.fromCharCodes(iv));
+
+    final result = encrypter.decrypt(encrypted, iv: ivector);
+
+    return result;
   }
 
   // String getStretchedMasterKey() {}

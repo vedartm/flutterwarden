@@ -53,7 +53,7 @@ class CipherList extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: _isCipherListEmpty(s.filteredSync.ciphers)
+              child: s.filteredSync.ciphers.isEmpty
                   ? Center(child: Text('Sorry the list is empty'))
                   : ListView.separated(
                       padding: const EdgeInsets.only(
@@ -74,6 +74,4 @@ class CipherList extends StatelessWidget {
       ),
     );
   }
-
-  bool _isCipherListEmpty(List<Cipher> ciphers) => ciphers.isEmpty;
 }

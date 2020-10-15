@@ -20,11 +20,6 @@ class HomePage extends StatelessWidget {
           centerTitle: true,
         ),
         body: CipherList(accessToken: accessToken),
-        floatingActionButton: FloatingActionButton(
-          elevation: 4.0,
-          child: const Icon(Icons.add),
-          onPressed: () {},
-        ),
       ),
     );
   }
