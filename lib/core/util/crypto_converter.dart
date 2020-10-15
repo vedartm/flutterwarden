@@ -64,7 +64,7 @@ class CryptoConverter {
     final list = cipherString.substring(2).split('|');
     final iv = base64Decode(list[0]);
     final ct = base64Decode(list[1]);
-    final mac = base64Decode(list[2]);
+    // final mac = base64Decode(list[2]);
 
     final encrypter = Encrypter(AES(
       Key.fromUtf8(key),

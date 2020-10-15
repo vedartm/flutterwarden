@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/ui/dimens.dart';
-import '../../domain/entities/sync_entities/cipher.dart';
 import '../bloc/home_bloc.dart';
 import 'cipher_card.dart';
 
