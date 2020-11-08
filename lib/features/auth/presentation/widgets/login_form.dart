@@ -26,10 +26,10 @@ class LoginForm extends StatelessWidget {
                 (value) => null,
                 twoFactorRequired: (s) {
                   context
-                      .bloc<LoginFormBloc>()
+                      .read<LoginFormBloc>()
                       .add(LoginFormEvent.twoFactorProviderSaved(s.type));
                   _showTwoFactorInputDialog(
-                      context, s.type, context.bloc<LoginFormBloc>());
+                      context, s.type, context.read<LoginFormBloc>());
                 },
                 orElse: () => Scaffold.of(context)
                   ..hideCurrentSnackBar()
@@ -100,7 +100,7 @@ class LoginForm extends StatelessWidget {
                 ),
                 autocorrect: false,
                 onChanged: (value) => context
-                    .bloc<LoginFormBloc>()
+                    .read<LoginFormBloc>()
                     .add(LoginFormEvent.emailChanged(value)),
                 validator: (_) => Validators.isValidEmail(state.emailAddress)
                     ? null
@@ -115,7 +115,7 @@ class LoginForm extends StatelessWidget {
                 obscureText: true,
                 autocorrect: false,
                 onChanged: (value) => context
-                    .bloc<LoginFormBloc>()
+                    .read<LoginFormBloc>()
                     .add(LoginFormEvent.passwordChanged(value)),
                 validator: (_) => Validators.isValidPassword(state.password)
                     ? null
@@ -123,7 +123,7 @@ class LoginForm extends StatelessWidget {
               ),
               const SizedBox(height: 24),
               RaisedButton(
-                onPressed: () => context.bloc<LoginFormBloc>().add(
+                onPressed: () => context.read<LoginFormBloc>().add(
                     const LoginFormEvent.signInWithEmailAndPasswordPressed()),
                 child: (state.isSubmitting)
                     ? const SizedBox(
@@ -224,10 +224,10 @@ class LoginForm extends StatelessWidget {
       (value) => null,
       twoFactorRequired: (s) {
         context
-            .bloc<LoginFormBloc>()
+            .read<LoginFormBloc>()
             .add(LoginFormEvent.twoFactorProviderSaved(s.type));
         _showTwoFactorInputDialog(
-            context, s.type, context.bloc<LoginFormBloc>());
+            context, s.type, context.read<LoginFormBloc>());
       },
       orElse: () => Scaffold.of(context)
         ..hideCurrentSnackBar()

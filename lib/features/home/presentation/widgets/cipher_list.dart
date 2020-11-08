@@ -24,7 +24,7 @@ class CipherList extends StatelessWidget {
               const SizedBox(height: 8),
               FlatButton.icon(
                 onPressed: () => context
-                    .bloc<HomeBloc>()
+                    .read<HomeBloc>()
                     .add(HomeEvent.verificationRequested(accessToken)),
                 icon: Icon(AntIcons.reload),
                 label: Text('Try again'),
@@ -42,7 +42,7 @@ class CipherList extends StatelessWidget {
                   hintText: 'Start typing...',
                   suffixIcon: Icon(AntIcons.search_outline),
                 ),
-                onChanged: (searchTerm) => context.bloc<HomeBloc>().add(
+                onChanged: (searchTerm) => context.read<HomeBloc>().add(
                       HomeEvent.searchChanged(
                         searchTerm: searchTerm,
                         originalSync: s.originalSync,

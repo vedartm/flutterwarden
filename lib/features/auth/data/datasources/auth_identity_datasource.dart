@@ -38,9 +38,7 @@ class AuthIdentityDataSource implements IAuthIdentityDataSource {
       String email, String passwordHash) async {
     final response = await _client.post(
       'https://identity.bitwarden.com/connect/token',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
       body: {
         'grant_type': 'password',
         'username': email,
@@ -50,7 +48,6 @@ class AuthIdentityDataSource implements IAuthIdentityDataSource {
         'deviceType': '0',
       },
     );
-    _logger.d(response.statusCode);
     _logger.d(response.body);
     if (response.statusCode == 200) {
       return LoginResponseModel.fromJson(json.decode(response.body));
@@ -58,7 +55,8 @@ class AuthIdentityDataSource implements IAuthIdentityDataSource {
       final Map<String, dynamic> responseMap = json.decode(response.body);
       responseMap.containsKey('TwoFactorProviders')
           ? throw TwoFactorException(
-              twoFactorProvider: responseMap['TwoFactorProviders'][0])
+              twoFactorProvider:
+                  int.parse(responseMap['TwoFactorProviders'][0]))
           : throw ServerException();
     }
   }
@@ -67,9 +65,7 @@ class AuthIdentityDataSource implements IAuthIdentityDataSource {
   Future<LoginResponseModel> getTokenWhileRefresh(String refreshToken) async {
     final response = await _client.post(
       'https://identity.bitwarden.com/connect/token',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
       body: {
         'grant_type': 'refresh_token',
         'client_id': 'mobile',
@@ -89,9 +85,7 @@ class AuthIdentityDataSource implements IAuthIdentityDataSource {
       String passwordHash, String twoFactorToken, int twoFactorProvider) async {
     final response = await _client.post(
       'https://identity.bitwarden.com/connect/token',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
       body: {
         'grant_type': 'password',
         'username': email,
