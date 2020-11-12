@@ -2,12 +2,11 @@ include: package:effective_dart/analysis_options.yaml
 
 analyzer:
   enable-experiment:
-    - non-nullable
     - extension-methods
 
   exclude:
     - lib/**/*.gr.dart
-    - lib/**/*.iconfig.dart
+    - lib/**/*.config.dart
     - lib/**/*.g.dart
     - lib/**/*.freezed.dart
 
