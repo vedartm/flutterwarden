@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
+import 'package:cryptography/cryptography.dart';
 import 'package:encrypt/encrypt.dart';
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
@@ -52,31 +53,40 @@ class CryptoConverter {
     }
   }
 
-  String makeEncKey(String key) {
+  Future<String> getEncKey(String masterKey) async {
     // TODO: Implement
-    throw UnimplementedError();
+    // throw UnimplementedError();
+    final hkdf = Hkdf(Hmac(sha256));
+    final input = SecretKey([1, 2, 3]);
+    final output = await hkdf.deriveKey(
+      input,
+      outputLength: 32,
+      info: utf8.encode('enc'),
+    );
+    return '';
   }
 
   String decryptCipher(String cipherString, String key) {
-    if (cipherString[0] != '2') {
+    try {
+      if (cipherString[0] != '2') {
+        throw CryptoException();
+      }
+      final list = cipherString.substring(2).split('|');
+
+      // TODO: Calculate CipherString MAC
+      // final mac = base64Decode(list[2]);
+
+      final encrypter = Encrypter(AES(Key.fromBase64(key), mode: AESMode.cbc));
+
+      final encrypted = Encrypted.fromBase64(list[1]);
+      final ivector = IV.fromBase64(list[0]);
+
+      final result = encrypter.decrypt(encrypted, iv: ivector);
+
+      return result;
+    } on Exception {
       throw CryptoException();
     }
-    final list = cipherString.substring(2).split('|');
-    final iv = base64Decode(list[0]);
-    final ct = base64Decode(list[1]);
-    // final mac = base64Decode(list[2]);
-
-    final encrypter = Encrypter(AES(
-      Key.fromUtf8(key),
-      mode: AESMode.cbc,
-    ));
-
-    final encrypted = Encrypted.fromUtf8(String.fromCharCodes(ct));
-    final ivector = IV.fromUtf8(String.fromCharCodes(iv));
-
-    final result = encrypter.decrypt(encrypted, iv: ivector);
-
-    return result;
   }
 
   // String getStretchedMasterKey() {}

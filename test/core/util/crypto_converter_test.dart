@@ -38,5 +38,19 @@ void main() {
         expect(result, 'r5CFRR+n9NQI8a525FY+0BPR0HGOjVJX0cR1KEMnIOo=');
       },
     );
+
+    test(
+      'should decrypt cipher',
+      () async {
+        // arrange
+        const cipherString =
+            '2.+8anbib+QmXhQJ8Egn4ZbA==|pOb8wQPeHBKHD47ZRlzZ6ioHnINYywK4pQS9NwQ3x24=|5PYBD4xbUPmoDx6bBqJmL0mOrZwap0by7nJ6jgJMAJM=';
+        const key = 'lmEWgr+CfkZ1rwA8k/fHxd4Q23rHVCaDNa/ob25a/mQ=';
+        // act
+        final result = cryptoConverter.decryptCipher(cipherString, key);
+        // assert
+        expect(result, 'This is a secret.');
+      },
+    );
   });
 }

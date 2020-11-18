@@ -38,6 +38,7 @@ dependencies:
   # Cryptography
   pointycastle: ^2.0.0
   encrypt: ^4.1.0
+  cryptography: ^0.3.0
 
   # Routing
   auto_route: ^0.6.9
