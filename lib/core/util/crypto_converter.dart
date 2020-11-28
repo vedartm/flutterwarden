@@ -53,17 +53,17 @@ class CryptoConverter {
     }
   }
 
-  Future<String> getEncKey(String masterKey) async {
-    // TODO: Implement
-    // throw UnimplementedError();
+  Future<String> getStretchedKey(String masterKey, String info) async {
     final hkdf = Hkdf(Hmac(sha256));
-    final input = SecretKey([1, 2, 3]);
+    final input = SecretKey(base64.decode(masterKey));
     final output = await hkdf.deriveKey(
       input,
       outputLength: 32,
-      info: utf8.encode('enc'),
+      info: utf8.encode(info),
     );
-    return '';
+    final result = base64Encode(output.extractSync());
+    _logger.d(result);
+    return result;
   }
 
   String decryptCipher(String cipherString, String key) {

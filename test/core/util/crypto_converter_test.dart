@@ -14,13 +14,13 @@ void main() {
       'should return PBKDF2 hashed key',
       () async {
         // arrange
-        const key = 'p4ssw0rd';
-        const salt = 'nobody@example.com';
-        const iterations = 5000;
+        const key = 'warden1234';
+        const salt = 'y7t23ehl24@cloud-mail.top';
+        const iterations = 100000;
         // act
         final result = cryptoConverter.getMasterKey(key, salt, iterations);
         // assert
-        expect(result, 'E4hqYJlt40ZBlO4n8LIaIbY+XCn01coj5RumZjVve6o=');
+        expect(result, 'lU7umhJi2HDW2fkQu2T27tU71mVcnJ0GgPceUX8rZ+g=');
       },
     );
 
@@ -28,14 +28,27 @@ void main() {
       'should return double PBKDF2 hashed password',
       () async {
         // arrange
-        const password = 'p4ssw0rd';
-        const email = 'nobody@example.com';
-        const iterations = 5000;
+        const password = 'warden1234';
+        const email = 'y7t23ehl24@cloud-mail.top';
+        const iterations = 100000;
         // act
         final result =
             cryptoConverter.getMasterPasswordHash(password, email, iterations);
         // assert
-        expect(result, 'r5CFRR+n9NQI8a525FY+0BPR0HGOjVJX0cR1KEMnIOo=');
+        expect(result, 'E9N6imrywR50YO/P8RejIJ2yA351ZiUNRvXA+yGKgK0=');
+      },
+    );
+
+    test(
+      'should strectch master key',
+      () async {
+        // arrange
+        const masterKey = 'lU7umhJi2HDW2fkQu2T27tU71mVcnJ0GgPceUX8rZ+g=';
+        const info = 'enc';
+        // act
+        final result = await cryptoConverter.getStretchedKey(masterKey, info);
+        // assert
+        expect(result, 'fgY2lDfkMRTzYNmRuXE2qUsJnEeOUAWgcknJT15Vkns=');
       },
     );
 
@@ -44,12 +57,12 @@ void main() {
       () async {
         // arrange
         const cipherString =
-            '2.+8anbib+QmXhQJ8Egn4ZbA==|pOb8wQPeHBKHD47ZRlzZ6ioHnINYywK4pQS9NwQ3x24=|5PYBD4xbUPmoDx6bBqJmL0mOrZwap0by7nJ6jgJMAJM=';
-        const key = 'lmEWgr+CfkZ1rwA8k/fHxd4Q23rHVCaDNa/ob25a/mQ=';
+            '2.riY2udm+ytdWJqjBWjUhVQ==|hGu13BRgfixG5DnvQ5BUTaxgeu6qOcTHh7s0GfwS+pd6uL/kcYdI3E1DeY2HlZQJeXe3JuVq7XC16o2txd5DPg==|39lEGzYuuKlSLc8rluri96kGHXYHhx0sLQWs8YX/Lak=';
+        const key = 'xEU6zgdqCh87vlgSZ1ESbELokAT4ItqXYIbtQfDOJpk=';
         // act
         final result = cryptoConverter.decryptCipher(cipherString, key);
         // assert
-        expect(result, 'This is a secret.');
+        expect(result, 'https://cleancoders.com/episode/clean-code-episode-13');
       },
     );
   });
