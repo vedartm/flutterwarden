@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'pre_login_response_model.dart';
 
@@ -8,6 +8,10 @@ part of 'pre_login_response_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 PreLoginResponseModel _$PreLoginResponseModelFromJson(
     Map<String, dynamic> json) {
   return _PreLoginResponseModel.fromJson(json);
@@ -17,35 +21,34 @@ PreLoginResponseModel _$PreLoginResponseModelFromJson(
 class _$PreLoginResponseModelTearOff {
   const _$PreLoginResponseModelTearOff();
 
-// ignore: unused_element
   _PreLoginResponseModel call(
-      {@required @JsonKey(name: 'Kdf') int kdfType,
-      @required @JsonKey(name: 'KdfIterations') int kdfIternationCount}) {
+      {@JsonKey(name: 'Kdf') required int kdfType,
+      @JsonKey(name: 'KdfIterations') required int kdfIternationCount}) {
     return _PreLoginResponseModel(
       kdfType: kdfType,
       kdfIternationCount: kdfIternationCount,
     );
   }
 
-// ignore: unused_element
   PreLoginResponseModel fromJson(Map<String, Object> json) {
     return PreLoginResponseModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PreLoginResponseModel = _$PreLoginResponseModelTearOff();
 
 /// @nodoc
 mixin _$PreLoginResponseModel {
   @JsonKey(name: 'Kdf')
-  int get kdfType;
+  int get kdfType => throw _privateConstructorUsedError;
   @JsonKey(name: 'KdfIterations')
-  int get kdfIternationCount;
+  int get kdfIternationCount => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PreLoginResponseModelCopyWith<PreLoginResponseModel> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PreLoginResponseModelCopyWith<PreLoginResponseModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -69,14 +72,18 @@ class _$PreLoginResponseModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object kdfType = freezed,
-    Object kdfIternationCount = freezed,
+    Object? kdfType = freezed,
+    Object? kdfIternationCount = freezed,
   }) {
     return _then(_value.copyWith(
-      kdfType: kdfType == freezed ? _value.kdfType : kdfType as int,
+      kdfType: kdfType == freezed
+          ? _value.kdfType
+          : kdfType // ignore: cast_nullable_to_non_nullable
+              as int,
       kdfIternationCount: kdfIternationCount == freezed
           ? _value.kdfIternationCount
-          : kdfIternationCount as int,
+          : kdfIternationCount // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -106,27 +113,28 @@ class __$PreLoginResponseModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object kdfType = freezed,
-    Object kdfIternationCount = freezed,
+    Object? kdfType = freezed,
+    Object? kdfIternationCount = freezed,
   }) {
     return _then(_PreLoginResponseModel(
-      kdfType: kdfType == freezed ? _value.kdfType : kdfType as int,
+      kdfType: kdfType == freezed
+          ? _value.kdfType
+          : kdfType // ignore: cast_nullable_to_non_nullable
+              as int,
       kdfIternationCount: kdfIternationCount == freezed
           ? _value.kdfIternationCount
-          : kdfIternationCount as int,
+          : kdfIternationCount // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PreLoginResponseModel implements _PreLoginResponseModel {
   const _$_PreLoginResponseModel(
-      {@required @JsonKey(name: 'Kdf') this.kdfType,
-      @required @JsonKey(name: 'KdfIterations') this.kdfIternationCount})
-      : assert(kdfType != null),
-        assert(kdfIternationCount != null);
+      {@JsonKey(name: 'Kdf') required this.kdfType,
+      @JsonKey(name: 'KdfIterations') required this.kdfIternationCount});
 
   factory _$_PreLoginResponseModel.fromJson(Map<String, dynamic> json) =>
       _$_$_PreLoginResponseModelFromJson(json);
@@ -161,6 +169,7 @@ class _$_PreLoginResponseModel implements _PreLoginResponseModel {
       const DeepCollectionEquality().hash(kdfType) ^
       const DeepCollectionEquality().hash(kdfIternationCount);
 
+  @JsonKey(ignore: true)
   @override
   _$PreLoginResponseModelCopyWith<_PreLoginResponseModel> get copyWith =>
       __$PreLoginResponseModelCopyWithImpl<_PreLoginResponseModel>(
@@ -174,8 +183,8 @@ class _$_PreLoginResponseModel implements _PreLoginResponseModel {
 
 abstract class _PreLoginResponseModel implements PreLoginResponseModel {
   const factory _PreLoginResponseModel(
-          {@required @JsonKey(name: 'Kdf') int kdfType,
-          @required @JsonKey(name: 'KdfIterations') int kdfIternationCount}) =
+          {@JsonKey(name: 'Kdf') required int kdfType,
+          @JsonKey(name: 'KdfIterations') required int kdfIternationCount}) =
       _$_PreLoginResponseModel;
 
   factory _PreLoginResponseModel.fromJson(Map<String, dynamic> json) =
@@ -183,10 +192,12 @@ abstract class _PreLoginResponseModel implements PreLoginResponseModel {
 
   @override
   @JsonKey(name: 'Kdf')
-  int get kdfType;
+  int get kdfType => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'KdfIterations')
-  int get kdfIternationCount;
+  int get kdfIternationCount => throw _privateConstructorUsedError;
   @override
-  _$PreLoginResponseModelCopyWith<_PreLoginResponseModel> get copyWith;
+  @JsonKey(ignore: true)
+  _$PreLoginResponseModelCopyWith<_PreLoginResponseModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

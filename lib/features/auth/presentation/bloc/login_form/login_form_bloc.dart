@@ -53,7 +53,7 @@ class LoginFormBloc extends Bloc<LoginFormEvent, LoginFormState> {
   }
 
   Stream<LoginFormState> _signInWithEmailAndPassword() async* {
-    Either<Failure, LoginResponse> failureOrSuccess;
+    Either<Failure, LoginResponse>? failureOrSuccess;
 
     final isEmailValid = Validators.isValidEmail(state.emailAddress);
     final isPasswordValid = Validators.isValidPassword(state.password);
@@ -77,7 +77,7 @@ class LoginFormBloc extends Bloc<LoginFormEvent, LoginFormState> {
   }
 
   Stream<LoginFormState> _signInWithEmailPasswordAndToken() async* {
-    Either<Failure, LoginResponse> failureOrSuccess;
+    Either<Failure, LoginResponse>? failureOrSuccess;
 
     final isEmailValid = Validators.isValidEmail(state.emailAddress);
     final isPasswordValid = Validators.isValidPassword(state.password);

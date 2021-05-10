@@ -1,5 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:meta/meta.dart';
 
 import '../../domain/entities/sync.dart';
 import 'sync_models/cipher_model.dart';
@@ -9,11 +8,11 @@ part 'sync_model.freezed.dart';
 part 'sync_model.g.dart';
 
 @freezed
-abstract class SyncModel with _$SyncModel {
+class SyncModel with _$SyncModel {
   @JsonSerializable(explicitToJson: true)
   const factory SyncModel({
-    @JsonKey(name: 'Profile') @required ProfileModel profile,
-    @JsonKey(name: 'Ciphers') @required List<CipherModel> ciphers,
+    @JsonKey(name: 'Profile') required ProfileModel profile,
+    @JsonKey(name: 'Ciphers') required List<CipherModel> ciphers,
   }) = _SyncModel;
 
   factory SyncModel.fromJson(Map<String, dynamic> json) =>

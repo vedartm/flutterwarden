@@ -6,10 +6,10 @@ import 'sync_entities/profile.dart';
 part 'sync.freezed.dart';
 
 @freezed
-abstract class Sync with _$Sync {
+class Sync with _$Sync {
   const factory Sync({
-    @required Profile profile,
-    @required List<Cipher> ciphers,
+    required Profile profile,
+    required List<Cipher> ciphers,
   }) = _Sync;
 }
 

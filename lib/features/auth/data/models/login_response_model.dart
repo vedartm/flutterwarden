@@ -6,12 +6,12 @@ part 'login_response_model.freezed.dart';
 part 'login_response_model.g.dart';
 
 @freezed
-abstract class LoginResponseModel with _$LoginResponseModel {
+class LoginResponseModel with _$LoginResponseModel {
   const factory LoginResponseModel({
-    @JsonKey(name: 'access_token') @required String accessToken,
-    @JsonKey(name: 'expires_in') @required Duration expiresAccessTokenIn,
-    @JsonKey(name: 'refresh_token') @required String refreshToken,
-    @JsonKey(name: 'Key') @nullable @required String key,
+    @JsonKey(name: 'access_token') required String accessToken,
+    @JsonKey(name: 'expires_in') required Duration expiresAccessTokenIn,
+    @JsonKey(name: 'refresh_token') required String refreshToken,
+    @JsonKey(name: 'Key') required String? key,
   }) = _LoginResponseModel;
 
   factory LoginResponseModel.fromJson(Map<String, dynamic> json) =>

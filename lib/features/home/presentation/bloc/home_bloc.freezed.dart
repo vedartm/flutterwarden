@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'home_bloc.dart';
 
@@ -9,29 +9,29 @@ part of 'home_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$HomeEventTearOff {
   const _$HomeEventTearOff();
 
-// ignore: unused_element
   VerificationRequested verificationRequested(String accessToken) {
     return VerificationRequested(
       accessToken,
     );
   }
 
-// ignore: unused_element
   SyncRequested syncRequested(String accessToken) {
     return SyncRequested(
       accessToken,
     );
   }
 
-// ignore: unused_element
   SearchChanged searchChanged(
-      {@required Sync filteredSync,
-      @required Sync originalSync,
-      @required String searchTerm}) {
+      {required Sync filteredSync,
+      required Sync originalSync,
+      required String searchTerm}) {
     return SearchChanged(
       filteredSync: filteredSync,
       originalSync: originalSync,
@@ -41,40 +41,44 @@ class _$HomeEventTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $HomeEvent = _$HomeEventTearOff();
 
 /// @nodoc
 mixin _$HomeEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result verificationRequested(String accessToken),
-    @required Result syncRequested(String accessToken),
-    @required
-        Result searchChanged(
-            Sync filteredSync, Sync originalSync, String searchTerm),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function(String accessToken) verificationRequested,
+    required TResult Function(String accessToken) syncRequested,
+    required TResult Function(
+            Sync filteredSync, Sync originalSync, String searchTerm)
+        searchChanged,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result verificationRequested(String accessToken),
-    Result syncRequested(String accessToken),
-    Result searchChanged(
-        Sync filteredSync, Sync originalSync, String searchTerm),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String accessToken)? verificationRequested,
+    TResult Function(String accessToken)? syncRequested,
+    TResult Function(Sync filteredSync, Sync originalSync, String searchTerm)?
+        searchChanged,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result verificationRequested(VerificationRequested value),
-    @required Result syncRequested(SyncRequested value),
-    @required Result searchChanged(SearchChanged value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(VerificationRequested value)
+        verificationRequested,
+    required TResult Function(SyncRequested value) syncRequested,
+    required TResult Function(SearchChanged value) searchChanged,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result verificationRequested(VerificationRequested value),
-    Result syncRequested(SyncRequested value),
-    Result searchChanged(SearchChanged value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(VerificationRequested value)? verificationRequested,
+    TResult Function(SyncRequested value)? syncRequested,
+    TResult Function(SearchChanged value)? searchChanged,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -113,17 +117,21 @@ class _$VerificationRequestedCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object accessToken = freezed,
+    Object? accessToken = freezed,
   }) {
     return _then(VerificationRequested(
-      accessToken == freezed ? _value.accessToken : accessToken as String,
+      accessToken == freezed
+          ? _value.accessToken
+          : accessToken // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$VerificationRequested implements VerificationRequested {
-  const _$VerificationRequested(this.accessToken) : assert(accessToken != null);
+  const _$VerificationRequested(this.accessToken);
 
   @override
   final String accessToken;
@@ -146,6 +154,7 @@ class _$VerificationRequested implements VerificationRequested {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(accessToken);
 
+  @JsonKey(ignore: true)
   @override
   $VerificationRequestedCopyWith<VerificationRequested> get copyWith =>
       _$VerificationRequestedCopyWithImpl<VerificationRequested>(
@@ -153,29 +162,25 @@ class _$VerificationRequested implements VerificationRequested {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result verificationRequested(String accessToken),
-    @required Result syncRequested(String accessToken),
-    @required
-        Result searchChanged(
-            Sync filteredSync, Sync originalSync, String searchTerm),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String accessToken) verificationRequested,
+    required TResult Function(String accessToken) syncRequested,
+    required TResult Function(
+            Sync filteredSync, Sync originalSync, String searchTerm)
+        searchChanged,
   }) {
-    assert(verificationRequested != null);
-    assert(syncRequested != null);
-    assert(searchChanged != null);
     return verificationRequested(accessToken);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result verificationRequested(String accessToken),
-    Result syncRequested(String accessToken),
-    Result searchChanged(
-        Sync filteredSync, Sync originalSync, String searchTerm),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String accessToken)? verificationRequested,
+    TResult Function(String accessToken)? syncRequested,
+    TResult Function(Sync filteredSync, Sync originalSync, String searchTerm)?
+        searchChanged,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (verificationRequested != null) {
       return verificationRequested(accessToken);
     }
@@ -184,26 +189,23 @@ class _$VerificationRequested implements VerificationRequested {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result verificationRequested(VerificationRequested value),
-    @required Result syncRequested(SyncRequested value),
-    @required Result searchChanged(SearchChanged value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(VerificationRequested value)
+        verificationRequested,
+    required TResult Function(SyncRequested value) syncRequested,
+    required TResult Function(SearchChanged value) searchChanged,
   }) {
-    assert(verificationRequested != null);
-    assert(syncRequested != null);
-    assert(searchChanged != null);
     return verificationRequested(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result verificationRequested(VerificationRequested value),
-    Result syncRequested(SyncRequested value),
-    Result searchChanged(SearchChanged value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(VerificationRequested value)? verificationRequested,
+    TResult Function(SyncRequested value)? syncRequested,
+    TResult Function(SearchChanged value)? searchChanged,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (verificationRequested != null) {
       return verificationRequested(this);
     }
@@ -215,8 +217,10 @@ abstract class VerificationRequested implements HomeEvent {
   const factory VerificationRequested(String accessToken) =
       _$VerificationRequested;
 
-  String get accessToken;
-  $VerificationRequestedCopyWith<VerificationRequested> get copyWith;
+  String get accessToken => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $VerificationRequestedCopyWith<VerificationRequested> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -239,17 +243,21 @@ class _$SyncRequestedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object accessToken = freezed,
+    Object? accessToken = freezed,
   }) {
     return _then(SyncRequested(
-      accessToken == freezed ? _value.accessToken : accessToken as String,
+      accessToken == freezed
+          ? _value.accessToken
+          : accessToken // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$SyncRequested implements SyncRequested {
-  const _$SyncRequested(this.accessToken) : assert(accessToken != null);
+  const _$SyncRequested(this.accessToken);
 
   @override
   final String accessToken;
@@ -272,35 +280,32 @@ class _$SyncRequested implements SyncRequested {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(accessToken);
 
+  @JsonKey(ignore: true)
   @override
   $SyncRequestedCopyWith<SyncRequested> get copyWith =>
       _$SyncRequestedCopyWithImpl<SyncRequested>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result verificationRequested(String accessToken),
-    @required Result syncRequested(String accessToken),
-    @required
-        Result searchChanged(
-            Sync filteredSync, Sync originalSync, String searchTerm),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String accessToken) verificationRequested,
+    required TResult Function(String accessToken) syncRequested,
+    required TResult Function(
+            Sync filteredSync, Sync originalSync, String searchTerm)
+        searchChanged,
   }) {
-    assert(verificationRequested != null);
-    assert(syncRequested != null);
-    assert(searchChanged != null);
     return syncRequested(accessToken);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result verificationRequested(String accessToken),
-    Result syncRequested(String accessToken),
-    Result searchChanged(
-        Sync filteredSync, Sync originalSync, String searchTerm),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String accessToken)? verificationRequested,
+    TResult Function(String accessToken)? syncRequested,
+    TResult Function(Sync filteredSync, Sync originalSync, String searchTerm)?
+        searchChanged,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (syncRequested != null) {
       return syncRequested(accessToken);
     }
@@ -309,26 +314,23 @@ class _$SyncRequested implements SyncRequested {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result verificationRequested(VerificationRequested value),
-    @required Result syncRequested(SyncRequested value),
-    @required Result searchChanged(SearchChanged value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(VerificationRequested value)
+        verificationRequested,
+    required TResult Function(SyncRequested value) syncRequested,
+    required TResult Function(SearchChanged value) searchChanged,
   }) {
-    assert(verificationRequested != null);
-    assert(syncRequested != null);
-    assert(searchChanged != null);
     return syncRequested(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result verificationRequested(VerificationRequested value),
-    Result syncRequested(SyncRequested value),
-    Result searchChanged(SearchChanged value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(VerificationRequested value)? verificationRequested,
+    TResult Function(SyncRequested value)? syncRequested,
+    TResult Function(SearchChanged value)? searchChanged,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (syncRequested != null) {
       return syncRequested(this);
     }
@@ -339,8 +341,10 @@ class _$SyncRequested implements SyncRequested {
 abstract class SyncRequested implements HomeEvent {
   const factory SyncRequested(String accessToken) = _$SyncRequested;
 
-  String get accessToken;
-  $SyncRequestedCopyWith<SyncRequested> get copyWith;
+  String get accessToken => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SyncRequestedCopyWith<SyncRequested> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -366,25 +370,28 @@ class _$SearchChangedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object filteredSync = freezed,
-    Object originalSync = freezed,
-    Object searchTerm = freezed,
+    Object? filteredSync = freezed,
+    Object? originalSync = freezed,
+    Object? searchTerm = freezed,
   }) {
     return _then(SearchChanged(
-      filteredSync:
-          filteredSync == freezed ? _value.filteredSync : filteredSync as Sync,
-      originalSync:
-          originalSync == freezed ? _value.originalSync : originalSync as Sync,
-      searchTerm:
-          searchTerm == freezed ? _value.searchTerm : searchTerm as String,
+      filteredSync: filteredSync == freezed
+          ? _value.filteredSync
+          : filteredSync // ignore: cast_nullable_to_non_nullable
+              as Sync,
+      originalSync: originalSync == freezed
+          ? _value.originalSync
+          : originalSync // ignore: cast_nullable_to_non_nullable
+              as Sync,
+      searchTerm: searchTerm == freezed
+          ? _value.searchTerm
+          : searchTerm // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
   @override
   $SyncCopyWith<$Res> get filteredSync {
-    if (_value.filteredSync == null) {
-      return null;
-    }
     return $SyncCopyWith<$Res>(_value.filteredSync, (value) {
       return _then(_value.copyWith(filteredSync: value));
     });
@@ -392,9 +399,6 @@ class _$SearchChangedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
 
   @override
   $SyncCopyWith<$Res> get originalSync {
-    if (_value.originalSync == null) {
-      return null;
-    }
     return $SyncCopyWith<$Res>(_value.originalSync, (value) {
       return _then(_value.copyWith(originalSync: value));
     });
@@ -402,14 +406,12 @@ class _$SearchChangedCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$SearchChanged implements SearchChanged {
   const _$SearchChanged(
-      {@required this.filteredSync,
-      @required this.originalSync,
-      @required this.searchTerm})
-      : assert(filteredSync != null),
-        assert(originalSync != null),
-        assert(searchTerm != null);
+      {required this.filteredSync,
+      required this.originalSync,
+      required this.searchTerm});
 
   @override
   final Sync filteredSync;
@@ -445,35 +447,32 @@ class _$SearchChanged implements SearchChanged {
       const DeepCollectionEquality().hash(originalSync) ^
       const DeepCollectionEquality().hash(searchTerm);
 
+  @JsonKey(ignore: true)
   @override
   $SearchChangedCopyWith<SearchChanged> get copyWith =>
       _$SearchChangedCopyWithImpl<SearchChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result verificationRequested(String accessToken),
-    @required Result syncRequested(String accessToken),
-    @required
-        Result searchChanged(
-            Sync filteredSync, Sync originalSync, String searchTerm),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String accessToken) verificationRequested,
+    required TResult Function(String accessToken) syncRequested,
+    required TResult Function(
+            Sync filteredSync, Sync originalSync, String searchTerm)
+        searchChanged,
   }) {
-    assert(verificationRequested != null);
-    assert(syncRequested != null);
-    assert(searchChanged != null);
     return searchChanged(filteredSync, originalSync, searchTerm);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result verificationRequested(String accessToken),
-    Result syncRequested(String accessToken),
-    Result searchChanged(
-        Sync filteredSync, Sync originalSync, String searchTerm),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String accessToken)? verificationRequested,
+    TResult Function(String accessToken)? syncRequested,
+    TResult Function(Sync filteredSync, Sync originalSync, String searchTerm)?
+        searchChanged,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (searchChanged != null) {
       return searchChanged(filteredSync, originalSync, searchTerm);
     }
@@ -482,26 +481,23 @@ class _$SearchChanged implements SearchChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result verificationRequested(VerificationRequested value),
-    @required Result syncRequested(SyncRequested value),
-    @required Result searchChanged(SearchChanged value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(VerificationRequested value)
+        verificationRequested,
+    required TResult Function(SyncRequested value) syncRequested,
+    required TResult Function(SearchChanged value) searchChanged,
   }) {
-    assert(verificationRequested != null);
-    assert(syncRequested != null);
-    assert(searchChanged != null);
     return searchChanged(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result verificationRequested(VerificationRequested value),
-    Result syncRequested(SyncRequested value),
-    Result searchChanged(SearchChanged value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(VerificationRequested value)? verificationRequested,
+    TResult Function(SyncRequested value)? syncRequested,
+    TResult Function(SearchChanged value)? searchChanged,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (searchChanged != null) {
       return searchChanged(this);
     }
@@ -511,37 +507,35 @@ class _$SearchChanged implements SearchChanged {
 
 abstract class SearchChanged implements HomeEvent {
   const factory SearchChanged(
-      {@required Sync filteredSync,
-      @required Sync originalSync,
-      @required String searchTerm}) = _$SearchChanged;
+      {required Sync filteredSync,
+      required Sync originalSync,
+      required String searchTerm}) = _$SearchChanged;
 
-  Sync get filteredSync;
-  Sync get originalSync;
-  String get searchTerm;
-  $SearchChangedCopyWith<SearchChanged> get copyWith;
+  Sync get filteredSync => throw _privateConstructorUsedError;
+  Sync get originalSync => throw _privateConstructorUsedError;
+  String get searchTerm => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SearchChangedCopyWith<SearchChanged> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 class _$HomeStateTearOff {
   const _$HomeStateTearOff();
 
-// ignore: unused_element
   Loading loading() {
     return const Loading();
   }
 
-// ignore: unused_element
   VerificationFailed verificationFailed() {
     return const VerificationFailed();
   }
 
-// ignore: unused_element
   SyncFailed syncFailed() {
     return const SyncFailed();
   }
 
-// ignore: unused_element
-  Synced synced({@required Sync originalSync, @required Sync filteredSync}) {
+  Synced synced({required Sync originalSync, required Sync filteredSync}) {
     return Synced(
       originalSync: originalSync,
       filteredSync: filteredSync,
@@ -550,41 +544,44 @@ class _$HomeStateTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $HomeState = _$HomeStateTearOff();
 
 /// @nodoc
 mixin _$HomeState {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result loading(),
-    @required Result verificationFailed(),
-    @required Result syncFailed(),
-    @required Result synced(Sync originalSync, Sync filteredSync),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function() verificationFailed,
+    required TResult Function() syncFailed,
+    required TResult Function(Sync originalSync, Sync filteredSync) synced,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result loading(),
-    Result verificationFailed(),
-    Result syncFailed(),
-    Result synced(Sync originalSync, Sync filteredSync),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function()? verificationFailed,
+    TResult Function()? syncFailed,
+    TResult Function(Sync originalSync, Sync filteredSync)? synced,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result loading(Loading value),
-    @required Result verificationFailed(VerificationFailed value),
-    @required Result syncFailed(SyncFailed value),
-    @required Result synced(Synced value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(Loading value) loading,
+    required TResult Function(VerificationFailed value) verificationFailed,
+    required TResult Function(SyncFailed value) syncFailed,
+    required TResult Function(Synced value) synced,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result loading(Loading value),
-    Result verificationFailed(VerificationFailed value),
-    Result syncFailed(SyncFailed value),
-    Result synced(Synced value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Loading value)? loading,
+    TResult Function(VerificationFailed value)? verificationFailed,
+    TResult Function(SyncFailed value)? syncFailed,
+    TResult Function(Synced value)? synced,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -619,6 +616,7 @@ class _$LoadingCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$Loading implements Loading {
   const _$Loading();
 
@@ -637,29 +635,24 @@ class _$Loading implements Loading {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result loading(),
-    @required Result verificationFailed(),
-    @required Result syncFailed(),
-    @required Result synced(Sync originalSync, Sync filteredSync),
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function() verificationFailed,
+    required TResult Function() syncFailed,
+    required TResult Function(Sync originalSync, Sync filteredSync) synced,
   }) {
-    assert(loading != null);
-    assert(verificationFailed != null);
-    assert(syncFailed != null);
-    assert(synced != null);
     return loading();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result loading(),
-    Result verificationFailed(),
-    Result syncFailed(),
-    Result synced(Sync originalSync, Sync filteredSync),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function()? verificationFailed,
+    TResult Function()? syncFailed,
+    TResult Function(Sync originalSync, Sync filteredSync)? synced,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loading != null) {
       return loading();
     }
@@ -668,29 +661,24 @@ class _$Loading implements Loading {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result loading(Loading value),
-    @required Result verificationFailed(VerificationFailed value),
-    @required Result syncFailed(SyncFailed value),
-    @required Result synced(Synced value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(Loading value) loading,
+    required TResult Function(VerificationFailed value) verificationFailed,
+    required TResult Function(SyncFailed value) syncFailed,
+    required TResult Function(Synced value) synced,
   }) {
-    assert(loading != null);
-    assert(verificationFailed != null);
-    assert(syncFailed != null);
-    assert(synced != null);
     return loading(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result loading(Loading value),
-    Result verificationFailed(VerificationFailed value),
-    Result syncFailed(SyncFailed value),
-    Result synced(Synced value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Loading value)? loading,
+    TResult Function(VerificationFailed value)? verificationFailed,
+    TResult Function(SyncFailed value)? syncFailed,
+    TResult Function(Synced value)? synced,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loading != null) {
       return loading(this);
     }
@@ -722,6 +710,7 @@ class _$VerificationFailedCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$VerificationFailed implements VerificationFailed {
   const _$VerificationFailed();
 
@@ -740,29 +729,24 @@ class _$VerificationFailed implements VerificationFailed {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result loading(),
-    @required Result verificationFailed(),
-    @required Result syncFailed(),
-    @required Result synced(Sync originalSync, Sync filteredSync),
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function() verificationFailed,
+    required TResult Function() syncFailed,
+    required TResult Function(Sync originalSync, Sync filteredSync) synced,
   }) {
-    assert(loading != null);
-    assert(verificationFailed != null);
-    assert(syncFailed != null);
-    assert(synced != null);
     return verificationFailed();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result loading(),
-    Result verificationFailed(),
-    Result syncFailed(),
-    Result synced(Sync originalSync, Sync filteredSync),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function()? verificationFailed,
+    TResult Function()? syncFailed,
+    TResult Function(Sync originalSync, Sync filteredSync)? synced,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (verificationFailed != null) {
       return verificationFailed();
     }
@@ -771,29 +755,24 @@ class _$VerificationFailed implements VerificationFailed {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result loading(Loading value),
-    @required Result verificationFailed(VerificationFailed value),
-    @required Result syncFailed(SyncFailed value),
-    @required Result synced(Synced value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(Loading value) loading,
+    required TResult Function(VerificationFailed value) verificationFailed,
+    required TResult Function(SyncFailed value) syncFailed,
+    required TResult Function(Synced value) synced,
   }) {
-    assert(loading != null);
-    assert(verificationFailed != null);
-    assert(syncFailed != null);
-    assert(synced != null);
     return verificationFailed(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result loading(Loading value),
-    Result verificationFailed(VerificationFailed value),
-    Result syncFailed(SyncFailed value),
-    Result synced(Synced value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Loading value)? loading,
+    TResult Function(VerificationFailed value)? verificationFailed,
+    TResult Function(SyncFailed value)? syncFailed,
+    TResult Function(Synced value)? synced,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (verificationFailed != null) {
       return verificationFailed(this);
     }
@@ -823,6 +802,7 @@ class _$SyncFailedCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$SyncFailed implements SyncFailed {
   const _$SyncFailed();
 
@@ -841,29 +821,24 @@ class _$SyncFailed implements SyncFailed {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result loading(),
-    @required Result verificationFailed(),
-    @required Result syncFailed(),
-    @required Result synced(Sync originalSync, Sync filteredSync),
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function() verificationFailed,
+    required TResult Function() syncFailed,
+    required TResult Function(Sync originalSync, Sync filteredSync) synced,
   }) {
-    assert(loading != null);
-    assert(verificationFailed != null);
-    assert(syncFailed != null);
-    assert(synced != null);
     return syncFailed();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result loading(),
-    Result verificationFailed(),
-    Result syncFailed(),
-    Result synced(Sync originalSync, Sync filteredSync),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function()? verificationFailed,
+    TResult Function()? syncFailed,
+    TResult Function(Sync originalSync, Sync filteredSync)? synced,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (syncFailed != null) {
       return syncFailed();
     }
@@ -872,29 +847,24 @@ class _$SyncFailed implements SyncFailed {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result loading(Loading value),
-    @required Result verificationFailed(VerificationFailed value),
-    @required Result syncFailed(SyncFailed value),
-    @required Result synced(Synced value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(Loading value) loading,
+    required TResult Function(VerificationFailed value) verificationFailed,
+    required TResult Function(SyncFailed value) syncFailed,
+    required TResult Function(Synced value) synced,
   }) {
-    assert(loading != null);
-    assert(verificationFailed != null);
-    assert(syncFailed != null);
-    assert(synced != null);
     return syncFailed(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result loading(Loading value),
-    Result verificationFailed(VerificationFailed value),
-    Result syncFailed(SyncFailed value),
-    Result synced(Synced value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Loading value)? loading,
+    TResult Function(VerificationFailed value)? verificationFailed,
+    TResult Function(SyncFailed value)? syncFailed,
+    TResult Function(Synced value)? synced,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (syncFailed != null) {
       return syncFailed(this);
     }
@@ -927,22 +897,23 @@ class _$SyncedCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object originalSync = freezed,
-    Object filteredSync = freezed,
+    Object? originalSync = freezed,
+    Object? filteredSync = freezed,
   }) {
     return _then(Synced(
-      originalSync:
-          originalSync == freezed ? _value.originalSync : originalSync as Sync,
-      filteredSync:
-          filteredSync == freezed ? _value.filteredSync : filteredSync as Sync,
+      originalSync: originalSync == freezed
+          ? _value.originalSync
+          : originalSync // ignore: cast_nullable_to_non_nullable
+              as Sync,
+      filteredSync: filteredSync == freezed
+          ? _value.filteredSync
+          : filteredSync // ignore: cast_nullable_to_non_nullable
+              as Sync,
     ));
   }
 
   @override
   $SyncCopyWith<$Res> get originalSync {
-    if (_value.originalSync == null) {
-      return null;
-    }
     return $SyncCopyWith<$Res>(_value.originalSync, (value) {
       return _then(_value.copyWith(originalSync: value));
     });
@@ -950,9 +921,6 @@ class _$SyncedCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
 
   @override
   $SyncCopyWith<$Res> get filteredSync {
-    if (_value.filteredSync == null) {
-      return null;
-    }
     return $SyncCopyWith<$Res>(_value.filteredSync, (value) {
       return _then(_value.copyWith(filteredSync: value));
     });
@@ -960,10 +928,9 @@ class _$SyncedCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$Synced implements Synced {
-  const _$Synced({@required this.originalSync, @required this.filteredSync})
-      : assert(originalSync != null),
-        assert(filteredSync != null);
+  const _$Synced({required this.originalSync, required this.filteredSync});
 
   @override
   final Sync originalSync;
@@ -993,35 +960,31 @@ class _$Synced implements Synced {
       const DeepCollectionEquality().hash(originalSync) ^
       const DeepCollectionEquality().hash(filteredSync);
 
+  @JsonKey(ignore: true)
   @override
   $SyncedCopyWith<Synced> get copyWith =>
       _$SyncedCopyWithImpl<Synced>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result loading(),
-    @required Result verificationFailed(),
-    @required Result syncFailed(),
-    @required Result synced(Sync originalSync, Sync filteredSync),
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function() verificationFailed,
+    required TResult Function() syncFailed,
+    required TResult Function(Sync originalSync, Sync filteredSync) synced,
   }) {
-    assert(loading != null);
-    assert(verificationFailed != null);
-    assert(syncFailed != null);
-    assert(synced != null);
     return synced(originalSync, filteredSync);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result loading(),
-    Result verificationFailed(),
-    Result syncFailed(),
-    Result synced(Sync originalSync, Sync filteredSync),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function()? verificationFailed,
+    TResult Function()? syncFailed,
+    TResult Function(Sync originalSync, Sync filteredSync)? synced,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (synced != null) {
       return synced(originalSync, filteredSync);
     }
@@ -1030,29 +993,24 @@ class _$Synced implements Synced {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result loading(Loading value),
-    @required Result verificationFailed(VerificationFailed value),
-    @required Result syncFailed(SyncFailed value),
-    @required Result synced(Synced value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(Loading value) loading,
+    required TResult Function(VerificationFailed value) verificationFailed,
+    required TResult Function(SyncFailed value) syncFailed,
+    required TResult Function(Synced value) synced,
   }) {
-    assert(loading != null);
-    assert(verificationFailed != null);
-    assert(syncFailed != null);
-    assert(synced != null);
     return synced(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result loading(Loading value),
-    Result verificationFailed(VerificationFailed value),
-    Result syncFailed(SyncFailed value),
-    Result synced(Synced value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Loading value)? loading,
+    TResult Function(VerificationFailed value)? verificationFailed,
+    TResult Function(SyncFailed value)? syncFailed,
+    TResult Function(Synced value)? synced,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (synced != null) {
       return synced(this);
     }
@@ -1062,9 +1020,10 @@ class _$Synced implements Synced {
 
 abstract class Synced implements HomeState {
   const factory Synced(
-      {@required Sync originalSync, @required Sync filteredSync}) = _$Synced;
+      {required Sync originalSync, required Sync filteredSync}) = _$Synced;
 
-  Sync get originalSync;
-  Sync get filteredSync;
-  $SyncedCopyWith<Synced> get copyWith;
+  Sync get originalSync => throw _privateConstructorUsedError;
+  Sync get filteredSync => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SyncedCopyWith<Synced> get copyWith => throw _privateConstructorUsedError;
 }

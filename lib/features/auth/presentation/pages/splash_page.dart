@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../../../core/routes/router.gr.dart';
+
 import '../bloc/auth_bloc.dart';
 
 class SplashPage extends StatelessWidget {
@@ -12,12 +12,9 @@ class SplashPage extends StatelessWidget {
       listener: (context, state) {
         state.map(
           initial: (_) {},
-          authenticated: (e) => ExtendedNavigator.of(context).replace(
-            Routes.homePage,
-            arguments: HomePageArguments(accessToken: e.accessToken),
-          ),
-          unauthenticated: (_) =>
-              ExtendedNavigator.of(context).replace(Routes.loginPage),
+          authenticated: (e) => AutoRouter.of(context)
+              .replace(HomeRoute(accessToken: e.accessToken)),
+          unauthenticated: (_) => AutoRouter.of(context).replace(LoginRoute()),
         );
       },
       child: _PageWidget(),

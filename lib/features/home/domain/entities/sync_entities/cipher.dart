@@ -5,14 +5,14 @@ import 'login.dart';
 part 'cipher.freezed.dart';
 
 @freezed
-abstract class Cipher with _$Cipher {
+class Cipher with _$Cipher {
   const factory Cipher({
-    @required String id,
-    @required int type,
-    @required String name,
+    required String id,
+    required int type,
+    required String name,
     // @required String notes,
     // @required String card,
-    @required bool favourite,
-    @required Login login,
+    required bool favourite,
+    required Login login,
   }) = _Cipher;
 }

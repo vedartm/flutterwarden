@@ -19,7 +19,8 @@ class BiometricAuth implements IBiometricAuth {
   @override
   Future<bool> authenticate() async {
     try {
-      final didAuthenticate = await _localAuth.authenticateWithBiometrics(
+      final didAuthenticate = await _localAuth.authenticate(
+        biometricOnly: true,
         localizedReason: 'Use fingerprint | PIN | Password | Pattern to verify',
       );
       _logger.d('Did authenticate: $didAuthenticate');

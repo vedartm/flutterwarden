@@ -12,7 +12,7 @@ import '../../../../core/util/validators.dart';
 import '../bloc/login_form/login_form_bloc.dart';
 
 class LoginForm extends StatelessWidget {
-  const LoginForm({Key key}) : super(key: key);
+  const LoginForm({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class LoginForm extends StatelessWidget {
                   _showTwoFactorInputDialog(
                       context, s.type, context.read<LoginFormBloc>());
                 },
-                orElse: () => Scaffold.of(context)
+                orElse: () => ScaffoldMessenger.of(context)
                   ..hideCurrentSnackBar()
                   ..showSnackBar(
                     SnackBar(
@@ -46,10 +46,8 @@ class LoginForm extends StatelessWidget {
                     ),
                   ),
               ),
-              (r) => ExtendedNavigator.of(context).replace(
-                Routes.homePage,
-                arguments: HomePageArguments(accessToken: r.accessToken),
-              ),
+              (r) => AutoRouter.of(context)
+                  .replace(HomeRoute(accessToken: r.accessToken)),
             );
           },
         );
@@ -57,10 +55,8 @@ class LoginForm extends StatelessWidget {
           () {},
           (either) => either.fold(
             (l) => null,
-            (r) => ExtendedNavigator.of(context).replace(
-              Routes.homePage,
-              arguments: HomePageArguments(accessToken: r.accessToken),
-            ),
+            (r) => AutoRouter.of(context)
+                .replace(HomeRoute(accessToken: r.accessToken)),
           ),
         );
         // if (state.isSubmittingToken) {
@@ -68,7 +64,7 @@ class LoginForm extends StatelessWidget {
         // }
         // if (state.showTokenErrorMessages) {
         //   Navigator.pop(context);
-        //   Scaffold.of(context)
+        //   ScaffoldMessenger.of(context)
         //     ..hideCurrentSnackBar()
         //     ..showSnackBar(
         //       SnackBar(
@@ -122,7 +118,7 @@ class LoginForm extends StatelessWidget {
                     : 'Short password',
               ),
               const SizedBox(height: 24),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () => context.read<LoginFormBloc>().add(
                     const LoginFormEvent.signInWithEmailAndPasswordPressed()),
                 child: (state.isSubmitting)
@@ -141,7 +137,7 @@ class LoginForm extends StatelessWidget {
                       ),
               ),
               const SizedBox(height: 24),
-              OutlineButton.icon(
+              OutlinedButton.icon(
                 onPressed: () => launch(
                     'https://vault.bitwarden.com/#/register?email=${state.emailAddress}'),
                 // onPressed: () => _showLoadingDialog(context),
@@ -165,7 +161,7 @@ class LoginForm extends StatelessWidget {
       context: context,
       barrierDismissible: false,
       builder: (context) => BlocBuilder<LoginFormBloc, LoginFormState>(
-        cubit: bloc,
+        bloc: bloc,
         builder: (_, state) => AlertDialog(
           backgroundColor: FWColors.scaffoldBackground,
           shape: RoundedRectangleBorder(
@@ -190,12 +186,12 @@ class LoginForm extends StatelessWidget {
             ],
           ),
           actions: <Widget>[
-            FlatButton(
+            TextButton(
               onPressed: () => Navigator.pop(context),
               child: Text('CANCEL'),
             ),
             const SizedBox(width: 8),
-            RaisedButton(
+            ElevatedButton(
               onPressed: (state.token.length == 6)
                   ? !state.isSubmittingToken
                       ? () => bloc.add(LoginFormEvent
@@ -229,7 +225,7 @@ class LoginForm extends StatelessWidget {
         _showTwoFactorInputDialog(
             context, s.type, context.read<LoginFormBloc>());
       },
-      orElse: () => Scaffold.of(context)
+      orElse: () => ScaffoldMessenger.of(context)
         ..hideCurrentSnackBar()
         ..showSnackBar(
           SnackBar(

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'cipher.dart';
 
@@ -9,17 +9,19 @@ part of 'cipher.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$CipherTearOff {
   const _$CipherTearOff();
 
-// ignore: unused_element
   _Cipher call(
-      {@required String id,
-      @required int type,
-      @required String name,
-      @required bool favourite,
-      @required Login login}) {
+      {required String id,
+      required int type,
+      required String name,
+      required bool favourite,
+      required Login login}) {
     return _Cipher(
       id: id,
       type: type,
@@ -31,19 +33,20 @@ class _$CipherTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Cipher = _$CipherTearOff();
 
 /// @nodoc
 mixin _$Cipher {
-  String get id;
-  int get type;
-  String get name; // @required String notes,
+  String get id => throw _privateConstructorUsedError;
+  int get type => throw _privateConstructorUsedError;
+  String get name =>
+      throw _privateConstructorUsedError; // @required String notes,
 // @required String card,
-  bool get favourite;
-  Login get login;
+  bool get favourite => throw _privateConstructorUsedError;
+  Login get login => throw _privateConstructorUsedError;
 
-  $CipherCopyWith<Cipher> get copyWith;
+  @JsonKey(ignore: true)
+  $CipherCopyWith<Cipher> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -65,26 +68,38 @@ class _$CipherCopyWithImpl<$Res> implements $CipherCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object type = freezed,
-    Object name = freezed,
-    Object favourite = freezed,
-    Object login = freezed,
+    Object? id = freezed,
+    Object? type = freezed,
+    Object? name = freezed,
+    Object? favourite = freezed,
+    Object? login = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      type: type == freezed ? _value.type : type as int,
-      name: name == freezed ? _value.name : name as String,
-      favourite: favourite == freezed ? _value.favourite : favourite as bool,
-      login: login == freezed ? _value.login : login as Login,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      favourite: favourite == freezed
+          ? _value.favourite
+          : favourite // ignore: cast_nullable_to_non_nullable
+              as bool,
+      login: login == freezed
+          ? _value.login
+          : login // ignore: cast_nullable_to_non_nullable
+              as Login,
     ));
   }
 
   @override
   $LoginCopyWith<$Res> get login {
-    if (_value.login == null) {
-      return null;
-    }
     return $LoginCopyWith<$Res>(_value.login, (value) {
       return _then(_value.copyWith(login: value));
     });
@@ -113,35 +128,46 @@ class __$CipherCopyWithImpl<$Res> extends _$CipherCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object type = freezed,
-    Object name = freezed,
-    Object favourite = freezed,
-    Object login = freezed,
+    Object? id = freezed,
+    Object? type = freezed,
+    Object? name = freezed,
+    Object? favourite = freezed,
+    Object? login = freezed,
   }) {
     return _then(_Cipher(
-      id: id == freezed ? _value.id : id as String,
-      type: type == freezed ? _value.type : type as int,
-      name: name == freezed ? _value.name : name as String,
-      favourite: favourite == freezed ? _value.favourite : favourite as bool,
-      login: login == freezed ? _value.login : login as Login,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      favourite: favourite == freezed
+          ? _value.favourite
+          : favourite // ignore: cast_nullable_to_non_nullable
+              as bool,
+      login: login == freezed
+          ? _value.login
+          : login // ignore: cast_nullable_to_non_nullable
+              as Login,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_Cipher implements _Cipher {
   const _$_Cipher(
-      {@required this.id,
-      @required this.type,
-      @required this.name,
-      @required this.favourite,
-      @required this.login})
-      : assert(id != null),
-        assert(type != null),
-        assert(name != null),
-        assert(favourite != null),
-        assert(login != null);
+      {required this.id,
+      required this.type,
+      required this.name,
+      required this.favourite,
+      required this.login});
 
   @override
   final String id;
@@ -186,6 +212,7 @@ class _$_Cipher implements _Cipher {
       const DeepCollectionEquality().hash(favourite) ^
       const DeepCollectionEquality().hash(login);
 
+  @JsonKey(ignore: true)
   @override
   _$CipherCopyWith<_Cipher> get copyWith =>
       __$CipherCopyWithImpl<_Cipher>(this, _$identity);
@@ -193,23 +220,24 @@ class _$_Cipher implements _Cipher {
 
 abstract class _Cipher implements Cipher {
   const factory _Cipher(
-      {@required String id,
-      @required int type,
-      @required String name,
-      @required bool favourite,
-      @required Login login}) = _$_Cipher;
+      {required String id,
+      required int type,
+      required String name,
+      required bool favourite,
+      required Login login}) = _$_Cipher;
 
   @override
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
-  int get type;
+  int get type => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override // @required String notes,
 // @required String card,
-  bool get favourite;
+  bool get favourite => throw _privateConstructorUsedError;
   @override
-  Login get login;
+  Login get login => throw _privateConstructorUsedError;
   @override
-  _$CipherCopyWith<_Cipher> get copyWith;
+  @JsonKey(ignore: true)
+  _$CipherCopyWith<_Cipher> get copyWith => throw _privateConstructorUsedError;
 }

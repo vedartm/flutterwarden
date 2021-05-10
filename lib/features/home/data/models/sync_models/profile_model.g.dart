@@ -11,7 +11,7 @@ _$_ProfileModel _$_$_ProfileModelFromJson(Map<String, dynamic> json) {
     id: json['Id'] as String,
     name: json['Name'] as String,
     email: json['Email'] as String,
-    masterPasswordHint: json['MasterPasswordHint'] as String,
+    masterPasswordHint: json['MasterPasswordHint'] as String?,
     key: json['Key'] as String,
     privateKey: json['PrivateKey'] as String,
     securityStamp: json['SecurityStamp'] as String,

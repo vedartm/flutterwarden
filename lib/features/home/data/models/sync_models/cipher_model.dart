@@ -7,16 +7,16 @@ part 'cipher_model.freezed.dart';
 part 'cipher_model.g.dart';
 
 @freezed
-abstract class CipherModel with _$CipherModel {
+class CipherModel with _$CipherModel {
   @JsonSerializable(explicitToJson: true)
   const factory CipherModel({
-    @JsonKey(name: 'Id') @required String id,
-    @JsonKey(name: 'Type') @required int type,
-    @JsonKey(name: 'Name') @required String name,
+    @JsonKey(name: 'Id') required String id,
+    @JsonKey(name: 'Type') required int type,
+    @JsonKey(name: 'Name') required String name,
     // @JsonKey(name: 'Notes') @required String notes,
     // @JsonKey(name: 'Card') @required String card,
-    @JsonKey(name: 'Favorite') @required bool favourite,
-    @JsonKey(name: 'Login') @required LoginModel login,
+    @JsonKey(name: 'Favorite') required bool favourite,
+    @JsonKey(name: 'Login') required LoginModel login,
   }) = _CipherModel;
 
   factory CipherModel.fromJson(Map<String, dynamic> json) =>

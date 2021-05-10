@@ -37,7 +37,7 @@ class AuthIdentityDataSource implements IAuthIdentityDataSource {
   Future<LoginResponseModel> getTokenWhileLogin(
       String email, String passwordHash) async {
     final response = await _client.post(
-      'https://identity.bitwarden.com/connect/token',
+      Uri.parse('https://identity.bitwarden.com/connect/token'),
       headers: {'Content-Type': 'application/x-www-form-urlencoded'},
       body: {
         'grant_type': 'password',
@@ -64,7 +64,7 @@ class AuthIdentityDataSource implements IAuthIdentityDataSource {
   @override
   Future<LoginResponseModel> getTokenWhileRefresh(String refreshToken) async {
     final response = await _client.post(
-      'https://identity.bitwarden.com/connect/token',
+      Uri.parse('https://identity.bitwarden.com/connect/token'),
       headers: {'Content-Type': 'application/x-www-form-urlencoded'},
       body: {
         'grant_type': 'refresh_token',
@@ -84,7 +84,7 @@ class AuthIdentityDataSource implements IAuthIdentityDataSource {
   Future<LoginResponseModel> getTokenWhile2faLogin(String email,
       String passwordHash, String twoFactorToken, int twoFactorProvider) async {
     final response = await _client.post(
-      'https://identity.bitwarden.com/connect/token',
+      Uri.parse('https://identity.bitwarden.com/connect/token'),
       headers: {'Content-Type': 'application/x-www-form-urlencoded'},
       body: {
         'grant_type': 'password',

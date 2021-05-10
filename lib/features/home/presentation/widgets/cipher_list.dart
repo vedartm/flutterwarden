@@ -7,7 +7,7 @@ import '../bloc/home_bloc.dart';
 import 'cipher_card.dart';
 
 class CipherList extends StatelessWidget {
-  const CipherList({Key key, @required this.accessToken}) : super(key: key);
+  const CipherList({Key? key, required this.accessToken}) : super(key: key);
 
   final String accessToken;
 
@@ -22,7 +22,7 @@ class CipherList extends StatelessWidget {
             children: <Widget>[
               Text('Not authenticated'),
               const SizedBox(height: 8),
-              FlatButton.icon(
+              TextButton.icon(
                 onPressed: () => context
                     .read<HomeBloc>()
                     .add(HomeEvent.verificationRequested(accessToken)),

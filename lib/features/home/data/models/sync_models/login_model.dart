@@ -6,12 +6,12 @@ part 'login_model.freezed.dart';
 part 'login_model.g.dart';
 
 @freezed
-abstract class LoginModel with _$LoginModel {
+class LoginModel with _$LoginModel {
   const factory LoginModel({
-    @nullable @JsonKey(name: 'Uri') @required String uri,
-    @nullable @JsonKey(name: 'Uris') @required List<dynamic> uris,
-    @JsonKey(name: 'Username') @required String username,
-    @JsonKey(name: 'Password') @required String password,
+    @JsonKey(name: 'Uri') required String? uri,
+    @JsonKey(name: 'Uris') required List<dynamic>? uris,
+    @JsonKey(name: 'Username') required String username,
+    @JsonKey(name: 'Password') required String password,
   }) = _LoginModel;
 
   factory LoginModel.fromJson(Map<String, dynamic> json) =>

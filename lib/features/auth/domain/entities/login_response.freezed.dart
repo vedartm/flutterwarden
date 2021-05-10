@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'login_response.dart';
 
@@ -9,16 +9,18 @@ part of 'login_response.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$LoginResponseTearOff {
   const _$LoginResponseTearOff();
 
-// ignore: unused_element
   _LoginResponse call(
-      {@required String accessToken,
-      @required Duration expiresAccessTokenIn,
-      @required String refreshToken,
-      @required @nullable String key}) {
+      {required String accessToken,
+      required Duration expiresAccessTokenIn,
+      required String refreshToken,
+      required String? key}) {
     return _LoginResponse(
       accessToken: accessToken,
       expiresAccessTokenIn: expiresAccessTokenIn,
@@ -29,20 +31,20 @@ class _$LoginResponseTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $LoginResponse = _$LoginResponseTearOff();
 
 /// @nodoc
 mixin _$LoginResponse {
-  String get accessToken;
-  Duration get expiresAccessTokenIn;
-  String
-      get refreshToken; // will be decrypted using $masterKey to get $encKey and $macKey
+  String get accessToken => throw _privateConstructorUsedError;
+  Duration get expiresAccessTokenIn => throw _privateConstructorUsedError;
+  String get refreshToken =>
+      throw _privateConstructorUsedError; // will be decrypted using $masterKey to get $encKey and $macKey
 // $masterKey = makeKey("p4ssw0rd", "nobody@example.com".downcase, 5000)
-  @nullable
-  String get key;
+  String? get key => throw _privateConstructorUsedError;
 
-  $LoginResponseCopyWith<LoginResponse> get copyWith;
+  @JsonKey(ignore: true)
+  $LoginResponseCopyWith<LoginResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -54,7 +56,7 @@ abstract class $LoginResponseCopyWith<$Res> {
       {String accessToken,
       Duration expiresAccessTokenIn,
       String refreshToken,
-      @nullable String key});
+      String? key});
 }
 
 /// @nodoc
@@ -68,21 +70,28 @@ class _$LoginResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object accessToken = freezed,
-    Object expiresAccessTokenIn = freezed,
-    Object refreshToken = freezed,
-    Object key = freezed,
+    Object? accessToken = freezed,
+    Object? expiresAccessTokenIn = freezed,
+    Object? refreshToken = freezed,
+    Object? key = freezed,
   }) {
     return _then(_value.copyWith(
-      accessToken:
-          accessToken == freezed ? _value.accessToken : accessToken as String,
+      accessToken: accessToken == freezed
+          ? _value.accessToken
+          : accessToken // ignore: cast_nullable_to_non_nullable
+              as String,
       expiresAccessTokenIn: expiresAccessTokenIn == freezed
           ? _value.expiresAccessTokenIn
-          : expiresAccessTokenIn as Duration,
+          : expiresAccessTokenIn // ignore: cast_nullable_to_non_nullable
+              as Duration,
       refreshToken: refreshToken == freezed
           ? _value.refreshToken
-          : refreshToken as String,
-      key: key == freezed ? _value.key : key as String,
+          : refreshToken // ignore: cast_nullable_to_non_nullable
+              as String,
+      key: key == freezed
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -98,7 +107,7 @@ abstract class _$LoginResponseCopyWith<$Res>
       {String accessToken,
       Duration expiresAccessTokenIn,
       String refreshToken,
-      @nullable String key});
+      String? key});
 }
 
 /// @nodoc
@@ -114,35 +123,40 @@ class __$LoginResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object accessToken = freezed,
-    Object expiresAccessTokenIn = freezed,
-    Object refreshToken = freezed,
-    Object key = freezed,
+    Object? accessToken = freezed,
+    Object? expiresAccessTokenIn = freezed,
+    Object? refreshToken = freezed,
+    Object? key = freezed,
   }) {
     return _then(_LoginResponse(
-      accessToken:
-          accessToken == freezed ? _value.accessToken : accessToken as String,
+      accessToken: accessToken == freezed
+          ? _value.accessToken
+          : accessToken // ignore: cast_nullable_to_non_nullable
+              as String,
       expiresAccessTokenIn: expiresAccessTokenIn == freezed
           ? _value.expiresAccessTokenIn
-          : expiresAccessTokenIn as Duration,
+          : expiresAccessTokenIn // ignore: cast_nullable_to_non_nullable
+              as Duration,
       refreshToken: refreshToken == freezed
           ? _value.refreshToken
-          : refreshToken as String,
-      key: key == freezed ? _value.key : key as String,
+          : refreshToken // ignore: cast_nullable_to_non_nullable
+              as String,
+      key: key == freezed
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_LoginResponse implements _LoginResponse {
   const _$_LoginResponse(
-      {@required this.accessToken,
-      @required this.expiresAccessTokenIn,
-      @required this.refreshToken,
-      @required @nullable this.key})
-      : assert(accessToken != null),
-        assert(expiresAccessTokenIn != null),
-        assert(refreshToken != null);
+      {required this.accessToken,
+      required this.expiresAccessTokenIn,
+      required this.refreshToken,
+      required this.key});
 
   @override
   final String accessToken;
@@ -152,8 +166,7 @@ class _$_LoginResponse implements _LoginResponse {
   final String refreshToken;
   @override // will be decrypted using $masterKey to get $encKey and $macKey
 // $masterKey = makeKey("p4ssw0rd", "nobody@example.com".downcase, 5000)
-  @nullable
-  final String key;
+  final String? key;
 
   @override
   String toString() {
@@ -185,6 +198,7 @@ class _$_LoginResponse implements _LoginResponse {
       const DeepCollectionEquality().hash(refreshToken) ^
       const DeepCollectionEquality().hash(key);
 
+  @JsonKey(ignore: true)
   @override
   _$LoginResponseCopyWith<_LoginResponse> get copyWith =>
       __$LoginResponseCopyWithImpl<_LoginResponse>(this, _$identity);
@@ -192,21 +206,22 @@ class _$_LoginResponse implements _LoginResponse {
 
 abstract class _LoginResponse implements LoginResponse {
   const factory _LoginResponse(
-      {@required String accessToken,
-      @required Duration expiresAccessTokenIn,
-      @required String refreshToken,
-      @required @nullable String key}) = _$_LoginResponse;
+      {required String accessToken,
+      required Duration expiresAccessTokenIn,
+      required String refreshToken,
+      required String? key}) = _$_LoginResponse;
 
   @override
-  String get accessToken;
+  String get accessToken => throw _privateConstructorUsedError;
   @override
-  Duration get expiresAccessTokenIn;
+  Duration get expiresAccessTokenIn => throw _privateConstructorUsedError;
   @override
-  String get refreshToken;
+  String get refreshToken => throw _privateConstructorUsedError;
   @override // will be decrypted using $masterKey to get $encKey and $macKey
 // $masterKey = makeKey("p4ssw0rd", "nobody@example.com".downcase, 5000)
-  @nullable
-  String get key;
+  String? get key => throw _privateConstructorUsedError;
   @override
-  _$LoginResponseCopyWith<_LoginResponse> get copyWith;
+  @JsonKey(ignore: true)
+  _$LoginResponseCopyWith<_LoginResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -3,10 +3,10 @@ part 'pre_login_response_model.freezed.dart';
 part 'pre_login_response_model.g.dart';
 
 @freezed
-abstract class PreLoginResponseModel with _$PreLoginResponseModel {
+class PreLoginResponseModel with _$PreLoginResponseModel {
   const factory PreLoginResponseModel({
-    @JsonKey(name: 'Kdf') @required int kdfType,
-    @JsonKey(name: 'KdfIterations') @required int kdfIternationCount,
+    @JsonKey(name: 'Kdf') required int kdfType,
+    @JsonKey(name: 'KdfIterations') required int kdfIternationCount,
   }) = _PreLoginResponseModel;
 
   factory PreLoginResponseModel.fromJson(Map<String, dynamic> json) =>

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'cipher_model.dart';
 
@@ -8,6 +8,10 @@ part of 'cipher_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 CipherModel _$CipherModelFromJson(Map<String, dynamic> json) {
   return _CipherModel.fromJson(json);
 }
@@ -16,13 +20,12 @@ CipherModel _$CipherModelFromJson(Map<String, dynamic> json) {
 class _$CipherModelTearOff {
   const _$CipherModelTearOff();
 
-// ignore: unused_element
   _CipherModel call(
-      {@required @JsonKey(name: 'Id') String id,
-      @required @JsonKey(name: 'Type') int type,
-      @required @JsonKey(name: 'Name') String name,
-      @required @JsonKey(name: 'Favorite') bool favourite,
-      @required @JsonKey(name: 'Login') LoginModel login}) {
+      {@JsonKey(name: 'Id') required String id,
+      @JsonKey(name: 'Type') required int type,
+      @JsonKey(name: 'Name') required String name,
+      @JsonKey(name: 'Favorite') required bool favourite,
+      @JsonKey(name: 'Login') required LoginModel login}) {
     return _CipherModel(
       id: id,
       type: type,
@@ -32,32 +35,33 @@ class _$CipherModelTearOff {
     );
   }
 
-// ignore: unused_element
   CipherModel fromJson(Map<String, Object> json) {
     return CipherModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CipherModel = _$CipherModelTearOff();
 
 /// @nodoc
 mixin _$CipherModel {
   @JsonKey(name: 'Id')
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'Type')
-  int get type;
+  int get type => throw _privateConstructorUsedError;
   @JsonKey(name: 'Name')
-  String get name; // @JsonKey(name: 'Notes') @required String notes,
+  String get name =>
+      throw _privateConstructorUsedError; // @JsonKey(name: 'Notes') @required String notes,
 // @JsonKey(name: 'Card') @required String card,
   @JsonKey(name: 'Favorite')
-  bool get favourite;
+  bool get favourite => throw _privateConstructorUsedError;
   @JsonKey(name: 'Login')
-  LoginModel get login;
+  LoginModel get login => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $CipherModelCopyWith<CipherModel> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CipherModelCopyWith<CipherModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -85,26 +89,38 @@ class _$CipherModelCopyWithImpl<$Res> implements $CipherModelCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object type = freezed,
-    Object name = freezed,
-    Object favourite = freezed,
-    Object login = freezed,
+    Object? id = freezed,
+    Object? type = freezed,
+    Object? name = freezed,
+    Object? favourite = freezed,
+    Object? login = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      type: type == freezed ? _value.type : type as int,
-      name: name == freezed ? _value.name : name as String,
-      favourite: favourite == freezed ? _value.favourite : favourite as bool,
-      login: login == freezed ? _value.login : login as LoginModel,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      favourite: favourite == freezed
+          ? _value.favourite
+          : favourite // ignore: cast_nullable_to_non_nullable
+              as bool,
+      login: login == freezed
+          ? _value.login
+          : login // ignore: cast_nullable_to_non_nullable
+              as LoginModel,
     ));
   }
 
   @override
   $LoginModelCopyWith<$Res> get login {
-    if (_value.login == null) {
-      return null;
-    }
     return $LoginModelCopyWith<$Res>(_value.login, (value) {
       return _then(_value.copyWith(login: value));
     });
@@ -141,37 +157,47 @@ class __$CipherModelCopyWithImpl<$Res> extends _$CipherModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object type = freezed,
-    Object name = freezed,
-    Object favourite = freezed,
-    Object login = freezed,
+    Object? id = freezed,
+    Object? type = freezed,
+    Object? name = freezed,
+    Object? favourite = freezed,
+    Object? login = freezed,
   }) {
     return _then(_CipherModel(
-      id: id == freezed ? _value.id : id as String,
-      type: type == freezed ? _value.type : type as int,
-      name: name == freezed ? _value.name : name as String,
-      favourite: favourite == freezed ? _value.favourite : favourite as bool,
-      login: login == freezed ? _value.login : login as LoginModel,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      favourite: favourite == freezed
+          ? _value.favourite
+          : favourite // ignore: cast_nullable_to_non_nullable
+              as bool,
+      login: login == freezed
+          ? _value.login
+          : login // ignore: cast_nullable_to_non_nullable
+              as LoginModel,
     ));
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
+
+@JsonSerializable(explicitToJson: true)
 class _$_CipherModel implements _CipherModel {
   const _$_CipherModel(
-      {@required @JsonKey(name: 'Id') this.id,
-      @required @JsonKey(name: 'Type') this.type,
-      @required @JsonKey(name: 'Name') this.name,
-      @required @JsonKey(name: 'Favorite') this.favourite,
-      @required @JsonKey(name: 'Login') this.login})
-      : assert(id != null),
-        assert(type != null),
-        assert(name != null),
-        assert(favourite != null),
-        assert(login != null);
+      {@JsonKey(name: 'Id') required this.id,
+      @JsonKey(name: 'Type') required this.type,
+      @JsonKey(name: 'Name') required this.name,
+      @JsonKey(name: 'Favorite') required this.favourite,
+      @JsonKey(name: 'Login') required this.login});
 
   factory _$_CipherModel.fromJson(Map<String, dynamic> json) =>
       _$_$_CipherModelFromJson(json);
@@ -224,6 +250,7 @@ class _$_CipherModel implements _CipherModel {
       const DeepCollectionEquality().hash(favourite) ^
       const DeepCollectionEquality().hash(login);
 
+  @JsonKey(ignore: true)
   @override
   _$CipherModelCopyWith<_CipherModel> get copyWith =>
       __$CipherModelCopyWithImpl<_CipherModel>(this, _$identity);
@@ -236,31 +263,33 @@ class _$_CipherModel implements _CipherModel {
 
 abstract class _CipherModel implements CipherModel {
   const factory _CipherModel(
-      {@required @JsonKey(name: 'Id') String id,
-      @required @JsonKey(name: 'Type') int type,
-      @required @JsonKey(name: 'Name') String name,
-      @required @JsonKey(name: 'Favorite') bool favourite,
-      @required @JsonKey(name: 'Login') LoginModel login}) = _$_CipherModel;
+      {@JsonKey(name: 'Id') required String id,
+      @JsonKey(name: 'Type') required int type,
+      @JsonKey(name: 'Name') required String name,
+      @JsonKey(name: 'Favorite') required bool favourite,
+      @JsonKey(name: 'Login') required LoginModel login}) = _$_CipherModel;
 
   factory _CipherModel.fromJson(Map<String, dynamic> json) =
       _$_CipherModel.fromJson;
 
   @override
   @JsonKey(name: 'Id')
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'Type')
-  int get type;
+  int get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'Name')
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override // @JsonKey(name: 'Notes') @required String notes,
 // @JsonKey(name: 'Card') @required String card,
   @JsonKey(name: 'Favorite')
-  bool get favourite;
+  bool get favourite => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'Login')
-  LoginModel get login;
+  LoginModel get login => throw _privateConstructorUsedError;
   @override
-  _$CipherModelCopyWith<_CipherModel> get copyWith;
+  @JsonKey(ignore: true)
+  _$CipherModelCopyWith<_CipherModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

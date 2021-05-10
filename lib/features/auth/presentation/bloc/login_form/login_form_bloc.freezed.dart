@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'login_form_bloc.dart';
 
@@ -9,44 +9,41 @@ part of 'login_form_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$LoginFormEventTearOff {
   const _$LoginFormEventTearOff();
 
-// ignore: unused_element
   EmailChanged emailChanged(String emailStr) {
     return EmailChanged(
       emailStr,
     );
   }
 
-// ignore: unused_element
   PasswordChanged passwordChanged(String passwordStr) {
     return PasswordChanged(
       passwordStr,
     );
   }
 
-// ignore: unused_element
   TwoFactorTokenChanged twoFactorTokenChanged(String tokenStr) {
     return TwoFactorTokenChanged(
       tokenStr,
     );
   }
 
-// ignore: unused_element
   TwoFactorProviderSaved twoFactorProviderSaved(int provider) {
     return TwoFactorProviderSaved(
       provider,
     );
   }
 
-// ignore: unused_element
   SignInWithEmailAndPasswordPressed signInWithEmailAndPasswordPressed() {
     return const SignInWithEmailAndPasswordPressed();
   }
 
-// ignore: unused_element
   SignInWithEmailPasswordAndTokenPressed
       signInWithEmailPasswordAndTokenPressed() {
     return const SignInWithEmailPasswordAndTokenPressed();
@@ -54,55 +51,58 @@ class _$LoginFormEventTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $LoginFormEvent = _$LoginFormEventTearOff();
 
 /// @nodoc
 mixin _$LoginFormEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result emailChanged(String emailStr),
-    @required Result passwordChanged(String passwordStr),
-    @required Result twoFactorTokenChanged(String tokenStr),
-    @required Result twoFactorProviderSaved(int provider),
-    @required Result signInWithEmailAndPasswordPressed(),
-    @required Result signInWithEmailPasswordAndTokenPressed(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function(String emailStr) emailChanged,
+    required TResult Function(String passwordStr) passwordChanged,
+    required TResult Function(String tokenStr) twoFactorTokenChanged,
+    required TResult Function(int provider) twoFactorProviderSaved,
+    required TResult Function() signInWithEmailAndPasswordPressed,
+    required TResult Function() signInWithEmailPasswordAndTokenPressed,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result emailChanged(String emailStr),
-    Result passwordChanged(String passwordStr),
-    Result twoFactorTokenChanged(String tokenStr),
-    Result twoFactorProviderSaved(int provider),
-    Result signInWithEmailAndPasswordPressed(),
-    Result signInWithEmailPasswordAndTokenPressed(),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String emailStr)? emailChanged,
+    TResult Function(String passwordStr)? passwordChanged,
+    TResult Function(String tokenStr)? twoFactorTokenChanged,
+    TResult Function(int provider)? twoFactorProviderSaved,
+    TResult Function()? signInWithEmailAndPasswordPressed,
+    TResult Function()? signInWithEmailPasswordAndTokenPressed,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result emailChanged(EmailChanged value),
-    @required Result passwordChanged(PasswordChanged value),
-    @required Result twoFactorTokenChanged(TwoFactorTokenChanged value),
-    @required Result twoFactorProviderSaved(TwoFactorProviderSaved value),
-    @required
-        Result signInWithEmailAndPasswordPressed(
-            SignInWithEmailAndPasswordPressed value),
-    @required
-        Result signInWithEmailPasswordAndTokenPressed(
-            SignInWithEmailPasswordAndTokenPressed value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(TwoFactorTokenChanged value)
+        twoFactorTokenChanged,
+    required TResult Function(TwoFactorProviderSaved value)
+        twoFactorProviderSaved,
+    required TResult Function(SignInWithEmailAndPasswordPressed value)
+        signInWithEmailAndPasswordPressed,
+    required TResult Function(SignInWithEmailPasswordAndTokenPressed value)
+        signInWithEmailPasswordAndTokenPressed,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result emailChanged(EmailChanged value),
-    Result passwordChanged(PasswordChanged value),
-    Result twoFactorTokenChanged(TwoFactorTokenChanged value),
-    Result twoFactorProviderSaved(TwoFactorProviderSaved value),
-    Result signInWithEmailAndPasswordPressed(
-        SignInWithEmailAndPasswordPressed value),
-    Result signInWithEmailPasswordAndTokenPressed(
-        SignInWithEmailPasswordAndTokenPressed value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(TwoFactorTokenChanged value)? twoFactorTokenChanged,
+    TResult Function(TwoFactorProviderSaved value)? twoFactorProviderSaved,
+    TResult Function(SignInWithEmailAndPasswordPressed value)?
+        signInWithEmailAndPasswordPressed,
+    TResult Function(SignInWithEmailPasswordAndTokenPressed value)?
+        signInWithEmailPasswordAndTokenPressed,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -143,17 +143,21 @@ class _$EmailChangedCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object emailStr = freezed,
+    Object? emailStr = freezed,
   }) {
     return _then(EmailChanged(
-      emailStr == freezed ? _value.emailStr : emailStr as String,
+      emailStr == freezed
+          ? _value.emailStr
+          : emailStr // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$EmailChanged implements EmailChanged {
-  const _$EmailChanged(this.emailStr) : assert(emailStr != null);
+  const _$EmailChanged(this.emailStr);
 
   @override
   final String emailStr;
@@ -176,41 +180,35 @@ class _$EmailChanged implements EmailChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(emailStr);
 
+  @JsonKey(ignore: true)
   @override
   $EmailChangedCopyWith<EmailChanged> get copyWith =>
       _$EmailChangedCopyWithImpl<EmailChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result emailChanged(String emailStr),
-    @required Result passwordChanged(String passwordStr),
-    @required Result twoFactorTokenChanged(String tokenStr),
-    @required Result twoFactorProviderSaved(int provider),
-    @required Result signInWithEmailAndPasswordPressed(),
-    @required Result signInWithEmailPasswordAndTokenPressed(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String emailStr) emailChanged,
+    required TResult Function(String passwordStr) passwordChanged,
+    required TResult Function(String tokenStr) twoFactorTokenChanged,
+    required TResult Function(int provider) twoFactorProviderSaved,
+    required TResult Function() signInWithEmailAndPasswordPressed,
+    required TResult Function() signInWithEmailPasswordAndTokenPressed,
   }) {
-    assert(emailChanged != null);
-    assert(passwordChanged != null);
-    assert(twoFactorTokenChanged != null);
-    assert(twoFactorProviderSaved != null);
-    assert(signInWithEmailAndPasswordPressed != null);
-    assert(signInWithEmailPasswordAndTokenPressed != null);
     return emailChanged(emailStr);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result emailChanged(String emailStr),
-    Result passwordChanged(String passwordStr),
-    Result twoFactorTokenChanged(String tokenStr),
-    Result twoFactorProviderSaved(int provider),
-    Result signInWithEmailAndPasswordPressed(),
-    Result signInWithEmailPasswordAndTokenPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String emailStr)? emailChanged,
+    TResult Function(String passwordStr)? passwordChanged,
+    TResult Function(String tokenStr)? twoFactorTokenChanged,
+    TResult Function(int provider)? twoFactorProviderSaved,
+    TResult Function()? signInWithEmailAndPasswordPressed,
+    TResult Function()? signInWithEmailPasswordAndTokenPressed,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (emailChanged != null) {
       return emailChanged(emailStr);
     }
@@ -219,41 +217,34 @@ class _$EmailChanged implements EmailChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result emailChanged(EmailChanged value),
-    @required Result passwordChanged(PasswordChanged value),
-    @required Result twoFactorTokenChanged(TwoFactorTokenChanged value),
-    @required Result twoFactorProviderSaved(TwoFactorProviderSaved value),
-    @required
-        Result signInWithEmailAndPasswordPressed(
-            SignInWithEmailAndPasswordPressed value),
-    @required
-        Result signInWithEmailPasswordAndTokenPressed(
-            SignInWithEmailPasswordAndTokenPressed value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(TwoFactorTokenChanged value)
+        twoFactorTokenChanged,
+    required TResult Function(TwoFactorProviderSaved value)
+        twoFactorProviderSaved,
+    required TResult Function(SignInWithEmailAndPasswordPressed value)
+        signInWithEmailAndPasswordPressed,
+    required TResult Function(SignInWithEmailPasswordAndTokenPressed value)
+        signInWithEmailPasswordAndTokenPressed,
   }) {
-    assert(emailChanged != null);
-    assert(passwordChanged != null);
-    assert(twoFactorTokenChanged != null);
-    assert(twoFactorProviderSaved != null);
-    assert(signInWithEmailAndPasswordPressed != null);
-    assert(signInWithEmailPasswordAndTokenPressed != null);
     return emailChanged(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result emailChanged(EmailChanged value),
-    Result passwordChanged(PasswordChanged value),
-    Result twoFactorTokenChanged(TwoFactorTokenChanged value),
-    Result twoFactorProviderSaved(TwoFactorProviderSaved value),
-    Result signInWithEmailAndPasswordPressed(
-        SignInWithEmailAndPasswordPressed value),
-    Result signInWithEmailPasswordAndTokenPressed(
-        SignInWithEmailPasswordAndTokenPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(TwoFactorTokenChanged value)? twoFactorTokenChanged,
+    TResult Function(TwoFactorProviderSaved value)? twoFactorProviderSaved,
+    TResult Function(SignInWithEmailAndPasswordPressed value)?
+        signInWithEmailAndPasswordPressed,
+    TResult Function(SignInWithEmailPasswordAndTokenPressed value)?
+        signInWithEmailPasswordAndTokenPressed,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (emailChanged != null) {
       return emailChanged(this);
     }
@@ -264,8 +255,10 @@ class _$EmailChanged implements EmailChanged {
 abstract class EmailChanged implements LoginFormEvent {
   const factory EmailChanged(String emailStr) = _$EmailChanged;
 
-  String get emailStr;
-  $EmailChangedCopyWith<EmailChanged> get copyWith;
+  String get emailStr => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $EmailChangedCopyWith<EmailChanged> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -289,17 +282,21 @@ class _$PasswordChangedCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object passwordStr = freezed,
+    Object? passwordStr = freezed,
   }) {
     return _then(PasswordChanged(
-      passwordStr == freezed ? _value.passwordStr : passwordStr as String,
+      passwordStr == freezed
+          ? _value.passwordStr
+          : passwordStr // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$PasswordChanged implements PasswordChanged {
-  const _$PasswordChanged(this.passwordStr) : assert(passwordStr != null);
+  const _$PasswordChanged(this.passwordStr);
 
   @override
   final String passwordStr;
@@ -322,41 +319,35 @@ class _$PasswordChanged implements PasswordChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(passwordStr);
 
+  @JsonKey(ignore: true)
   @override
   $PasswordChangedCopyWith<PasswordChanged> get copyWith =>
       _$PasswordChangedCopyWithImpl<PasswordChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result emailChanged(String emailStr),
-    @required Result passwordChanged(String passwordStr),
-    @required Result twoFactorTokenChanged(String tokenStr),
-    @required Result twoFactorProviderSaved(int provider),
-    @required Result signInWithEmailAndPasswordPressed(),
-    @required Result signInWithEmailPasswordAndTokenPressed(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String emailStr) emailChanged,
+    required TResult Function(String passwordStr) passwordChanged,
+    required TResult Function(String tokenStr) twoFactorTokenChanged,
+    required TResult Function(int provider) twoFactorProviderSaved,
+    required TResult Function() signInWithEmailAndPasswordPressed,
+    required TResult Function() signInWithEmailPasswordAndTokenPressed,
   }) {
-    assert(emailChanged != null);
-    assert(passwordChanged != null);
-    assert(twoFactorTokenChanged != null);
-    assert(twoFactorProviderSaved != null);
-    assert(signInWithEmailAndPasswordPressed != null);
-    assert(signInWithEmailPasswordAndTokenPressed != null);
     return passwordChanged(passwordStr);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result emailChanged(String emailStr),
-    Result passwordChanged(String passwordStr),
-    Result twoFactorTokenChanged(String tokenStr),
-    Result twoFactorProviderSaved(int provider),
-    Result signInWithEmailAndPasswordPressed(),
-    Result signInWithEmailPasswordAndTokenPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String emailStr)? emailChanged,
+    TResult Function(String passwordStr)? passwordChanged,
+    TResult Function(String tokenStr)? twoFactorTokenChanged,
+    TResult Function(int provider)? twoFactorProviderSaved,
+    TResult Function()? signInWithEmailAndPasswordPressed,
+    TResult Function()? signInWithEmailPasswordAndTokenPressed,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (passwordChanged != null) {
       return passwordChanged(passwordStr);
     }
@@ -365,41 +356,34 @@ class _$PasswordChanged implements PasswordChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result emailChanged(EmailChanged value),
-    @required Result passwordChanged(PasswordChanged value),
-    @required Result twoFactorTokenChanged(TwoFactorTokenChanged value),
-    @required Result twoFactorProviderSaved(TwoFactorProviderSaved value),
-    @required
-        Result signInWithEmailAndPasswordPressed(
-            SignInWithEmailAndPasswordPressed value),
-    @required
-        Result signInWithEmailPasswordAndTokenPressed(
-            SignInWithEmailPasswordAndTokenPressed value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(TwoFactorTokenChanged value)
+        twoFactorTokenChanged,
+    required TResult Function(TwoFactorProviderSaved value)
+        twoFactorProviderSaved,
+    required TResult Function(SignInWithEmailAndPasswordPressed value)
+        signInWithEmailAndPasswordPressed,
+    required TResult Function(SignInWithEmailPasswordAndTokenPressed value)
+        signInWithEmailPasswordAndTokenPressed,
   }) {
-    assert(emailChanged != null);
-    assert(passwordChanged != null);
-    assert(twoFactorTokenChanged != null);
-    assert(twoFactorProviderSaved != null);
-    assert(signInWithEmailAndPasswordPressed != null);
-    assert(signInWithEmailPasswordAndTokenPressed != null);
     return passwordChanged(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result emailChanged(EmailChanged value),
-    Result passwordChanged(PasswordChanged value),
-    Result twoFactorTokenChanged(TwoFactorTokenChanged value),
-    Result twoFactorProviderSaved(TwoFactorProviderSaved value),
-    Result signInWithEmailAndPasswordPressed(
-        SignInWithEmailAndPasswordPressed value),
-    Result signInWithEmailPasswordAndTokenPressed(
-        SignInWithEmailPasswordAndTokenPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(TwoFactorTokenChanged value)? twoFactorTokenChanged,
+    TResult Function(TwoFactorProviderSaved value)? twoFactorProviderSaved,
+    TResult Function(SignInWithEmailAndPasswordPressed value)?
+        signInWithEmailAndPasswordPressed,
+    TResult Function(SignInWithEmailPasswordAndTokenPressed value)?
+        signInWithEmailPasswordAndTokenPressed,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (passwordChanged != null) {
       return passwordChanged(this);
     }
@@ -410,8 +394,10 @@ class _$PasswordChanged implements PasswordChanged {
 abstract class PasswordChanged implements LoginFormEvent {
   const factory PasswordChanged(String passwordStr) = _$PasswordChanged;
 
-  String get passwordStr;
-  $PasswordChangedCopyWith<PasswordChanged> get copyWith;
+  String get passwordStr => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PasswordChangedCopyWith<PasswordChanged> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -435,17 +421,21 @@ class _$TwoFactorTokenChangedCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object tokenStr = freezed,
+    Object? tokenStr = freezed,
   }) {
     return _then(TwoFactorTokenChanged(
-      tokenStr == freezed ? _value.tokenStr : tokenStr as String,
+      tokenStr == freezed
+          ? _value.tokenStr
+          : tokenStr // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$TwoFactorTokenChanged implements TwoFactorTokenChanged {
-  const _$TwoFactorTokenChanged(this.tokenStr) : assert(tokenStr != null);
+  const _$TwoFactorTokenChanged(this.tokenStr);
 
   @override
   final String tokenStr;
@@ -468,6 +458,7 @@ class _$TwoFactorTokenChanged implements TwoFactorTokenChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(tokenStr);
 
+  @JsonKey(ignore: true)
   @override
   $TwoFactorTokenChangedCopyWith<TwoFactorTokenChanged> get copyWith =>
       _$TwoFactorTokenChangedCopyWithImpl<TwoFactorTokenChanged>(
@@ -475,35 +466,28 @@ class _$TwoFactorTokenChanged implements TwoFactorTokenChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result emailChanged(String emailStr),
-    @required Result passwordChanged(String passwordStr),
-    @required Result twoFactorTokenChanged(String tokenStr),
-    @required Result twoFactorProviderSaved(int provider),
-    @required Result signInWithEmailAndPasswordPressed(),
-    @required Result signInWithEmailPasswordAndTokenPressed(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String emailStr) emailChanged,
+    required TResult Function(String passwordStr) passwordChanged,
+    required TResult Function(String tokenStr) twoFactorTokenChanged,
+    required TResult Function(int provider) twoFactorProviderSaved,
+    required TResult Function() signInWithEmailAndPasswordPressed,
+    required TResult Function() signInWithEmailPasswordAndTokenPressed,
   }) {
-    assert(emailChanged != null);
-    assert(passwordChanged != null);
-    assert(twoFactorTokenChanged != null);
-    assert(twoFactorProviderSaved != null);
-    assert(signInWithEmailAndPasswordPressed != null);
-    assert(signInWithEmailPasswordAndTokenPressed != null);
     return twoFactorTokenChanged(tokenStr);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result emailChanged(String emailStr),
-    Result passwordChanged(String passwordStr),
-    Result twoFactorTokenChanged(String tokenStr),
-    Result twoFactorProviderSaved(int provider),
-    Result signInWithEmailAndPasswordPressed(),
-    Result signInWithEmailPasswordAndTokenPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String emailStr)? emailChanged,
+    TResult Function(String passwordStr)? passwordChanged,
+    TResult Function(String tokenStr)? twoFactorTokenChanged,
+    TResult Function(int provider)? twoFactorProviderSaved,
+    TResult Function()? signInWithEmailAndPasswordPressed,
+    TResult Function()? signInWithEmailPasswordAndTokenPressed,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (twoFactorTokenChanged != null) {
       return twoFactorTokenChanged(tokenStr);
     }
@@ -512,41 +496,34 @@ class _$TwoFactorTokenChanged implements TwoFactorTokenChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result emailChanged(EmailChanged value),
-    @required Result passwordChanged(PasswordChanged value),
-    @required Result twoFactorTokenChanged(TwoFactorTokenChanged value),
-    @required Result twoFactorProviderSaved(TwoFactorProviderSaved value),
-    @required
-        Result signInWithEmailAndPasswordPressed(
-            SignInWithEmailAndPasswordPressed value),
-    @required
-        Result signInWithEmailPasswordAndTokenPressed(
-            SignInWithEmailPasswordAndTokenPressed value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(TwoFactorTokenChanged value)
+        twoFactorTokenChanged,
+    required TResult Function(TwoFactorProviderSaved value)
+        twoFactorProviderSaved,
+    required TResult Function(SignInWithEmailAndPasswordPressed value)
+        signInWithEmailAndPasswordPressed,
+    required TResult Function(SignInWithEmailPasswordAndTokenPressed value)
+        signInWithEmailPasswordAndTokenPressed,
   }) {
-    assert(emailChanged != null);
-    assert(passwordChanged != null);
-    assert(twoFactorTokenChanged != null);
-    assert(twoFactorProviderSaved != null);
-    assert(signInWithEmailAndPasswordPressed != null);
-    assert(signInWithEmailPasswordAndTokenPressed != null);
     return twoFactorTokenChanged(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result emailChanged(EmailChanged value),
-    Result passwordChanged(PasswordChanged value),
-    Result twoFactorTokenChanged(TwoFactorTokenChanged value),
-    Result twoFactorProviderSaved(TwoFactorProviderSaved value),
-    Result signInWithEmailAndPasswordPressed(
-        SignInWithEmailAndPasswordPressed value),
-    Result signInWithEmailPasswordAndTokenPressed(
-        SignInWithEmailPasswordAndTokenPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(TwoFactorTokenChanged value)? twoFactorTokenChanged,
+    TResult Function(TwoFactorProviderSaved value)? twoFactorProviderSaved,
+    TResult Function(SignInWithEmailAndPasswordPressed value)?
+        signInWithEmailAndPasswordPressed,
+    TResult Function(SignInWithEmailPasswordAndTokenPressed value)?
+        signInWithEmailPasswordAndTokenPressed,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (twoFactorTokenChanged != null) {
       return twoFactorTokenChanged(this);
     }
@@ -558,8 +535,10 @@ abstract class TwoFactorTokenChanged implements LoginFormEvent {
   const factory TwoFactorTokenChanged(String tokenStr) =
       _$TwoFactorTokenChanged;
 
-  String get tokenStr;
-  $TwoFactorTokenChangedCopyWith<TwoFactorTokenChanged> get copyWith;
+  String get tokenStr => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TwoFactorTokenChangedCopyWith<TwoFactorTokenChanged> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -583,17 +562,21 @@ class _$TwoFactorProviderSavedCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object provider = freezed,
+    Object? provider = freezed,
   }) {
     return _then(TwoFactorProviderSaved(
-      provider == freezed ? _value.provider : provider as int,
+      provider == freezed
+          ? _value.provider
+          : provider // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
 
 /// @nodoc
+
 class _$TwoFactorProviderSaved implements TwoFactorProviderSaved {
-  const _$TwoFactorProviderSaved(this.provider) : assert(provider != null);
+  const _$TwoFactorProviderSaved(this.provider);
 
   @override
   final int provider;
@@ -616,6 +599,7 @@ class _$TwoFactorProviderSaved implements TwoFactorProviderSaved {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(provider);
 
+  @JsonKey(ignore: true)
   @override
   $TwoFactorProviderSavedCopyWith<TwoFactorProviderSaved> get copyWith =>
       _$TwoFactorProviderSavedCopyWithImpl<TwoFactorProviderSaved>(
@@ -623,35 +607,28 @@ class _$TwoFactorProviderSaved implements TwoFactorProviderSaved {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result emailChanged(String emailStr),
-    @required Result passwordChanged(String passwordStr),
-    @required Result twoFactorTokenChanged(String tokenStr),
-    @required Result twoFactorProviderSaved(int provider),
-    @required Result signInWithEmailAndPasswordPressed(),
-    @required Result signInWithEmailPasswordAndTokenPressed(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String emailStr) emailChanged,
+    required TResult Function(String passwordStr) passwordChanged,
+    required TResult Function(String tokenStr) twoFactorTokenChanged,
+    required TResult Function(int provider) twoFactorProviderSaved,
+    required TResult Function() signInWithEmailAndPasswordPressed,
+    required TResult Function() signInWithEmailPasswordAndTokenPressed,
   }) {
-    assert(emailChanged != null);
-    assert(passwordChanged != null);
-    assert(twoFactorTokenChanged != null);
-    assert(twoFactorProviderSaved != null);
-    assert(signInWithEmailAndPasswordPressed != null);
-    assert(signInWithEmailPasswordAndTokenPressed != null);
     return twoFactorProviderSaved(provider);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result emailChanged(String emailStr),
-    Result passwordChanged(String passwordStr),
-    Result twoFactorTokenChanged(String tokenStr),
-    Result twoFactorProviderSaved(int provider),
-    Result signInWithEmailAndPasswordPressed(),
-    Result signInWithEmailPasswordAndTokenPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String emailStr)? emailChanged,
+    TResult Function(String passwordStr)? passwordChanged,
+    TResult Function(String tokenStr)? twoFactorTokenChanged,
+    TResult Function(int provider)? twoFactorProviderSaved,
+    TResult Function()? signInWithEmailAndPasswordPressed,
+    TResult Function()? signInWithEmailPasswordAndTokenPressed,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (twoFactorProviderSaved != null) {
       return twoFactorProviderSaved(provider);
     }
@@ -660,41 +637,34 @@ class _$TwoFactorProviderSaved implements TwoFactorProviderSaved {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result emailChanged(EmailChanged value),
-    @required Result passwordChanged(PasswordChanged value),
-    @required Result twoFactorTokenChanged(TwoFactorTokenChanged value),
-    @required Result twoFactorProviderSaved(TwoFactorProviderSaved value),
-    @required
-        Result signInWithEmailAndPasswordPressed(
-            SignInWithEmailAndPasswordPressed value),
-    @required
-        Result signInWithEmailPasswordAndTokenPressed(
-            SignInWithEmailPasswordAndTokenPressed value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(TwoFactorTokenChanged value)
+        twoFactorTokenChanged,
+    required TResult Function(TwoFactorProviderSaved value)
+        twoFactorProviderSaved,
+    required TResult Function(SignInWithEmailAndPasswordPressed value)
+        signInWithEmailAndPasswordPressed,
+    required TResult Function(SignInWithEmailPasswordAndTokenPressed value)
+        signInWithEmailPasswordAndTokenPressed,
   }) {
-    assert(emailChanged != null);
-    assert(passwordChanged != null);
-    assert(twoFactorTokenChanged != null);
-    assert(twoFactorProviderSaved != null);
-    assert(signInWithEmailAndPasswordPressed != null);
-    assert(signInWithEmailPasswordAndTokenPressed != null);
     return twoFactorProviderSaved(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result emailChanged(EmailChanged value),
-    Result passwordChanged(PasswordChanged value),
-    Result twoFactorTokenChanged(TwoFactorTokenChanged value),
-    Result twoFactorProviderSaved(TwoFactorProviderSaved value),
-    Result signInWithEmailAndPasswordPressed(
-        SignInWithEmailAndPasswordPressed value),
-    Result signInWithEmailPasswordAndTokenPressed(
-        SignInWithEmailPasswordAndTokenPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(TwoFactorTokenChanged value)? twoFactorTokenChanged,
+    TResult Function(TwoFactorProviderSaved value)? twoFactorProviderSaved,
+    TResult Function(SignInWithEmailAndPasswordPressed value)?
+        signInWithEmailAndPasswordPressed,
+    TResult Function(SignInWithEmailPasswordAndTokenPressed value)?
+        signInWithEmailPasswordAndTokenPressed,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (twoFactorProviderSaved != null) {
       return twoFactorProviderSaved(this);
     }
@@ -705,8 +675,10 @@ class _$TwoFactorProviderSaved implements TwoFactorProviderSaved {
 abstract class TwoFactorProviderSaved implements LoginFormEvent {
   const factory TwoFactorProviderSaved(int provider) = _$TwoFactorProviderSaved;
 
-  int get provider;
-  $TwoFactorProviderSavedCopyWith<TwoFactorProviderSaved> get copyWith;
+  int get provider => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TwoFactorProviderSavedCopyWith<TwoFactorProviderSaved> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -732,6 +704,7 @@ class _$SignInWithEmailAndPasswordPressedCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$SignInWithEmailAndPasswordPressed
     implements SignInWithEmailAndPasswordPressed {
   const _$SignInWithEmailAndPasswordPressed();
@@ -752,35 +725,28 @@ class _$SignInWithEmailAndPasswordPressed
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result emailChanged(String emailStr),
-    @required Result passwordChanged(String passwordStr),
-    @required Result twoFactorTokenChanged(String tokenStr),
-    @required Result twoFactorProviderSaved(int provider),
-    @required Result signInWithEmailAndPasswordPressed(),
-    @required Result signInWithEmailPasswordAndTokenPressed(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String emailStr) emailChanged,
+    required TResult Function(String passwordStr) passwordChanged,
+    required TResult Function(String tokenStr) twoFactorTokenChanged,
+    required TResult Function(int provider) twoFactorProviderSaved,
+    required TResult Function() signInWithEmailAndPasswordPressed,
+    required TResult Function() signInWithEmailPasswordAndTokenPressed,
   }) {
-    assert(emailChanged != null);
-    assert(passwordChanged != null);
-    assert(twoFactorTokenChanged != null);
-    assert(twoFactorProviderSaved != null);
-    assert(signInWithEmailAndPasswordPressed != null);
-    assert(signInWithEmailPasswordAndTokenPressed != null);
     return signInWithEmailAndPasswordPressed();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result emailChanged(String emailStr),
-    Result passwordChanged(String passwordStr),
-    Result twoFactorTokenChanged(String tokenStr),
-    Result twoFactorProviderSaved(int provider),
-    Result signInWithEmailAndPasswordPressed(),
-    Result signInWithEmailPasswordAndTokenPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String emailStr)? emailChanged,
+    TResult Function(String passwordStr)? passwordChanged,
+    TResult Function(String tokenStr)? twoFactorTokenChanged,
+    TResult Function(int provider)? twoFactorProviderSaved,
+    TResult Function()? signInWithEmailAndPasswordPressed,
+    TResult Function()? signInWithEmailPasswordAndTokenPressed,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (signInWithEmailAndPasswordPressed != null) {
       return signInWithEmailAndPasswordPressed();
     }
@@ -789,41 +755,34 @@ class _$SignInWithEmailAndPasswordPressed
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result emailChanged(EmailChanged value),
-    @required Result passwordChanged(PasswordChanged value),
-    @required Result twoFactorTokenChanged(TwoFactorTokenChanged value),
-    @required Result twoFactorProviderSaved(TwoFactorProviderSaved value),
-    @required
-        Result signInWithEmailAndPasswordPressed(
-            SignInWithEmailAndPasswordPressed value),
-    @required
-        Result signInWithEmailPasswordAndTokenPressed(
-            SignInWithEmailPasswordAndTokenPressed value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(TwoFactorTokenChanged value)
+        twoFactorTokenChanged,
+    required TResult Function(TwoFactorProviderSaved value)
+        twoFactorProviderSaved,
+    required TResult Function(SignInWithEmailAndPasswordPressed value)
+        signInWithEmailAndPasswordPressed,
+    required TResult Function(SignInWithEmailPasswordAndTokenPressed value)
+        signInWithEmailPasswordAndTokenPressed,
   }) {
-    assert(emailChanged != null);
-    assert(passwordChanged != null);
-    assert(twoFactorTokenChanged != null);
-    assert(twoFactorProviderSaved != null);
-    assert(signInWithEmailAndPasswordPressed != null);
-    assert(signInWithEmailPasswordAndTokenPressed != null);
     return signInWithEmailAndPasswordPressed(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result emailChanged(EmailChanged value),
-    Result passwordChanged(PasswordChanged value),
-    Result twoFactorTokenChanged(TwoFactorTokenChanged value),
-    Result twoFactorProviderSaved(TwoFactorProviderSaved value),
-    Result signInWithEmailAndPasswordPressed(
-        SignInWithEmailAndPasswordPressed value),
-    Result signInWithEmailPasswordAndTokenPressed(
-        SignInWithEmailPasswordAndTokenPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(TwoFactorTokenChanged value)? twoFactorTokenChanged,
+    TResult Function(TwoFactorProviderSaved value)? twoFactorProviderSaved,
+    TResult Function(SignInWithEmailAndPasswordPressed value)?
+        signInWithEmailAndPasswordPressed,
+    TResult Function(SignInWithEmailPasswordAndTokenPressed value)?
+        signInWithEmailPasswordAndTokenPressed,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (signInWithEmailAndPasswordPressed != null) {
       return signInWithEmailAndPasswordPressed(this);
     }
@@ -860,6 +819,7 @@ class _$SignInWithEmailPasswordAndTokenPressedCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$SignInWithEmailPasswordAndTokenPressed
     implements SignInWithEmailPasswordAndTokenPressed {
   const _$SignInWithEmailPasswordAndTokenPressed();
@@ -880,35 +840,28 @@ class _$SignInWithEmailPasswordAndTokenPressed
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result emailChanged(String emailStr),
-    @required Result passwordChanged(String passwordStr),
-    @required Result twoFactorTokenChanged(String tokenStr),
-    @required Result twoFactorProviderSaved(int provider),
-    @required Result signInWithEmailAndPasswordPressed(),
-    @required Result signInWithEmailPasswordAndTokenPressed(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String emailStr) emailChanged,
+    required TResult Function(String passwordStr) passwordChanged,
+    required TResult Function(String tokenStr) twoFactorTokenChanged,
+    required TResult Function(int provider) twoFactorProviderSaved,
+    required TResult Function() signInWithEmailAndPasswordPressed,
+    required TResult Function() signInWithEmailPasswordAndTokenPressed,
   }) {
-    assert(emailChanged != null);
-    assert(passwordChanged != null);
-    assert(twoFactorTokenChanged != null);
-    assert(twoFactorProviderSaved != null);
-    assert(signInWithEmailAndPasswordPressed != null);
-    assert(signInWithEmailPasswordAndTokenPressed != null);
     return signInWithEmailPasswordAndTokenPressed();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result emailChanged(String emailStr),
-    Result passwordChanged(String passwordStr),
-    Result twoFactorTokenChanged(String tokenStr),
-    Result twoFactorProviderSaved(int provider),
-    Result signInWithEmailAndPasswordPressed(),
-    Result signInWithEmailPasswordAndTokenPressed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String emailStr)? emailChanged,
+    TResult Function(String passwordStr)? passwordChanged,
+    TResult Function(String tokenStr)? twoFactorTokenChanged,
+    TResult Function(int provider)? twoFactorProviderSaved,
+    TResult Function()? signInWithEmailAndPasswordPressed,
+    TResult Function()? signInWithEmailPasswordAndTokenPressed,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (signInWithEmailPasswordAndTokenPressed != null) {
       return signInWithEmailPasswordAndTokenPressed();
     }
@@ -917,41 +870,34 @@ class _$SignInWithEmailPasswordAndTokenPressed
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result emailChanged(EmailChanged value),
-    @required Result passwordChanged(PasswordChanged value),
-    @required Result twoFactorTokenChanged(TwoFactorTokenChanged value),
-    @required Result twoFactorProviderSaved(TwoFactorProviderSaved value),
-    @required
-        Result signInWithEmailAndPasswordPressed(
-            SignInWithEmailAndPasswordPressed value),
-    @required
-        Result signInWithEmailPasswordAndTokenPressed(
-            SignInWithEmailPasswordAndTokenPressed value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(TwoFactorTokenChanged value)
+        twoFactorTokenChanged,
+    required TResult Function(TwoFactorProviderSaved value)
+        twoFactorProviderSaved,
+    required TResult Function(SignInWithEmailAndPasswordPressed value)
+        signInWithEmailAndPasswordPressed,
+    required TResult Function(SignInWithEmailPasswordAndTokenPressed value)
+        signInWithEmailPasswordAndTokenPressed,
   }) {
-    assert(emailChanged != null);
-    assert(passwordChanged != null);
-    assert(twoFactorTokenChanged != null);
-    assert(twoFactorProviderSaved != null);
-    assert(signInWithEmailAndPasswordPressed != null);
-    assert(signInWithEmailPasswordAndTokenPressed != null);
     return signInWithEmailPasswordAndTokenPressed(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result emailChanged(EmailChanged value),
-    Result passwordChanged(PasswordChanged value),
-    Result twoFactorTokenChanged(TwoFactorTokenChanged value),
-    Result twoFactorProviderSaved(TwoFactorProviderSaved value),
-    Result signInWithEmailAndPasswordPressed(
-        SignInWithEmailAndPasswordPressed value),
-    Result signInWithEmailPasswordAndTokenPressed(
-        SignInWithEmailPasswordAndTokenPressed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(TwoFactorTokenChanged value)? twoFactorTokenChanged,
+    TResult Function(TwoFactorProviderSaved value)? twoFactorProviderSaved,
+    TResult Function(SignInWithEmailAndPasswordPressed value)?
+        signInWithEmailAndPasswordPressed,
+    TResult Function(SignInWithEmailPasswordAndTokenPressed value)?
+        signInWithEmailPasswordAndTokenPressed,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (signInWithEmailPasswordAndTokenPressed != null) {
       return signInWithEmailPasswordAndTokenPressed(this);
     }
@@ -969,29 +915,19 @@ abstract class SignInWithEmailPasswordAndTokenPressed
 class _$LoginFormStateTearOff {
   const _$LoginFormStateTearOff();
 
-// ignore: unused_element
   _LoginFormState call(
-      {@required
-          String emailAddress,
-      @required
-          String password,
-      @required
-          bool showErrorMessages,
-      @required
-          bool showTokenErrorMessages,
-      @required
-          Option<Either<Failure, LoginResponse>> authFailureOrSuccessOption,
-      @required
-          String token,
-      @required
-          bool isSubmitting,
-      @required
-          bool isSubmittingToken,
-      @required
-          int twoFactorProvider,
-      @required
-          Option<Either<Failure, LoginResponse>>
-              auth2faFailureOrSuccessOption}) {
+      {required String emailAddress,
+      required String password,
+      required bool showErrorMessages,
+      required bool showTokenErrorMessages,
+      required Option<Either<Failure, LoginResponse>>
+          authFailureOrSuccessOption,
+      required String token,
+      required bool isSubmitting,
+      required bool isSubmittingToken,
+      required int twoFactorProvider,
+      required Option<Either<Failure, LoginResponse>>
+          auth2faFailureOrSuccessOption}) {
     return _LoginFormState(
       emailAddress: emailAddress,
       password: password,
@@ -1008,23 +944,26 @@ class _$LoginFormStateTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $LoginFormState = _$LoginFormStateTearOff();
 
 /// @nodoc
 mixin _$LoginFormState {
-  String get emailAddress;
-  String get password;
-  bool get showErrorMessages;
-  bool get showTokenErrorMessages;
-  Option<Either<Failure, LoginResponse>> get authFailureOrSuccessOption;
-  String get token;
-  bool get isSubmitting;
-  bool get isSubmittingToken;
-  int get twoFactorProvider;
-  Option<Either<Failure, LoginResponse>> get auth2faFailureOrSuccessOption;
+  String get emailAddress => throw _privateConstructorUsedError;
+  String get password => throw _privateConstructorUsedError;
+  bool get showErrorMessages => throw _privateConstructorUsedError;
+  bool get showTokenErrorMessages => throw _privateConstructorUsedError;
+  Option<Either<Failure, LoginResponse>> get authFailureOrSuccessOption =>
+      throw _privateConstructorUsedError;
+  String get token => throw _privateConstructorUsedError;
+  bool get isSubmitting => throw _privateConstructorUsedError;
+  bool get isSubmittingToken => throw _privateConstructorUsedError;
+  int get twoFactorProvider => throw _privateConstructorUsedError;
+  Option<Either<Failure, LoginResponse>> get auth2faFailureOrSuccessOption =>
+      throw _privateConstructorUsedError;
 
-  $LoginFormStateCopyWith<LoginFormState> get copyWith;
+  @JsonKey(ignore: true)
+  $LoginFormStateCopyWith<LoginFormState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1056,44 +995,57 @@ class _$LoginFormStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object emailAddress = freezed,
-    Object password = freezed,
-    Object showErrorMessages = freezed,
-    Object showTokenErrorMessages = freezed,
-    Object authFailureOrSuccessOption = freezed,
-    Object token = freezed,
-    Object isSubmitting = freezed,
-    Object isSubmittingToken = freezed,
-    Object twoFactorProvider = freezed,
-    Object auth2faFailureOrSuccessOption = freezed,
+    Object? emailAddress = freezed,
+    Object? password = freezed,
+    Object? showErrorMessages = freezed,
+    Object? showTokenErrorMessages = freezed,
+    Object? authFailureOrSuccessOption = freezed,
+    Object? token = freezed,
+    Object? isSubmitting = freezed,
+    Object? isSubmittingToken = freezed,
+    Object? twoFactorProvider = freezed,
+    Object? auth2faFailureOrSuccessOption = freezed,
   }) {
     return _then(_value.copyWith(
       emailAddress: emailAddress == freezed
           ? _value.emailAddress
-          : emailAddress as String,
-      password: password == freezed ? _value.password : password as String,
+          : emailAddress // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
       showErrorMessages: showErrorMessages == freezed
           ? _value.showErrorMessages
-          : showErrorMessages as bool,
+          : showErrorMessages // ignore: cast_nullable_to_non_nullable
+              as bool,
       showTokenErrorMessages: showTokenErrorMessages == freezed
           ? _value.showTokenErrorMessages
-          : showTokenErrorMessages as bool,
+          : showTokenErrorMessages // ignore: cast_nullable_to_non_nullable
+              as bool,
       authFailureOrSuccessOption: authFailureOrSuccessOption == freezed
           ? _value.authFailureOrSuccessOption
-          : authFailureOrSuccessOption
+          : authFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<Failure, LoginResponse>>,
-      token: token == freezed ? _value.token : token as String,
-      isSubmitting:
-          isSubmitting == freezed ? _value.isSubmitting : isSubmitting as bool,
+      token: token == freezed
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
+              as String,
+      isSubmitting: isSubmitting == freezed
+          ? _value.isSubmitting
+          : isSubmitting // ignore: cast_nullable_to_non_nullable
+              as bool,
       isSubmittingToken: isSubmittingToken == freezed
           ? _value.isSubmittingToken
-          : isSubmittingToken as bool,
+          : isSubmittingToken // ignore: cast_nullable_to_non_nullable
+              as bool,
       twoFactorProvider: twoFactorProvider == freezed
           ? _value.twoFactorProvider
-          : twoFactorProvider as int,
+          : twoFactorProvider // ignore: cast_nullable_to_non_nullable
+              as int,
       auth2faFailureOrSuccessOption: auth2faFailureOrSuccessOption == freezed
           ? _value.auth2faFailureOrSuccessOption
-          : auth2faFailureOrSuccessOption
+          : auth2faFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<Failure, LoginResponse>>,
     ));
   }
@@ -1132,72 +1084,76 @@ class __$LoginFormStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object emailAddress = freezed,
-    Object password = freezed,
-    Object showErrorMessages = freezed,
-    Object showTokenErrorMessages = freezed,
-    Object authFailureOrSuccessOption = freezed,
-    Object token = freezed,
-    Object isSubmitting = freezed,
-    Object isSubmittingToken = freezed,
-    Object twoFactorProvider = freezed,
-    Object auth2faFailureOrSuccessOption = freezed,
+    Object? emailAddress = freezed,
+    Object? password = freezed,
+    Object? showErrorMessages = freezed,
+    Object? showTokenErrorMessages = freezed,
+    Object? authFailureOrSuccessOption = freezed,
+    Object? token = freezed,
+    Object? isSubmitting = freezed,
+    Object? isSubmittingToken = freezed,
+    Object? twoFactorProvider = freezed,
+    Object? auth2faFailureOrSuccessOption = freezed,
   }) {
     return _then(_LoginFormState(
       emailAddress: emailAddress == freezed
           ? _value.emailAddress
-          : emailAddress as String,
-      password: password == freezed ? _value.password : password as String,
+          : emailAddress // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
       showErrorMessages: showErrorMessages == freezed
           ? _value.showErrorMessages
-          : showErrorMessages as bool,
+          : showErrorMessages // ignore: cast_nullable_to_non_nullable
+              as bool,
       showTokenErrorMessages: showTokenErrorMessages == freezed
           ? _value.showTokenErrorMessages
-          : showTokenErrorMessages as bool,
+          : showTokenErrorMessages // ignore: cast_nullable_to_non_nullable
+              as bool,
       authFailureOrSuccessOption: authFailureOrSuccessOption == freezed
           ? _value.authFailureOrSuccessOption
-          : authFailureOrSuccessOption
+          : authFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<Failure, LoginResponse>>,
-      token: token == freezed ? _value.token : token as String,
-      isSubmitting:
-          isSubmitting == freezed ? _value.isSubmitting : isSubmitting as bool,
+      token: token == freezed
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
+              as String,
+      isSubmitting: isSubmitting == freezed
+          ? _value.isSubmitting
+          : isSubmitting // ignore: cast_nullable_to_non_nullable
+              as bool,
       isSubmittingToken: isSubmittingToken == freezed
           ? _value.isSubmittingToken
-          : isSubmittingToken as bool,
+          : isSubmittingToken // ignore: cast_nullable_to_non_nullable
+              as bool,
       twoFactorProvider: twoFactorProvider == freezed
           ? _value.twoFactorProvider
-          : twoFactorProvider as int,
+          : twoFactorProvider // ignore: cast_nullable_to_non_nullable
+              as int,
       auth2faFailureOrSuccessOption: auth2faFailureOrSuccessOption == freezed
           ? _value.auth2faFailureOrSuccessOption
-          : auth2faFailureOrSuccessOption
+          : auth2faFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<Failure, LoginResponse>>,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_LoginFormState implements _LoginFormState {
   const _$_LoginFormState(
-      {@required this.emailAddress,
-      @required this.password,
-      @required this.showErrorMessages,
-      @required this.showTokenErrorMessages,
-      @required this.authFailureOrSuccessOption,
-      @required this.token,
-      @required this.isSubmitting,
-      @required this.isSubmittingToken,
-      @required this.twoFactorProvider,
-      @required this.auth2faFailureOrSuccessOption})
-      : assert(emailAddress != null),
-        assert(password != null),
-        assert(showErrorMessages != null),
-        assert(showTokenErrorMessages != null),
-        assert(authFailureOrSuccessOption != null),
-        assert(token != null),
-        assert(isSubmitting != null),
-        assert(isSubmittingToken != null),
-        assert(twoFactorProvider != null),
-        assert(auth2faFailureOrSuccessOption != null);
+      {required this.emailAddress,
+      required this.password,
+      required this.showErrorMessages,
+      required this.showTokenErrorMessages,
+      required this.authFailureOrSuccessOption,
+      required this.token,
+      required this.isSubmitting,
+      required this.isSubmittingToken,
+      required this.twoFactorProvider,
+      required this.auth2faFailureOrSuccessOption});
 
   @override
   final String emailAddress;
@@ -1278,6 +1234,7 @@ class _$_LoginFormState implements _LoginFormState {
       const DeepCollectionEquality().hash(twoFactorProvider) ^
       const DeepCollectionEquality().hash(auth2faFailureOrSuccessOption);
 
+  @JsonKey(ignore: true)
   @override
   _$LoginFormStateCopyWith<_LoginFormState> get copyWith =>
       __$LoginFormStateCopyWithImpl<_LoginFormState>(this, _$identity);
@@ -1285,48 +1242,43 @@ class _$_LoginFormState implements _LoginFormState {
 
 abstract class _LoginFormState implements LoginFormState {
   const factory _LoginFormState(
-      {@required
-          String emailAddress,
-      @required
-          String password,
-      @required
-          bool showErrorMessages,
-      @required
-          bool showTokenErrorMessages,
-      @required
-          Option<Either<Failure, LoginResponse>> authFailureOrSuccessOption,
-      @required
-          String token,
-      @required
-          bool isSubmitting,
-      @required
-          bool isSubmittingToken,
-      @required
-          int twoFactorProvider,
-      @required
-          Option<Either<Failure, LoginResponse>>
-              auth2faFailureOrSuccessOption}) = _$_LoginFormState;
+      {required String emailAddress,
+      required String password,
+      required bool showErrorMessages,
+      required bool showTokenErrorMessages,
+      required Option<Either<Failure, LoginResponse>>
+          authFailureOrSuccessOption,
+      required String token,
+      required bool isSubmitting,
+      required bool isSubmittingToken,
+      required int twoFactorProvider,
+      required Option<Either<Failure, LoginResponse>>
+          auth2faFailureOrSuccessOption}) = _$_LoginFormState;
 
   @override
-  String get emailAddress;
+  String get emailAddress => throw _privateConstructorUsedError;
   @override
-  String get password;
+  String get password => throw _privateConstructorUsedError;
   @override
-  bool get showErrorMessages;
+  bool get showErrorMessages => throw _privateConstructorUsedError;
   @override
-  bool get showTokenErrorMessages;
+  bool get showTokenErrorMessages => throw _privateConstructorUsedError;
   @override
-  Option<Either<Failure, LoginResponse>> get authFailureOrSuccessOption;
+  Option<Either<Failure, LoginResponse>> get authFailureOrSuccessOption =>
+      throw _privateConstructorUsedError;
   @override
-  String get token;
+  String get token => throw _privateConstructorUsedError;
   @override
-  bool get isSubmitting;
+  bool get isSubmitting => throw _privateConstructorUsedError;
   @override
-  bool get isSubmittingToken;
+  bool get isSubmittingToken => throw _privateConstructorUsedError;
   @override
-  int get twoFactorProvider;
+  int get twoFactorProvider => throw _privateConstructorUsedError;
   @override
-  Option<Either<Failure, LoginResponse>> get auth2faFailureOrSuccessOption;
+  Option<Either<Failure, LoginResponse>> get auth2faFailureOrSuccessOption =>
+      throw _privateConstructorUsedError;
   @override
-  _$LoginFormStateCopyWith<_LoginFormState> get copyWith;
+  @JsonKey(ignore: true)
+  _$LoginFormStateCopyWith<_LoginFormState> get copyWith =>
+      throw _privateConstructorUsedError;
 }

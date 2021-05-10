@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'failures.dart';
 
@@ -9,31 +9,29 @@ part of 'failures.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$FailureTearOff {
   const _$FailureTearOff();
 
-// ignore: unused_element
   _Failure call() {
     return const _Failure();
   }
 
-// ignore: unused_element
   CacheFailure cache() {
     return const CacheFailure();
   }
 
-// ignore: unused_element
   CryptoFailure crypto() {
     return const CryptoFailure();
   }
 
-// ignore: unused_element
   ServerFailure server() {
     return const ServerFailure();
   }
 
-// ignore: unused_element
   TwoFactorRequired twoFactorRequired(int type) {
     return TwoFactorRequired(
       type,
@@ -42,45 +40,48 @@ class _$FailureTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Failure = _$FailureTearOff();
 
 /// @nodoc
 mixin _$Failure {
   @optionalTypeArgs
-  Result when<Result extends Object>(
-    Result $default(), {
-    @required Result cache(),
-    @required Result crypto(),
-    @required Result server(),
-    @required Result twoFactorRequired(int type),
-  });
+  TResult when<TResult extends Object?>(
+    TResult Function() $default, {
+    required TResult Function() cache,
+    required TResult Function() crypto,
+    required TResult Function() server,
+    required TResult Function(int type) twoFactorRequired,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>(
-    Result $default(), {
-    Result cache(),
-    Result crypto(),
-    Result server(),
-    Result twoFactorRequired(int type),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function()? $default, {
+    TResult Function()? cache,
+    TResult Function()? crypto,
+    TResult Function()? server,
+    TResult Function(int type)? twoFactorRequired,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>(
-    Result $default(_Failure value), {
-    @required Result cache(CacheFailure value),
-    @required Result crypto(CryptoFailure value),
-    @required Result server(ServerFailure value),
-    @required Result twoFactorRequired(TwoFactorRequired value),
-  });
+  TResult map<TResult extends Object?>(
+    TResult Function(_Failure value) $default, {
+    required TResult Function(CacheFailure value) cache,
+    required TResult Function(CryptoFailure value) crypto,
+    required TResult Function(ServerFailure value) server,
+    required TResult Function(TwoFactorRequired value) twoFactorRequired,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>(
-    Result $default(_Failure value), {
-    Result cache(CacheFailure value),
-    Result crypto(CryptoFailure value),
-    Result server(ServerFailure value),
-    Result twoFactorRequired(TwoFactorRequired value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_Failure value)? $default, {
+    TResult Function(CacheFailure value)? cache,
+    TResult Function(CryptoFailure value)? crypto,
+    TResult Function(ServerFailure value)? server,
+    TResult Function(TwoFactorRequired value)? twoFactorRequired,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -115,6 +116,7 @@ class __$FailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_Failure implements _Failure {
   const _$_Failure();
 
@@ -133,32 +135,26 @@ class _$_Failure implements _Failure {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>(
-    Result $default(), {
-    @required Result cache(),
-    @required Result crypto(),
-    @required Result server(),
-    @required Result twoFactorRequired(int type),
+  TResult when<TResult extends Object?>(
+    TResult Function() $default, {
+    required TResult Function() cache,
+    required TResult Function() crypto,
+    required TResult Function() server,
+    required TResult Function(int type) twoFactorRequired,
   }) {
-    assert($default != null);
-    assert(cache != null);
-    assert(crypto != null);
-    assert(server != null);
-    assert(twoFactorRequired != null);
     return $default();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>(
-    Result $default(), {
-    Result cache(),
-    Result crypto(),
-    Result server(),
-    Result twoFactorRequired(int type),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function()? $default, {
+    TResult Function()? cache,
+    TResult Function()? crypto,
+    TResult Function()? server,
+    TResult Function(int type)? twoFactorRequired,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if ($default != null) {
       return $default();
     }
@@ -167,32 +163,26 @@ class _$_Failure implements _Failure {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>(
-    Result $default(_Failure value), {
-    @required Result cache(CacheFailure value),
-    @required Result crypto(CryptoFailure value),
-    @required Result server(ServerFailure value),
-    @required Result twoFactorRequired(TwoFactorRequired value),
+  TResult map<TResult extends Object?>(
+    TResult Function(_Failure value) $default, {
+    required TResult Function(CacheFailure value) cache,
+    required TResult Function(CryptoFailure value) crypto,
+    required TResult Function(ServerFailure value) server,
+    required TResult Function(TwoFactorRequired value) twoFactorRequired,
   }) {
-    assert($default != null);
-    assert(cache != null);
-    assert(crypto != null);
-    assert(server != null);
-    assert(twoFactorRequired != null);
     return $default(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>(
-    Result $default(_Failure value), {
-    Result cache(CacheFailure value),
-    Result crypto(CryptoFailure value),
-    Result server(ServerFailure value),
-    Result twoFactorRequired(TwoFactorRequired value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_Failure value)? $default, {
+    TResult Function(CacheFailure value)? cache,
+    TResult Function(CryptoFailure value)? crypto,
+    TResult Function(ServerFailure value)? server,
+    TResult Function(TwoFactorRequired value)? twoFactorRequired,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if ($default != null) {
       return $default(this);
     }
@@ -223,6 +213,7 @@ class _$CacheFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$CacheFailure implements CacheFailure {
   const _$CacheFailure();
 
@@ -241,32 +232,26 @@ class _$CacheFailure implements CacheFailure {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>(
-    Result $default(), {
-    @required Result cache(),
-    @required Result crypto(),
-    @required Result server(),
-    @required Result twoFactorRequired(int type),
+  TResult when<TResult extends Object?>(
+    TResult Function() $default, {
+    required TResult Function() cache,
+    required TResult Function() crypto,
+    required TResult Function() server,
+    required TResult Function(int type) twoFactorRequired,
   }) {
-    assert($default != null);
-    assert(cache != null);
-    assert(crypto != null);
-    assert(server != null);
-    assert(twoFactorRequired != null);
     return cache();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>(
-    Result $default(), {
-    Result cache(),
-    Result crypto(),
-    Result server(),
-    Result twoFactorRequired(int type),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function()? $default, {
+    TResult Function()? cache,
+    TResult Function()? crypto,
+    TResult Function()? server,
+    TResult Function(int type)? twoFactorRequired,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (cache != null) {
       return cache();
     }
@@ -275,32 +260,26 @@ class _$CacheFailure implements CacheFailure {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>(
-    Result $default(_Failure value), {
-    @required Result cache(CacheFailure value),
-    @required Result crypto(CryptoFailure value),
-    @required Result server(ServerFailure value),
-    @required Result twoFactorRequired(TwoFactorRequired value),
+  TResult map<TResult extends Object?>(
+    TResult Function(_Failure value) $default, {
+    required TResult Function(CacheFailure value) cache,
+    required TResult Function(CryptoFailure value) crypto,
+    required TResult Function(ServerFailure value) server,
+    required TResult Function(TwoFactorRequired value) twoFactorRequired,
   }) {
-    assert($default != null);
-    assert(cache != null);
-    assert(crypto != null);
-    assert(server != null);
-    assert(twoFactorRequired != null);
     return cache(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>(
-    Result $default(_Failure value), {
-    Result cache(CacheFailure value),
-    Result crypto(CryptoFailure value),
-    Result server(ServerFailure value),
-    Result twoFactorRequired(TwoFactorRequired value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_Failure value)? $default, {
+    TResult Function(CacheFailure value)? cache,
+    TResult Function(CryptoFailure value)? crypto,
+    TResult Function(ServerFailure value)? server,
+    TResult Function(TwoFactorRequired value)? twoFactorRequired,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (cache != null) {
       return cache(this);
     }
@@ -331,6 +310,7 @@ class _$CryptoFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$CryptoFailure implements CryptoFailure {
   const _$CryptoFailure();
 
@@ -349,32 +329,26 @@ class _$CryptoFailure implements CryptoFailure {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>(
-    Result $default(), {
-    @required Result cache(),
-    @required Result crypto(),
-    @required Result server(),
-    @required Result twoFactorRequired(int type),
+  TResult when<TResult extends Object?>(
+    TResult Function() $default, {
+    required TResult Function() cache,
+    required TResult Function() crypto,
+    required TResult Function() server,
+    required TResult Function(int type) twoFactorRequired,
   }) {
-    assert($default != null);
-    assert(cache != null);
-    assert(crypto != null);
-    assert(server != null);
-    assert(twoFactorRequired != null);
     return crypto();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>(
-    Result $default(), {
-    Result cache(),
-    Result crypto(),
-    Result server(),
-    Result twoFactorRequired(int type),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function()? $default, {
+    TResult Function()? cache,
+    TResult Function()? crypto,
+    TResult Function()? server,
+    TResult Function(int type)? twoFactorRequired,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (crypto != null) {
       return crypto();
     }
@@ -383,32 +357,26 @@ class _$CryptoFailure implements CryptoFailure {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>(
-    Result $default(_Failure value), {
-    @required Result cache(CacheFailure value),
-    @required Result crypto(CryptoFailure value),
-    @required Result server(ServerFailure value),
-    @required Result twoFactorRequired(TwoFactorRequired value),
+  TResult map<TResult extends Object?>(
+    TResult Function(_Failure value) $default, {
+    required TResult Function(CacheFailure value) cache,
+    required TResult Function(CryptoFailure value) crypto,
+    required TResult Function(ServerFailure value) server,
+    required TResult Function(TwoFactorRequired value) twoFactorRequired,
   }) {
-    assert($default != null);
-    assert(cache != null);
-    assert(crypto != null);
-    assert(server != null);
-    assert(twoFactorRequired != null);
     return crypto(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>(
-    Result $default(_Failure value), {
-    Result cache(CacheFailure value),
-    Result crypto(CryptoFailure value),
-    Result server(ServerFailure value),
-    Result twoFactorRequired(TwoFactorRequired value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_Failure value)? $default, {
+    TResult Function(CacheFailure value)? cache,
+    TResult Function(CryptoFailure value)? crypto,
+    TResult Function(ServerFailure value)? server,
+    TResult Function(TwoFactorRequired value)? twoFactorRequired,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (crypto != null) {
       return crypto(this);
     }
@@ -439,6 +407,7 @@ class _$ServerFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$ServerFailure implements ServerFailure {
   const _$ServerFailure();
 
@@ -457,32 +426,26 @@ class _$ServerFailure implements ServerFailure {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>(
-    Result $default(), {
-    @required Result cache(),
-    @required Result crypto(),
-    @required Result server(),
-    @required Result twoFactorRequired(int type),
+  TResult when<TResult extends Object?>(
+    TResult Function() $default, {
+    required TResult Function() cache,
+    required TResult Function() crypto,
+    required TResult Function() server,
+    required TResult Function(int type) twoFactorRequired,
   }) {
-    assert($default != null);
-    assert(cache != null);
-    assert(crypto != null);
-    assert(server != null);
-    assert(twoFactorRequired != null);
     return server();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>(
-    Result $default(), {
-    Result cache(),
-    Result crypto(),
-    Result server(),
-    Result twoFactorRequired(int type),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function()? $default, {
+    TResult Function()? cache,
+    TResult Function()? crypto,
+    TResult Function()? server,
+    TResult Function(int type)? twoFactorRequired,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (server != null) {
       return server();
     }
@@ -491,32 +454,26 @@ class _$ServerFailure implements ServerFailure {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>(
-    Result $default(_Failure value), {
-    @required Result cache(CacheFailure value),
-    @required Result crypto(CryptoFailure value),
-    @required Result server(ServerFailure value),
-    @required Result twoFactorRequired(TwoFactorRequired value),
+  TResult map<TResult extends Object?>(
+    TResult Function(_Failure value) $default, {
+    required TResult Function(CacheFailure value) cache,
+    required TResult Function(CryptoFailure value) crypto,
+    required TResult Function(ServerFailure value) server,
+    required TResult Function(TwoFactorRequired value) twoFactorRequired,
   }) {
-    assert($default != null);
-    assert(cache != null);
-    assert(crypto != null);
-    assert(server != null);
-    assert(twoFactorRequired != null);
     return server(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>(
-    Result $default(_Failure value), {
-    Result cache(CacheFailure value),
-    Result crypto(CryptoFailure value),
-    Result server(ServerFailure value),
-    Result twoFactorRequired(TwoFactorRequired value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_Failure value)? $default, {
+    TResult Function(CacheFailure value)? cache,
+    TResult Function(CryptoFailure value)? crypto,
+    TResult Function(ServerFailure value)? server,
+    TResult Function(TwoFactorRequired value)? twoFactorRequired,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (server != null) {
       return server(this);
     }
@@ -548,17 +505,21 @@ class _$TwoFactorRequiredCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object type = freezed,
+    Object? type = freezed,
   }) {
     return _then(TwoFactorRequired(
-      type == freezed ? _value.type : type as int,
+      type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
 
 /// @nodoc
+
 class _$TwoFactorRequired implements TwoFactorRequired {
-  const _$TwoFactorRequired(this.type) : assert(type != null);
+  const _$TwoFactorRequired(this.type);
 
   @override
   final int type;
@@ -580,38 +541,33 @@ class _$TwoFactorRequired implements TwoFactorRequired {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(type);
 
+  @JsonKey(ignore: true)
   @override
   $TwoFactorRequiredCopyWith<TwoFactorRequired> get copyWith =>
       _$TwoFactorRequiredCopyWithImpl<TwoFactorRequired>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>(
-    Result $default(), {
-    @required Result cache(),
-    @required Result crypto(),
-    @required Result server(),
-    @required Result twoFactorRequired(int type),
+  TResult when<TResult extends Object?>(
+    TResult Function() $default, {
+    required TResult Function() cache,
+    required TResult Function() crypto,
+    required TResult Function() server,
+    required TResult Function(int type) twoFactorRequired,
   }) {
-    assert($default != null);
-    assert(cache != null);
-    assert(crypto != null);
-    assert(server != null);
-    assert(twoFactorRequired != null);
     return twoFactorRequired(type);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>(
-    Result $default(), {
-    Result cache(),
-    Result crypto(),
-    Result server(),
-    Result twoFactorRequired(int type),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function()? $default, {
+    TResult Function()? cache,
+    TResult Function()? crypto,
+    TResult Function()? server,
+    TResult Function(int type)? twoFactorRequired,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (twoFactorRequired != null) {
       return twoFactorRequired(type);
     }
@@ -620,32 +576,26 @@ class _$TwoFactorRequired implements TwoFactorRequired {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>(
-    Result $default(_Failure value), {
-    @required Result cache(CacheFailure value),
-    @required Result crypto(CryptoFailure value),
-    @required Result server(ServerFailure value),
-    @required Result twoFactorRequired(TwoFactorRequired value),
+  TResult map<TResult extends Object?>(
+    TResult Function(_Failure value) $default, {
+    required TResult Function(CacheFailure value) cache,
+    required TResult Function(CryptoFailure value) crypto,
+    required TResult Function(ServerFailure value) server,
+    required TResult Function(TwoFactorRequired value) twoFactorRequired,
   }) {
-    assert($default != null);
-    assert(cache != null);
-    assert(crypto != null);
-    assert(server != null);
-    assert(twoFactorRequired != null);
     return twoFactorRequired(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>(
-    Result $default(_Failure value), {
-    Result cache(CacheFailure value),
-    Result crypto(CryptoFailure value),
-    Result server(ServerFailure value),
-    Result twoFactorRequired(TwoFactorRequired value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_Failure value)? $default, {
+    TResult Function(CacheFailure value)? cache,
+    TResult Function(CryptoFailure value)? crypto,
+    TResult Function(ServerFailure value)? server,
+    TResult Function(TwoFactorRequired value)? twoFactorRequired,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (twoFactorRequired != null) {
       return twoFactorRequired(this);
     }
@@ -656,6 +606,8 @@ class _$TwoFactorRequired implements TwoFactorRequired {
 abstract class TwoFactorRequired implements Failure {
   const factory TwoFactorRequired(int type) = _$TwoFactorRequired;
 
-  int get type;
-  $TwoFactorRequiredCopyWith<TwoFactorRequired> get copyWith;
+  int get type => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TwoFactorRequiredCopyWith<TwoFactorRequired> get copyWith =>
+      throw _privateConstructorUsedError;
 }

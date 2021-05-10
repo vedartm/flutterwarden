@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'login_model.dart';
 
@@ -8,6 +8,10 @@ part of 'login_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 LoginModel _$LoginModelFromJson(Map<String, dynamic> json) {
   return _LoginModel.fromJson(json);
 }
@@ -16,12 +20,11 @@ LoginModel _$LoginModelFromJson(Map<String, dynamic> json) {
 class _$LoginModelTearOff {
   const _$LoginModelTearOff();
 
-// ignore: unused_element
   _LoginModel call(
-      {@required @nullable @JsonKey(name: 'Uri') String uri,
-      @required @nullable @JsonKey(name: 'Uris') List<dynamic> uris,
-      @required @JsonKey(name: 'Username') String username,
-      @required @JsonKey(name: 'Password') String password}) {
+      {@JsonKey(name: 'Uri') required String? uri,
+      @JsonKey(name: 'Uris') required List<dynamic>? uris,
+      @JsonKey(name: 'Username') required String username,
+      @JsonKey(name: 'Password') required String password}) {
     return _LoginModel(
       uri: uri,
       uris: uris,
@@ -30,31 +33,29 @@ class _$LoginModelTearOff {
     );
   }
 
-// ignore: unused_element
   LoginModel fromJson(Map<String, Object> json) {
     return LoginModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $LoginModel = _$LoginModelTearOff();
 
 /// @nodoc
 mixin _$LoginModel {
-  @nullable
   @JsonKey(name: 'Uri')
-  String get uri;
-  @nullable
+  String? get uri => throw _privateConstructorUsedError;
   @JsonKey(name: 'Uris')
-  List<dynamic> get uris;
+  List<dynamic>? get uris => throw _privateConstructorUsedError;
   @JsonKey(name: 'Username')
-  String get username;
+  String get username => throw _privateConstructorUsedError;
   @JsonKey(name: 'Password')
-  String get password;
+  String get password => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $LoginModelCopyWith<LoginModel> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $LoginModelCopyWith<LoginModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -63,8 +64,8 @@ abstract class $LoginModelCopyWith<$Res> {
           LoginModel value, $Res Function(LoginModel) then) =
       _$LoginModelCopyWithImpl<$Res>;
   $Res call(
-      {@nullable @JsonKey(name: 'Uri') String uri,
-      @nullable @JsonKey(name: 'Uris') List<dynamic> uris,
+      {@JsonKey(name: 'Uri') String? uri,
+      @JsonKey(name: 'Uris') List<dynamic>? uris,
       @JsonKey(name: 'Username') String username,
       @JsonKey(name: 'Password') String password});
 }
@@ -79,16 +80,28 @@ class _$LoginModelCopyWithImpl<$Res> implements $LoginModelCopyWith<$Res> {
 
   @override
   $Res call({
-    Object uri = freezed,
-    Object uris = freezed,
-    Object username = freezed,
-    Object password = freezed,
+    Object? uri = freezed,
+    Object? uris = freezed,
+    Object? username = freezed,
+    Object? password = freezed,
   }) {
     return _then(_value.copyWith(
-      uri: uri == freezed ? _value.uri : uri as String,
-      uris: uris == freezed ? _value.uris : uris as List<dynamic>,
-      username: username == freezed ? _value.username : username as String,
-      password: password == freezed ? _value.password : password as String,
+      uri: uri == freezed
+          ? _value.uri
+          : uri // ignore: cast_nullable_to_non_nullable
+              as String?,
+      uris: uris == freezed
+          ? _value.uris
+          : uris // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>?,
+      username: username == freezed
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -100,8 +113,8 @@ abstract class _$LoginModelCopyWith<$Res> implements $LoginModelCopyWith<$Res> {
       __$LoginModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@nullable @JsonKey(name: 'Uri') String uri,
-      @nullable @JsonKey(name: 'Uris') List<dynamic> uris,
+      {@JsonKey(name: 'Uri') String? uri,
+      @JsonKey(name: 'Uris') List<dynamic>? uris,
       @JsonKey(name: 'Username') String username,
       @JsonKey(name: 'Password') String password});
 }
@@ -118,43 +131,50 @@ class __$LoginModelCopyWithImpl<$Res> extends _$LoginModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object uri = freezed,
-    Object uris = freezed,
-    Object username = freezed,
-    Object password = freezed,
+    Object? uri = freezed,
+    Object? uris = freezed,
+    Object? username = freezed,
+    Object? password = freezed,
   }) {
     return _then(_LoginModel(
-      uri: uri == freezed ? _value.uri : uri as String,
-      uris: uris == freezed ? _value.uris : uris as List<dynamic>,
-      username: username == freezed ? _value.username : username as String,
-      password: password == freezed ? _value.password : password as String,
+      uri: uri == freezed
+          ? _value.uri
+          : uri // ignore: cast_nullable_to_non_nullable
+              as String?,
+      uris: uris == freezed
+          ? _value.uris
+          : uris // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>?,
+      username: username == freezed
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_LoginModel implements _LoginModel {
   const _$_LoginModel(
-      {@required @nullable @JsonKey(name: 'Uri') this.uri,
-      @required @nullable @JsonKey(name: 'Uris') this.uris,
-      @required @JsonKey(name: 'Username') this.username,
-      @required @JsonKey(name: 'Password') this.password})
-      : assert(username != null),
-        assert(password != null);
+      {@JsonKey(name: 'Uri') required this.uri,
+      @JsonKey(name: 'Uris') required this.uris,
+      @JsonKey(name: 'Username') required this.username,
+      @JsonKey(name: 'Password') required this.password});
 
   factory _$_LoginModel.fromJson(Map<String, dynamic> json) =>
       _$_$_LoginModelFromJson(json);
 
   @override
-  @nullable
   @JsonKey(name: 'Uri')
-  final String uri;
+  final String? uri;
   @override
-  @nullable
   @JsonKey(name: 'Uris')
-  final List<dynamic> uris;
+  final List<dynamic>? uris;
   @override
   @JsonKey(name: 'Username')
   final String username;
@@ -191,6 +211,7 @@ class _$_LoginModel implements _LoginModel {
       const DeepCollectionEquality().hash(username) ^
       const DeepCollectionEquality().hash(password);
 
+  @JsonKey(ignore: true)
   @override
   _$LoginModelCopyWith<_LoginModel> get copyWith =>
       __$LoginModelCopyWithImpl<_LoginModel>(this, _$identity);
@@ -203,28 +224,28 @@ class _$_LoginModel implements _LoginModel {
 
 abstract class _LoginModel implements LoginModel {
   const factory _LoginModel(
-      {@required @nullable @JsonKey(name: 'Uri') String uri,
-      @required @nullable @JsonKey(name: 'Uris') List<dynamic> uris,
-      @required @JsonKey(name: 'Username') String username,
-      @required @JsonKey(name: 'Password') String password}) = _$_LoginModel;
+      {@JsonKey(name: 'Uri') required String? uri,
+      @JsonKey(name: 'Uris') required List<dynamic>? uris,
+      @JsonKey(name: 'Username') required String username,
+      @JsonKey(name: 'Password') required String password}) = _$_LoginModel;
 
   factory _LoginModel.fromJson(Map<String, dynamic> json) =
       _$_LoginModel.fromJson;
 
   @override
-  @nullable
   @JsonKey(name: 'Uri')
-  String get uri;
+  String? get uri => throw _privateConstructorUsedError;
   @override
-  @nullable
   @JsonKey(name: 'Uris')
-  List<dynamic> get uris;
+  List<dynamic>? get uris => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'Username')
-  String get username;
+  String get username => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'Password')
-  String get password;
+  String get password => throw _privateConstructorUsedError;
   @override
-  _$LoginModelCopyWith<_LoginModel> get copyWith;
+  @JsonKey(ignore: true)
+  _$LoginModelCopyWith<_LoginModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

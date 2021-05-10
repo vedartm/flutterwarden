@@ -24,7 +24,7 @@ class HomeWardenDataSource implements IHomeWardenDatasource {
   @override
   Future<SyncModel> getSync(String accessToken) async {
     final response = await _client.get(
-      'http://api.bitwarden.com/sync',
+      Uri.parse('http://api.bitwarden.com/sync'),
       headers: {'Authorization': 'Bearer $accessToken'},
     );
     _logger.d(response.body);

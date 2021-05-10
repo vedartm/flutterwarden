@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'login_response_model.dart';
 
@@ -8,6 +8,10 @@ part of 'login_response_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 LoginResponseModel _$LoginResponseModelFromJson(Map<String, dynamic> json) {
   return _LoginResponseModel.fromJson(json);
 }
@@ -16,12 +20,11 @@ LoginResponseModel _$LoginResponseModelFromJson(Map<String, dynamic> json) {
 class _$LoginResponseModelTearOff {
   const _$LoginResponseModelTearOff();
 
-// ignore: unused_element
   _LoginResponseModel call(
-      {@required @JsonKey(name: 'access_token') String accessToken,
-      @required @JsonKey(name: 'expires_in') Duration expiresAccessTokenIn,
-      @required @JsonKey(name: 'refresh_token') String refreshToken,
-      @required @JsonKey(name: 'Key') @nullable String key}) {
+      {@JsonKey(name: 'access_token') required String accessToken,
+      @JsonKey(name: 'expires_in') required Duration expiresAccessTokenIn,
+      @JsonKey(name: 'refresh_token') required String refreshToken,
+      @JsonKey(name: 'Key') required String? key}) {
     return _LoginResponseModel(
       accessToken: accessToken,
       expiresAccessTokenIn: expiresAccessTokenIn,
@@ -30,30 +33,29 @@ class _$LoginResponseModelTearOff {
     );
   }
 
-// ignore: unused_element
   LoginResponseModel fromJson(Map<String, Object> json) {
     return LoginResponseModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $LoginResponseModel = _$LoginResponseModelTearOff();
 
 /// @nodoc
 mixin _$LoginResponseModel {
   @JsonKey(name: 'access_token')
-  String get accessToken;
+  String get accessToken => throw _privateConstructorUsedError;
   @JsonKey(name: 'expires_in')
-  Duration get expiresAccessTokenIn;
+  Duration get expiresAccessTokenIn => throw _privateConstructorUsedError;
   @JsonKey(name: 'refresh_token')
-  String get refreshToken;
+  String get refreshToken => throw _privateConstructorUsedError;
   @JsonKey(name: 'Key')
-  @nullable
-  String get key;
+  String? get key => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $LoginResponseModelCopyWith<LoginResponseModel> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $LoginResponseModelCopyWith<LoginResponseModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -65,7 +67,7 @@ abstract class $LoginResponseModelCopyWith<$Res> {
       {@JsonKey(name: 'access_token') String accessToken,
       @JsonKey(name: 'expires_in') Duration expiresAccessTokenIn,
       @JsonKey(name: 'refresh_token') String refreshToken,
-      @JsonKey(name: 'Key') @nullable String key});
+      @JsonKey(name: 'Key') String? key});
 }
 
 /// @nodoc
@@ -79,21 +81,28 @@ class _$LoginResponseModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object accessToken = freezed,
-    Object expiresAccessTokenIn = freezed,
-    Object refreshToken = freezed,
-    Object key = freezed,
+    Object? accessToken = freezed,
+    Object? expiresAccessTokenIn = freezed,
+    Object? refreshToken = freezed,
+    Object? key = freezed,
   }) {
     return _then(_value.copyWith(
-      accessToken:
-          accessToken == freezed ? _value.accessToken : accessToken as String,
+      accessToken: accessToken == freezed
+          ? _value.accessToken
+          : accessToken // ignore: cast_nullable_to_non_nullable
+              as String,
       expiresAccessTokenIn: expiresAccessTokenIn == freezed
           ? _value.expiresAccessTokenIn
-          : expiresAccessTokenIn as Duration,
+          : expiresAccessTokenIn // ignore: cast_nullable_to_non_nullable
+              as Duration,
       refreshToken: refreshToken == freezed
           ? _value.refreshToken
-          : refreshToken as String,
-      key: key == freezed ? _value.key : key as String,
+          : refreshToken // ignore: cast_nullable_to_non_nullable
+              as String,
+      key: key == freezed
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -109,7 +118,7 @@ abstract class _$LoginResponseModelCopyWith<$Res>
       {@JsonKey(name: 'access_token') String accessToken,
       @JsonKey(name: 'expires_in') Duration expiresAccessTokenIn,
       @JsonKey(name: 'refresh_token') String refreshToken,
-      @JsonKey(name: 'Key') @nullable String key});
+      @JsonKey(name: 'Key') String? key});
 }
 
 /// @nodoc
@@ -125,37 +134,40 @@ class __$LoginResponseModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object accessToken = freezed,
-    Object expiresAccessTokenIn = freezed,
-    Object refreshToken = freezed,
-    Object key = freezed,
+    Object? accessToken = freezed,
+    Object? expiresAccessTokenIn = freezed,
+    Object? refreshToken = freezed,
+    Object? key = freezed,
   }) {
     return _then(_LoginResponseModel(
-      accessToken:
-          accessToken == freezed ? _value.accessToken : accessToken as String,
+      accessToken: accessToken == freezed
+          ? _value.accessToken
+          : accessToken // ignore: cast_nullable_to_non_nullable
+              as String,
       expiresAccessTokenIn: expiresAccessTokenIn == freezed
           ? _value.expiresAccessTokenIn
-          : expiresAccessTokenIn as Duration,
+          : expiresAccessTokenIn // ignore: cast_nullable_to_non_nullable
+              as Duration,
       refreshToken: refreshToken == freezed
           ? _value.refreshToken
-          : refreshToken as String,
-      key: key == freezed ? _value.key : key as String,
+          : refreshToken // ignore: cast_nullable_to_non_nullable
+              as String,
+      key: key == freezed
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_LoginResponseModel implements _LoginResponseModel {
   const _$_LoginResponseModel(
-      {@required @JsonKey(name: 'access_token') this.accessToken,
-      @required @JsonKey(name: 'expires_in') this.expiresAccessTokenIn,
-      @required @JsonKey(name: 'refresh_token') this.refreshToken,
-      @required @JsonKey(name: 'Key') @nullable this.key})
-      : assert(accessToken != null),
-        assert(expiresAccessTokenIn != null),
-        assert(refreshToken != null);
+      {@JsonKey(name: 'access_token') required this.accessToken,
+      @JsonKey(name: 'expires_in') required this.expiresAccessTokenIn,
+      @JsonKey(name: 'refresh_token') required this.refreshToken,
+      @JsonKey(name: 'Key') required this.key});
 
   factory _$_LoginResponseModel.fromJson(Map<String, dynamic> json) =>
       _$_$_LoginResponseModelFromJson(json);
@@ -171,8 +183,7 @@ class _$_LoginResponseModel implements _LoginResponseModel {
   final String refreshToken;
   @override
   @JsonKey(name: 'Key')
-  @nullable
-  final String key;
+  final String? key;
 
   @override
   String toString() {
@@ -204,6 +215,7 @@ class _$_LoginResponseModel implements _LoginResponseModel {
       const DeepCollectionEquality().hash(refreshToken) ^
       const DeepCollectionEquality().hash(key);
 
+  @JsonKey(ignore: true)
   @override
   _$LoginResponseModelCopyWith<_LoginResponseModel> get copyWith =>
       __$LoginResponseModelCopyWithImpl<_LoginResponseModel>(this, _$identity);
@@ -216,28 +228,28 @@ class _$_LoginResponseModel implements _LoginResponseModel {
 
 abstract class _LoginResponseModel implements LoginResponseModel {
   const factory _LoginResponseModel(
-          {@required @JsonKey(name: 'access_token') String accessToken,
-          @required @JsonKey(name: 'expires_in') Duration expiresAccessTokenIn,
-          @required @JsonKey(name: 'refresh_token') String refreshToken,
-          @required @JsonKey(name: 'Key') @nullable String key}) =
-      _$_LoginResponseModel;
+      {@JsonKey(name: 'access_token') required String accessToken,
+      @JsonKey(name: 'expires_in') required Duration expiresAccessTokenIn,
+      @JsonKey(name: 'refresh_token') required String refreshToken,
+      @JsonKey(name: 'Key') required String? key}) = _$_LoginResponseModel;
 
   factory _LoginResponseModel.fromJson(Map<String, dynamic> json) =
       _$_LoginResponseModel.fromJson;
 
   @override
   @JsonKey(name: 'access_token')
-  String get accessToken;
+  String get accessToken => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'expires_in')
-  Duration get expiresAccessTokenIn;
+  Duration get expiresAccessTokenIn => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'refresh_token')
-  String get refreshToken;
+  String get refreshToken => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'Key')
-  @nullable
-  String get key;
+  String? get key => throw _privateConstructorUsedError;
   @override
-  _$LoginResponseModelCopyWith<_LoginResponseModel> get copyWith;
+  @JsonKey(ignore: true)
+  _$LoginResponseModelCopyWith<_LoginResponseModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

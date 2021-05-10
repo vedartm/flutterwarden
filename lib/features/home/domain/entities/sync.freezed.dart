@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'sync.dart';
 
@@ -9,12 +9,14 @@ part of 'sync.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$SyncTearOff {
   const _$SyncTearOff();
 
-// ignore: unused_element
-  _Sync call({@required Profile profile, @required List<Cipher> ciphers}) {
+  _Sync call({required Profile profile, required List<Cipher> ciphers}) {
     return _Sync(
       profile: profile,
       ciphers: ciphers,
@@ -23,15 +25,15 @@ class _$SyncTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Sync = _$SyncTearOff();
 
 /// @nodoc
 mixin _$Sync {
-  Profile get profile;
-  List<Cipher> get ciphers;
+  Profile get profile => throw _privateConstructorUsedError;
+  List<Cipher> get ciphers => throw _privateConstructorUsedError;
 
-  $SyncCopyWith<Sync> get copyWith;
+  @JsonKey(ignore: true)
+  $SyncCopyWith<Sync> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -53,20 +55,23 @@ class _$SyncCopyWithImpl<$Res> implements $SyncCopyWith<$Res> {
 
   @override
   $Res call({
-    Object profile = freezed,
-    Object ciphers = freezed,
+    Object? profile = freezed,
+    Object? ciphers = freezed,
   }) {
     return _then(_value.copyWith(
-      profile: profile == freezed ? _value.profile : profile as Profile,
-      ciphers: ciphers == freezed ? _value.ciphers : ciphers as List<Cipher>,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Profile,
+      ciphers: ciphers == freezed
+          ? _value.ciphers
+          : ciphers // ignore: cast_nullable_to_non_nullable
+              as List<Cipher>,
     ));
   }
 
   @override
   $ProfileCopyWith<$Res> get profile {
-    if (_value.profile == null) {
-      return null;
-    }
     return $ProfileCopyWith<$Res>(_value.profile, (value) {
       return _then(_value.copyWith(profile: value));
     });
@@ -95,21 +100,26 @@ class __$SyncCopyWithImpl<$Res> extends _$SyncCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object profile = freezed,
-    Object ciphers = freezed,
+    Object? profile = freezed,
+    Object? ciphers = freezed,
   }) {
     return _then(_Sync(
-      profile: profile == freezed ? _value.profile : profile as Profile,
-      ciphers: ciphers == freezed ? _value.ciphers : ciphers as List<Cipher>,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Profile,
+      ciphers: ciphers == freezed
+          ? _value.ciphers
+          : ciphers // ignore: cast_nullable_to_non_nullable
+              as List<Cipher>,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_Sync implements _Sync {
-  const _$_Sync({@required this.profile, @required this.ciphers})
-      : assert(profile != null),
-        assert(ciphers != null);
+  const _$_Sync({required this.profile, required this.ciphers});
 
   @override
   final Profile profile;
@@ -138,6 +148,7 @@ class _$_Sync implements _Sync {
       const DeepCollectionEquality().hash(profile) ^
       const DeepCollectionEquality().hash(ciphers);
 
+  @JsonKey(ignore: true)
   @override
   _$SyncCopyWith<_Sync> get copyWith =>
       __$SyncCopyWithImpl<_Sync>(this, _$identity);
@@ -145,12 +156,13 @@ class _$_Sync implements _Sync {
 
 abstract class _Sync implements Sync {
   const factory _Sync(
-      {@required Profile profile, @required List<Cipher> ciphers}) = _$_Sync;
+      {required Profile profile, required List<Cipher> ciphers}) = _$_Sync;
 
   @override
-  Profile get profile;
+  Profile get profile => throw _privateConstructorUsedError;
   @override
-  List<Cipher> get ciphers;
+  List<Cipher> get ciphers => throw _privateConstructorUsedError;
   @override
-  _$SyncCopyWith<_Sync> get copyWith;
+  @JsonKey(ignore: true)
+  _$SyncCopyWith<_Sync> get copyWith => throw _privateConstructorUsedError;
 }

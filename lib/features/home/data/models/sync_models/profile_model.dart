@@ -6,18 +6,15 @@ part 'profile_model.freezed.dart';
 part 'profile_model.g.dart';
 
 @freezed
-abstract class ProfileModel with _$ProfileModel {
+class ProfileModel with _$ProfileModel {
   const factory ProfileModel({
-    @JsonKey(name: 'Id') @required String id,
-    @JsonKey(name: 'Name') @required String name,
-    @JsonKey(name: 'Email') @required String email,
-    @nullable
-    @JsonKey(name: 'MasterPasswordHint')
-    @required
-        String masterPasswordHint,
-    @JsonKey(name: 'Key') @required String key,
-    @JsonKey(name: 'PrivateKey') @required String privateKey,
-    @JsonKey(name: 'SecurityStamp') @required String securityStamp,
+    @JsonKey(name: 'Id') required String id,
+    @JsonKey(name: 'Name') required String name,
+    @JsonKey(name: 'Email') required String email,
+    @JsonKey(name: 'MasterPasswordHint') required String? masterPasswordHint,
+    @JsonKey(name: 'Key') required String key,
+    @JsonKey(name: 'PrivateKey') required String privateKey,
+    @JsonKey(name: 'SecurityStamp') required String securityStamp,
     // @JsonKey(name:'EmailVerified') @required bool emailVerified,
     // @JsonKey(name:'') @required List<dynamic> organisations,
     // @JsonKey(name:'') @required bool premium,

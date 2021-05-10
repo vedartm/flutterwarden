@@ -54,14 +54,13 @@ class CryptoConverter {
   }
 
   Future<String> getStretchedKey(String masterKey, String info) async {
-    final hkdf = Hkdf(Hmac(sha256));
+    final hkdf = Hkdf(hmac: Hmac(Sha256()), outputLength: KEY_LENGTH);
     final input = SecretKey(base64.decode(masterKey));
     final output = await hkdf.deriveKey(
-      input,
-      outputLength: 32,
+      secretKey: input,
       info: utf8.encode(info),
     );
-    final result = base64Encode(output.extractSync());
+    final result = base64Encode(await output.extractBytes());
     _logger.d(result);
     return result;
   }

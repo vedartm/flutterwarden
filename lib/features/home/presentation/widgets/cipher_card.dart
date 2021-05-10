@@ -8,7 +8,7 @@ import '../../domain/entities/sync_entities/cipher.dart';
 
 class CipherCard extends StatelessWidget {
   final Cipher cipher;
-  const CipherCard({Key key, @required this.cipher}) : super(key: key);
+  const CipherCard({Key? key, required this.cipher}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +19,7 @@ class CipherCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(FWDimens.borderRadius),
       ),
       child: ExpandablePanel(
+        collapsed: const SizedBox(),
         header: Column(
           children: <Widget>[
             Text(cipher.name),
@@ -78,7 +79,7 @@ class CipherCard extends StatelessWidget {
   Future<void> copyToClipboardAndShowScaffold(
       BuildContext context, String text) async {
     await Clipboard.setData(ClipboardData(text: text));
-    Scaffold.of(context)
+    ScaffoldMessenger.of(context)
       ..hideCurrentSnackBar()
       ..showSnackBar(
         SnackBar(

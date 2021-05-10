@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'login.dart';
 
@@ -9,16 +9,18 @@ part of 'login.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$LoginTearOff {
   const _$LoginTearOff();
 
-// ignore: unused_element
   _Login call(
-      {@required @nullable String uri,
-      @required @nullable List<dynamic> uris,
-      @required String username,
-      @required String password}) {
+      {required String? uri,
+      required List<dynamic>? uris,
+      required String username,
+      required String password}) {
     return _Login(
       uri: uri,
       uris: uris,
@@ -29,19 +31,17 @@ class _$LoginTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Login = _$LoginTearOff();
 
 /// @nodoc
 mixin _$Login {
-  @nullable
-  String get uri;
-  @nullable
-  List<dynamic> get uris;
-  String get username;
-  String get password;
+  String? get uri => throw _privateConstructorUsedError;
+  List<dynamic>? get uris => throw _privateConstructorUsedError;
+  String get username => throw _privateConstructorUsedError;
+  String get password => throw _privateConstructorUsedError;
 
-  $LoginCopyWith<Login> get copyWith;
+  @JsonKey(ignore: true)
+  $LoginCopyWith<Login> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -49,10 +49,7 @@ abstract class $LoginCopyWith<$Res> {
   factory $LoginCopyWith(Login value, $Res Function(Login) then) =
       _$LoginCopyWithImpl<$Res>;
   $Res call(
-      {@nullable String uri,
-      @nullable List<dynamic> uris,
-      String username,
-      String password});
+      {String? uri, List<dynamic>? uris, String username, String password});
 }
 
 /// @nodoc
@@ -65,16 +62,28 @@ class _$LoginCopyWithImpl<$Res> implements $LoginCopyWith<$Res> {
 
   @override
   $Res call({
-    Object uri = freezed,
-    Object uris = freezed,
-    Object username = freezed,
-    Object password = freezed,
+    Object? uri = freezed,
+    Object? uris = freezed,
+    Object? username = freezed,
+    Object? password = freezed,
   }) {
     return _then(_value.copyWith(
-      uri: uri == freezed ? _value.uri : uri as String,
-      uris: uris == freezed ? _value.uris : uris as List<dynamic>,
-      username: username == freezed ? _value.username : username as String,
-      password: password == freezed ? _value.password : password as String,
+      uri: uri == freezed
+          ? _value.uri
+          : uri // ignore: cast_nullable_to_non_nullable
+              as String?,
+      uris: uris == freezed
+          ? _value.uris
+          : uris // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>?,
+      username: username == freezed
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -85,10 +94,7 @@ abstract class _$LoginCopyWith<$Res> implements $LoginCopyWith<$Res> {
       __$LoginCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@nullable String uri,
-      @nullable List<dynamic> uris,
-      String username,
-      String password});
+      {String? uri, List<dynamic>? uris, String username, String password});
 }
 
 /// @nodoc
@@ -102,36 +108,45 @@ class __$LoginCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object uri = freezed,
-    Object uris = freezed,
-    Object username = freezed,
-    Object password = freezed,
+    Object? uri = freezed,
+    Object? uris = freezed,
+    Object? username = freezed,
+    Object? password = freezed,
   }) {
     return _then(_Login(
-      uri: uri == freezed ? _value.uri : uri as String,
-      uris: uris == freezed ? _value.uris : uris as List<dynamic>,
-      username: username == freezed ? _value.username : username as String,
-      password: password == freezed ? _value.password : password as String,
+      uri: uri == freezed
+          ? _value.uri
+          : uri // ignore: cast_nullable_to_non_nullable
+              as String?,
+      uris: uris == freezed
+          ? _value.uris
+          : uris // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>?,
+      username: username == freezed
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_Login implements _Login {
   const _$_Login(
-      {@required @nullable this.uri,
-      @required @nullable this.uris,
-      @required this.username,
-      @required this.password})
-      : assert(username != null),
-        assert(password != null);
+      {required this.uri,
+      required this.uris,
+      required this.username,
+      required this.password});
 
   @override
-  @nullable
-  final String uri;
+  final String? uri;
   @override
-  @nullable
-  final List<dynamic> uris;
+  final List<dynamic>? uris;
   @override
   final String username;
   @override
@@ -166,6 +181,7 @@ class _$_Login implements _Login {
       const DeepCollectionEquality().hash(username) ^
       const DeepCollectionEquality().hash(password);
 
+  @JsonKey(ignore: true)
   @override
   _$LoginCopyWith<_Login> get copyWith =>
       __$LoginCopyWithImpl<_Login>(this, _$identity);
@@ -173,21 +189,20 @@ class _$_Login implements _Login {
 
 abstract class _Login implements Login {
   const factory _Login(
-      {@required @nullable String uri,
-      @required @nullable List<dynamic> uris,
-      @required String username,
-      @required String password}) = _$_Login;
+      {required String? uri,
+      required List<dynamic>? uris,
+      required String username,
+      required String password}) = _$_Login;
 
   @override
-  @nullable
-  String get uri;
+  String? get uri => throw _privateConstructorUsedError;
   @override
-  @nullable
-  List<dynamic> get uris;
+  List<dynamic>? get uris => throw _privateConstructorUsedError;
   @override
-  String get username;
+  String get username => throw _privateConstructorUsedError;
   @override
-  String get password;
+  String get password => throw _privateConstructorUsedError;
   @override
-  _$LoginCopyWith<_Login> get copyWith;
+  @JsonKey(ignore: true)
+  _$LoginCopyWith<_Login> get copyWith => throw _privateConstructorUsedError;
 }

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'sync_model.dart';
 
@@ -8,6 +8,10 @@ part of 'sync_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 SyncModel _$SyncModelFromJson(Map<String, dynamic> json) {
   return _SyncModel.fromJson(json);
 }
@@ -16,35 +20,34 @@ SyncModel _$SyncModelFromJson(Map<String, dynamic> json) {
 class _$SyncModelTearOff {
   const _$SyncModelTearOff();
 
-// ignore: unused_element
   _SyncModel call(
-      {@required @JsonKey(name: 'Profile') ProfileModel profile,
-      @required @JsonKey(name: 'Ciphers') List<CipherModel> ciphers}) {
+      {@JsonKey(name: 'Profile') required ProfileModel profile,
+      @JsonKey(name: 'Ciphers') required List<CipherModel> ciphers}) {
     return _SyncModel(
       profile: profile,
       ciphers: ciphers,
     );
   }
 
-// ignore: unused_element
   SyncModel fromJson(Map<String, Object> json) {
     return SyncModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $SyncModel = _$SyncModelTearOff();
 
 /// @nodoc
 mixin _$SyncModel {
   @JsonKey(name: 'Profile')
-  ProfileModel get profile;
+  ProfileModel get profile => throw _privateConstructorUsedError;
   @JsonKey(name: 'Ciphers')
-  List<CipherModel> get ciphers;
+  List<CipherModel> get ciphers => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $SyncModelCopyWith<SyncModel> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SyncModelCopyWith<SyncModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -68,21 +71,23 @@ class _$SyncModelCopyWithImpl<$Res> implements $SyncModelCopyWith<$Res> {
 
   @override
   $Res call({
-    Object profile = freezed,
-    Object ciphers = freezed,
+    Object? profile = freezed,
+    Object? ciphers = freezed,
   }) {
     return _then(_value.copyWith(
-      profile: profile == freezed ? _value.profile : profile as ProfileModel,
-      ciphers:
-          ciphers == freezed ? _value.ciphers : ciphers as List<CipherModel>,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as ProfileModel,
+      ciphers: ciphers == freezed
+          ? _value.ciphers
+          : ciphers // ignore: cast_nullable_to_non_nullable
+              as List<CipherModel>,
     ));
   }
 
   @override
   $ProfileModelCopyWith<$Res> get profile {
-    if (_value.profile == null) {
-      return null;
-    }
     return $ProfileModelCopyWith<$Res>(_value.profile, (value) {
       return _then(_value.copyWith(profile: value));
     });
@@ -114,26 +119,29 @@ class __$SyncModelCopyWithImpl<$Res> extends _$SyncModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object profile = freezed,
-    Object ciphers = freezed,
+    Object? profile = freezed,
+    Object? ciphers = freezed,
   }) {
     return _then(_SyncModel(
-      profile: profile == freezed ? _value.profile : profile as ProfileModel,
-      ciphers:
-          ciphers == freezed ? _value.ciphers : ciphers as List<CipherModel>,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as ProfileModel,
+      ciphers: ciphers == freezed
+          ? _value.ciphers
+          : ciphers // ignore: cast_nullable_to_non_nullable
+              as List<CipherModel>,
     ));
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
+
+@JsonSerializable(explicitToJson: true)
 class _$_SyncModel implements _SyncModel {
   const _$_SyncModel(
-      {@required @JsonKey(name: 'Profile') this.profile,
-      @required @JsonKey(name: 'Ciphers') this.ciphers})
-      : assert(profile != null),
-        assert(ciphers != null);
+      {@JsonKey(name: 'Profile') required this.profile,
+      @JsonKey(name: 'Ciphers') required this.ciphers});
 
   factory _$_SyncModel.fromJson(Map<String, dynamic> json) =>
       _$_$_SyncModelFromJson(json);
@@ -167,6 +175,7 @@ class _$_SyncModel implements _SyncModel {
       const DeepCollectionEquality().hash(profile) ^
       const DeepCollectionEquality().hash(ciphers);
 
+  @JsonKey(ignore: true)
   @override
   _$SyncModelCopyWith<_SyncModel> get copyWith =>
       __$SyncModelCopyWithImpl<_SyncModel>(this, _$identity);
@@ -179,8 +188,8 @@ class _$_SyncModel implements _SyncModel {
 
 abstract class _SyncModel implements SyncModel {
   const factory _SyncModel(
-          {@required @JsonKey(name: 'Profile') ProfileModel profile,
-          @required @JsonKey(name: 'Ciphers') List<CipherModel> ciphers}) =
+          {@JsonKey(name: 'Profile') required ProfileModel profile,
+          @JsonKey(name: 'Ciphers') required List<CipherModel> ciphers}) =
       _$_SyncModel;
 
   factory _SyncModel.fromJson(Map<String, dynamic> json) =
@@ -188,10 +197,12 @@ abstract class _SyncModel implements SyncModel {
 
   @override
   @JsonKey(name: 'Profile')
-  ProfileModel get profile;
+  ProfileModel get profile => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'Ciphers')
-  List<CipherModel> get ciphers;
+  List<CipherModel> get ciphers => throw _privateConstructorUsedError;
   @override
-  _$SyncModelCopyWith<_SyncModel> get copyWith;
+  @JsonKey(ignore: true)
+  _$SyncModelCopyWith<_SyncModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

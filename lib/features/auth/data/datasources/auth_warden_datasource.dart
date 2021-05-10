@@ -24,7 +24,7 @@ class AuthWardenDataSource implements IAuthWardenDataSource {
   @override
   Future<PreLoginResponseModel> getPreLogin(String email) async {
     final response = await _client.post(
-      'https://api.bitwarden.com/accounts/prelogin',
+      Uri.parse('https://api.bitwarden.com/accounts/prelogin'),
       headers: {'Content-Type': 'application/json'},
       body: json.encode({'email': email}),
     );

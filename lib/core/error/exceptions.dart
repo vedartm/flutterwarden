@@ -9,9 +9,7 @@ class CacheException implements Exception {}
 class CryptoException implements Exception {}
 
 @freezed
-abstract class TwoFactorException
-    with _$TwoFactorException
-    implements Exception {
-  const factory TwoFactorException({@required int twoFactorProvider}) =
+class TwoFactorException with _$TwoFactorException implements Exception {
+  const factory TwoFactorException({required int twoFactorProvider}) =
       _TwoFactorException;
 }

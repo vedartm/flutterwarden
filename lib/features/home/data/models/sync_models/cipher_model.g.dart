@@ -12,9 +12,7 @@ _$_CipherModel _$_$_CipherModelFromJson(Map<String, dynamic> json) {
     type: json['Type'] as int,
     name: json['Name'] as String,
     favourite: json['Favorite'] as bool,
-    login: json['Login'] == null
-        ? null
-        : LoginModel.fromJson(json['Login'] as Map<String, dynamic>),
+    login: LoginModel.fromJson(json['Login'] as Map<String, dynamic>),
   );
 }
 
@@ -24,5 +22,5 @@ Map<String, dynamic> _$_$_CipherModelToJson(_$_CipherModel instance) =>
       'Type': instance.type,
       'Name': instance.name,
       'Favorite': instance.favourite,
-      'Login': instance.login?.toJson(),
+      'Login': instance.login.toJson(),
     };

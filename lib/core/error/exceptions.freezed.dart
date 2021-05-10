@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'exceptions.dart';
 
@@ -9,12 +9,14 @@ part of 'exceptions.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$TwoFactorExceptionTearOff {
   const _$TwoFactorExceptionTearOff();
 
-// ignore: unused_element
-  _TwoFactorException call({@required int twoFactorProvider}) {
+  _TwoFactorException call({required int twoFactorProvider}) {
     return _TwoFactorException(
       twoFactorProvider: twoFactorProvider,
     );
@@ -22,14 +24,15 @@ class _$TwoFactorExceptionTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $TwoFactorException = _$TwoFactorExceptionTearOff();
 
 /// @nodoc
 mixin _$TwoFactorException {
-  int get twoFactorProvider;
+  int get twoFactorProvider => throw _privateConstructorUsedError;
 
-  $TwoFactorExceptionCopyWith<TwoFactorException> get copyWith;
+  @JsonKey(ignore: true)
+  $TwoFactorExceptionCopyWith<TwoFactorException> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -51,12 +54,13 @@ class _$TwoFactorExceptionCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object twoFactorProvider = freezed,
+    Object? twoFactorProvider = freezed,
   }) {
     return _then(_value.copyWith(
       twoFactorProvider: twoFactorProvider == freezed
           ? _value.twoFactorProvider
-          : twoFactorProvider as int,
+          : twoFactorProvider // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -84,20 +88,21 @@ class __$TwoFactorExceptionCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object twoFactorProvider = freezed,
+    Object? twoFactorProvider = freezed,
   }) {
     return _then(_TwoFactorException(
       twoFactorProvider: twoFactorProvider == freezed
           ? _value.twoFactorProvider
-          : twoFactorProvider as int,
+          : twoFactorProvider // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_TwoFactorException implements _TwoFactorException {
-  const _$_TwoFactorException({@required this.twoFactorProvider})
-      : assert(twoFactorProvider != null);
+  const _$_TwoFactorException({required this.twoFactorProvider});
 
   @override
   final int twoFactorProvider;
@@ -121,17 +126,20 @@ class _$_TwoFactorException implements _TwoFactorException {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(twoFactorProvider);
 
+  @JsonKey(ignore: true)
   @override
   _$TwoFactorExceptionCopyWith<_TwoFactorException> get copyWith =>
       __$TwoFactorExceptionCopyWithImpl<_TwoFactorException>(this, _$identity);
 }
 
 abstract class _TwoFactorException implements TwoFactorException {
-  const factory _TwoFactorException({@required int twoFactorProvider}) =
+  const factory _TwoFactorException({required int twoFactorProvider}) =
       _$_TwoFactorException;
 
   @override
-  int get twoFactorProvider;
+  int get twoFactorProvider => throw _privateConstructorUsedError;
   @override
-  _$TwoFactorExceptionCopyWith<_TwoFactorException> get copyWith;
+  @JsonKey(ignore: true)
+  _$TwoFactorExceptionCopyWith<_TwoFactorException> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -6,7 +6,7 @@ import '../bloc/home_bloc.dart';
 import '../widgets/cipher_list.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key key, @required this.accessToken}) : super(key: key);
+  const HomePage({Key? key, required this.accessToken}) : super(key: key);
 
   final String accessToken;
 

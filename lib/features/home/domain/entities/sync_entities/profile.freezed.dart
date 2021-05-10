@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'profile.dart';
 
@@ -9,19 +9,21 @@ part of 'profile.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$ProfileTearOff {
   const _$ProfileTearOff();
 
-// ignore: unused_element
   _Profile call(
-      {@required String id,
-      @required String name,
-      @required String email,
-      @required @nullable String masterPasswordHint,
-      @required String key,
-      @required String privateKey,
-      @required String securityStamp}) {
+      {required String id,
+      required String name,
+      required String email,
+      required String? masterPasswordHint,
+      required String key,
+      required String privateKey,
+      required String securityStamp}) {
     return _Profile(
       id: id,
       name: name,
@@ -35,21 +37,20 @@ class _$ProfileTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Profile = _$ProfileTearOff();
 
 /// @nodoc
 mixin _$Profile {
-  String get id;
-  String get name;
-  String get email;
-  @nullable
-  String get masterPasswordHint;
-  String get key;
-  String get privateKey;
-  String get securityStamp;
+  String get id => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String get email => throw _privateConstructorUsedError;
+  String? get masterPasswordHint => throw _privateConstructorUsedError;
+  String get key => throw _privateConstructorUsedError;
+  String get privateKey => throw _privateConstructorUsedError;
+  String get securityStamp => throw _privateConstructorUsedError;
 
-  $ProfileCopyWith<Profile> get copyWith;
+  @JsonKey(ignore: true)
+  $ProfileCopyWith<Profile> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -60,7 +61,7 @@ abstract class $ProfileCopyWith<$Res> {
       {String id,
       String name,
       String email,
-      @nullable String masterPasswordHint,
+      String? masterPasswordHint,
       String key,
       String privateKey,
       String securityStamp});
@@ -76,27 +77,43 @@ class _$ProfileCopyWithImpl<$Res> implements $ProfileCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object email = freezed,
-    Object masterPasswordHint = freezed,
-    Object key = freezed,
-    Object privateKey = freezed,
-    Object securityStamp = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? email = freezed,
+    Object? masterPasswordHint = freezed,
+    Object? key = freezed,
+    Object? privateKey = freezed,
+    Object? securityStamp = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      name: name == freezed ? _value.name : name as String,
-      email: email == freezed ? _value.email : email as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
       masterPasswordHint: masterPasswordHint == freezed
           ? _value.masterPasswordHint
-          : masterPasswordHint as String,
-      key: key == freezed ? _value.key : key as String,
-      privateKey:
-          privateKey == freezed ? _value.privateKey : privateKey as String,
+          : masterPasswordHint // ignore: cast_nullable_to_non_nullable
+              as String?,
+      key: key == freezed
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String,
+      privateKey: privateKey == freezed
+          ? _value.privateKey
+          : privateKey // ignore: cast_nullable_to_non_nullable
+              as String,
       securityStamp: securityStamp == freezed
           ? _value.securityStamp
-          : securityStamp as String,
+          : securityStamp // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -110,7 +127,7 @@ abstract class _$ProfileCopyWith<$Res> implements $ProfileCopyWith<$Res> {
       {String id,
       String name,
       String email,
-      @nullable String masterPasswordHint,
+      String? masterPasswordHint,
       String key,
       String privateKey,
       String securityStamp});
@@ -127,47 +144,58 @@ class __$ProfileCopyWithImpl<$Res> extends _$ProfileCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object email = freezed,
-    Object masterPasswordHint = freezed,
-    Object key = freezed,
-    Object privateKey = freezed,
-    Object securityStamp = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? email = freezed,
+    Object? masterPasswordHint = freezed,
+    Object? key = freezed,
+    Object? privateKey = freezed,
+    Object? securityStamp = freezed,
   }) {
     return _then(_Profile(
-      id: id == freezed ? _value.id : id as String,
-      name: name == freezed ? _value.name : name as String,
-      email: email == freezed ? _value.email : email as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
       masterPasswordHint: masterPasswordHint == freezed
           ? _value.masterPasswordHint
-          : masterPasswordHint as String,
-      key: key == freezed ? _value.key : key as String,
-      privateKey:
-          privateKey == freezed ? _value.privateKey : privateKey as String,
+          : masterPasswordHint // ignore: cast_nullable_to_non_nullable
+              as String?,
+      key: key == freezed
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String,
+      privateKey: privateKey == freezed
+          ? _value.privateKey
+          : privateKey // ignore: cast_nullable_to_non_nullable
+              as String,
       securityStamp: securityStamp == freezed
           ? _value.securityStamp
-          : securityStamp as String,
+          : securityStamp // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_Profile implements _Profile {
   const _$_Profile(
-      {@required this.id,
-      @required this.name,
-      @required this.email,
-      @required @nullable this.masterPasswordHint,
-      @required this.key,
-      @required this.privateKey,
-      @required this.securityStamp})
-      : assert(id != null),
-        assert(name != null),
-        assert(email != null),
-        assert(key != null),
-        assert(privateKey != null),
-        assert(securityStamp != null);
+      {required this.id,
+      required this.name,
+      required this.email,
+      required this.masterPasswordHint,
+      required this.key,
+      required this.privateKey,
+      required this.securityStamp});
 
   @override
   final String id;
@@ -176,8 +204,7 @@ class _$_Profile implements _Profile {
   @override
   final String email;
   @override
-  @nullable
-  final String masterPasswordHint;
+  final String? masterPasswordHint;
   @override
   final String key;
   @override
@@ -224,6 +251,7 @@ class _$_Profile implements _Profile {
       const DeepCollectionEquality().hash(privateKey) ^
       const DeepCollectionEquality().hash(securityStamp);
 
+  @JsonKey(ignore: true)
   @override
   _$ProfileCopyWith<_Profile> get copyWith =>
       __$ProfileCopyWithImpl<_Profile>(this, _$identity);
@@ -231,29 +259,30 @@ class _$_Profile implements _Profile {
 
 abstract class _Profile implements Profile {
   const factory _Profile(
-      {@required String id,
-      @required String name,
-      @required String email,
-      @required @nullable String masterPasswordHint,
-      @required String key,
-      @required String privateKey,
-      @required String securityStamp}) = _$_Profile;
+      {required String id,
+      required String name,
+      required String email,
+      required String? masterPasswordHint,
+      required String key,
+      required String privateKey,
+      required String securityStamp}) = _$_Profile;
 
   @override
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  String get email;
+  String get email => throw _privateConstructorUsedError;
   @override
-  @nullable
-  String get masterPasswordHint;
+  String? get masterPasswordHint => throw _privateConstructorUsedError;
   @override
-  String get key;
+  String get key => throw _privateConstructorUsedError;
   @override
-  String get privateKey;
+  String get privateKey => throw _privateConstructorUsedError;
   @override
-  String get securityStamp;
+  String get securityStamp => throw _privateConstructorUsedError;
   @override
-  _$ProfileCopyWith<_Profile> get copyWith;
+  @JsonKey(ignore: true)
+  _$ProfileCopyWith<_Profile> get copyWith =>
+      throw _privateConstructorUsedError;
 }

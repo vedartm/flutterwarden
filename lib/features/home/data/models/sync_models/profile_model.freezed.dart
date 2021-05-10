@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'profile_model.dart';
 
@@ -8,6 +8,10 @@ part of 'profile_model.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 ProfileModel _$ProfileModelFromJson(Map<String, dynamic> json) {
   return _ProfileModel.fromJson(json);
 }
@@ -16,30 +20,14 @@ ProfileModel _$ProfileModelFromJson(Map<String, dynamic> json) {
 class _$ProfileModelTearOff {
   const _$ProfileModelTearOff();
 
-// ignore: unused_element
   _ProfileModel call(
-      {@required
-      @JsonKey(name: 'Id')
-          String id,
-      @required
-      @JsonKey(name: 'Name')
-          String name,
-      @required
-      @JsonKey(name: 'Email')
-          String email,
-      @required
-      @nullable
-      @JsonKey(name: 'MasterPasswordHint')
-          String masterPasswordHint,
-      @required
-      @JsonKey(name: 'Key')
-          String key,
-      @required
-      @JsonKey(name: 'PrivateKey')
-          String privateKey,
-      @required
-      @JsonKey(name: 'SecurityStamp')
-          String securityStamp}) {
+      {@JsonKey(name: 'Id') required String id,
+      @JsonKey(name: 'Name') required String name,
+      @JsonKey(name: 'Email') required String email,
+      @JsonKey(name: 'MasterPasswordHint') required String? masterPasswordHint,
+      @JsonKey(name: 'Key') required String key,
+      @JsonKey(name: 'PrivateKey') required String privateKey,
+      @JsonKey(name: 'SecurityStamp') required String securityStamp}) {
     return _ProfileModel(
       id: id,
       name: name,
@@ -51,36 +39,35 @@ class _$ProfileModelTearOff {
     );
   }
 
-// ignore: unused_element
   ProfileModel fromJson(Map<String, Object> json) {
     return ProfileModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ProfileModel = _$ProfileModelTearOff();
 
 /// @nodoc
 mixin _$ProfileModel {
   @JsonKey(name: 'Id')
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'Name')
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'Email')
-  String get email;
-  @nullable
+  String get email => throw _privateConstructorUsedError;
   @JsonKey(name: 'MasterPasswordHint')
-  String get masterPasswordHint;
+  String? get masterPasswordHint => throw _privateConstructorUsedError;
   @JsonKey(name: 'Key')
-  String get key;
+  String get key => throw _privateConstructorUsedError;
   @JsonKey(name: 'PrivateKey')
-  String get privateKey;
+  String get privateKey => throw _privateConstructorUsedError;
   @JsonKey(name: 'SecurityStamp')
-  String get securityStamp;
+  String get securityStamp => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ProfileModelCopyWith<ProfileModel> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ProfileModelCopyWith<ProfileModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -92,7 +79,7 @@ abstract class $ProfileModelCopyWith<$Res> {
       {@JsonKey(name: 'Id') String id,
       @JsonKey(name: 'Name') String name,
       @JsonKey(name: 'Email') String email,
-      @nullable @JsonKey(name: 'MasterPasswordHint') String masterPasswordHint,
+      @JsonKey(name: 'MasterPasswordHint') String? masterPasswordHint,
       @JsonKey(name: 'Key') String key,
       @JsonKey(name: 'PrivateKey') String privateKey,
       @JsonKey(name: 'SecurityStamp') String securityStamp});
@@ -108,27 +95,43 @@ class _$ProfileModelCopyWithImpl<$Res> implements $ProfileModelCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object email = freezed,
-    Object masterPasswordHint = freezed,
-    Object key = freezed,
-    Object privateKey = freezed,
-    Object securityStamp = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? email = freezed,
+    Object? masterPasswordHint = freezed,
+    Object? key = freezed,
+    Object? privateKey = freezed,
+    Object? securityStamp = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      name: name == freezed ? _value.name : name as String,
-      email: email == freezed ? _value.email : email as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
       masterPasswordHint: masterPasswordHint == freezed
           ? _value.masterPasswordHint
-          : masterPasswordHint as String,
-      key: key == freezed ? _value.key : key as String,
-      privateKey:
-          privateKey == freezed ? _value.privateKey : privateKey as String,
+          : masterPasswordHint // ignore: cast_nullable_to_non_nullable
+              as String?,
+      key: key == freezed
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String,
+      privateKey: privateKey == freezed
+          ? _value.privateKey
+          : privateKey // ignore: cast_nullable_to_non_nullable
+              as String,
       securityStamp: securityStamp == freezed
           ? _value.securityStamp
-          : securityStamp as String,
+          : securityStamp // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -144,7 +147,7 @@ abstract class _$ProfileModelCopyWith<$Res>
       {@JsonKey(name: 'Id') String id,
       @JsonKey(name: 'Name') String name,
       @JsonKey(name: 'Email') String email,
-      @nullable @JsonKey(name: 'MasterPasswordHint') String masterPasswordHint,
+      @JsonKey(name: 'MasterPasswordHint') String? masterPasswordHint,
       @JsonKey(name: 'Key') String key,
       @JsonKey(name: 'PrivateKey') String privateKey,
       @JsonKey(name: 'SecurityStamp') String securityStamp});
@@ -162,64 +165,58 @@ class __$ProfileModelCopyWithImpl<$Res> extends _$ProfileModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object email = freezed,
-    Object masterPasswordHint = freezed,
-    Object key = freezed,
-    Object privateKey = freezed,
-    Object securityStamp = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? email = freezed,
+    Object? masterPasswordHint = freezed,
+    Object? key = freezed,
+    Object? privateKey = freezed,
+    Object? securityStamp = freezed,
   }) {
     return _then(_ProfileModel(
-      id: id == freezed ? _value.id : id as String,
-      name: name == freezed ? _value.name : name as String,
-      email: email == freezed ? _value.email : email as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
       masterPasswordHint: masterPasswordHint == freezed
           ? _value.masterPasswordHint
-          : masterPasswordHint as String,
-      key: key == freezed ? _value.key : key as String,
-      privateKey:
-          privateKey == freezed ? _value.privateKey : privateKey as String,
+          : masterPasswordHint // ignore: cast_nullable_to_non_nullable
+              as String?,
+      key: key == freezed
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String,
+      privateKey: privateKey == freezed
+          ? _value.privateKey
+          : privateKey // ignore: cast_nullable_to_non_nullable
+              as String,
       securityStamp: securityStamp == freezed
           ? _value.securityStamp
-          : securityStamp as String,
+          : securityStamp // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProfileModel implements _ProfileModel {
   const _$_ProfileModel(
-      {@required
-      @JsonKey(name: 'Id')
-          this.id,
-      @required
-      @JsonKey(name: 'Name')
-          this.name,
-      @required
-      @JsonKey(name: 'Email')
-          this.email,
-      @required
-      @nullable
-      @JsonKey(name: 'MasterPasswordHint')
-          this.masterPasswordHint,
-      @required
-      @JsonKey(name: 'Key')
-          this.key,
-      @required
-      @JsonKey(name: 'PrivateKey')
-          this.privateKey,
-      @required
-      @JsonKey(name: 'SecurityStamp')
-          this.securityStamp})
-      : assert(id != null),
-        assert(name != null),
-        assert(email != null),
-        assert(key != null),
-        assert(privateKey != null),
-        assert(securityStamp != null);
+      {@JsonKey(name: 'Id') required this.id,
+      @JsonKey(name: 'Name') required this.name,
+      @JsonKey(name: 'Email') required this.email,
+      @JsonKey(name: 'MasterPasswordHint') required this.masterPasswordHint,
+      @JsonKey(name: 'Key') required this.key,
+      @JsonKey(name: 'PrivateKey') required this.privateKey,
+      @JsonKey(name: 'SecurityStamp') required this.securityStamp});
 
   factory _$_ProfileModel.fromJson(Map<String, dynamic> json) =>
       _$_$_ProfileModelFromJson(json);
@@ -234,9 +231,8 @@ class _$_ProfileModel implements _ProfileModel {
   @JsonKey(name: 'Email')
   final String email;
   @override
-  @nullable
   @JsonKey(name: 'MasterPasswordHint')
-  final String masterPasswordHint;
+  final String? masterPasswordHint;
   @override
   @JsonKey(name: 'Key')
   final String key;
@@ -286,6 +282,7 @@ class _$_ProfileModel implements _ProfileModel {
       const DeepCollectionEquality().hash(privateKey) ^
       const DeepCollectionEquality().hash(securityStamp);
 
+  @JsonKey(ignore: true)
   @override
   _$ProfileModelCopyWith<_ProfileModel> get copyWith =>
       __$ProfileModelCopyWithImpl<_ProfileModel>(this, _$identity);
@@ -298,54 +295,47 @@ class _$_ProfileModel implements _ProfileModel {
 
 abstract class _ProfileModel implements ProfileModel {
   const factory _ProfileModel(
-      {@required
-      @JsonKey(name: 'Id')
-          String id,
-      @required
+      {@JsonKey(name: 'Id')
+          required String id,
       @JsonKey(name: 'Name')
-          String name,
-      @required
+          required String name,
       @JsonKey(name: 'Email')
-          String email,
-      @required
-      @nullable
+          required String email,
       @JsonKey(name: 'MasterPasswordHint')
-          String masterPasswordHint,
-      @required
+          required String? masterPasswordHint,
       @JsonKey(name: 'Key')
-          String key,
-      @required
+          required String key,
       @JsonKey(name: 'PrivateKey')
-          String privateKey,
-      @required
+          required String privateKey,
       @JsonKey(name: 'SecurityStamp')
-          String securityStamp}) = _$_ProfileModel;
+          required String securityStamp}) = _$_ProfileModel;
 
   factory _ProfileModel.fromJson(Map<String, dynamic> json) =
       _$_ProfileModel.fromJson;
 
   @override
   @JsonKey(name: 'Id')
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'Name')
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'Email')
-  String get email;
+  String get email => throw _privateConstructorUsedError;
   @override
-  @nullable
   @JsonKey(name: 'MasterPasswordHint')
-  String get masterPasswordHint;
+  String? get masterPasswordHint => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'Key')
-  String get key;
+  String get key => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'PrivateKey')
-  String get privateKey;
+  String get privateKey => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'SecurityStamp')
-  String get securityStamp;
+  String get securityStamp => throw _privateConstructorUsedError;
   @override
-  _$ProfileModelCopyWith<_ProfileModel> get copyWith;
+  @JsonKey(ignore: true)
+  _$ProfileModelCopyWith<_ProfileModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
